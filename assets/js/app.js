@@ -58,13 +58,13 @@ for (var i = 0; i < numberOfUsers; i++) {
     // Select main-content area append userInfo
     $('.main-content').append( 
         $(` 
-            <div class="p-4 bd-highlight m-auto">
-                <a href="#">
+            <a href="#">
+                <div class="p-5 bd-highlight m-auto">
                     <img src="assets/images/redLight.png" alt="status" height="15px">  
                     <span class='firstName'>${users[i].first}</span> 
                     <span class='lastName'>${users[i].last}</span>
-                </a>
-            </div>
+                </div>
+            </a>
         `)
     ); 
 };
