@@ -1,0 +1,3981 @@
+{
+    "type": "FeatureCollection",
+    "metadata": {
+        "generated": 1571255496000,
+        "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=37.773972&longitude=-122.431297&maxradiuskm=100&orderby=time",
+        "title": "USGS Earthquakes",
+        "status": 200,
+        "api": "1.8.1",
+        "count": 216
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.35,
+                "place": "1km WNW of Pleasant Hill, CA",
+                "time": 1571206815020,
+                "updated": 1571212684169,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292715",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292715&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 28,
+                "net": "nc",
+                "code": "73292715",
+                "ids": ",nc73292715,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 20,
+                "dmin": 0.07382,
+                "rms": 0.05,
+                "gap": 78,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.4 - 1km WNW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0683365,
+                    37.9510002,
+                    12.19
+                ]
+            },
+            "id": "nc73292715"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.11,
+                "place": "1km SW of Pleasant Hill, CA",
+                "time": 1571193421370,
+                "updated": 1571194624240,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292605",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292605&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 19,
+                "net": "nc",
+                "code": "73292605",
+                "ids": ",nc73292605,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 10,
+                "dmin": 0.07265,
+                "rms": 0.03,
+                "gap": 171,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.1 - 1km SW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.06633,
+                    37.9441681,
+                    11.5
+                ]
+            },
+            "id": "nc73292605"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 3.38,
+                "place": "0km ESE of Pleasant Hill, CA",
+                "time": 1571191918530,
+                "updated": 1571253020383,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292585",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292585&format=geojson",
+                "felt": 1778,
+                "cdi": 5.4,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 716,
+                "net": "nc",
+                "code": "73292585",
+                "ids": ",nc73292585,us70005ui2,",
+                "sources": ",nc,us,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 89,
+                "dmin": 0.07857,
+                "rms": 0.13,
+                "gap": 24,
+                "magType": "ml",
+                "type": "earthquake",
+                "title": "M 3.4 - 0km ESE of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0599976,
+                    37.9476662,
+                    14.76
+                ]
+            },
+            "id": "nc73292585"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.77,
+                "place": "1km NW of Pleasant Hill, CA",
+                "time": 1571152194360,
+                "updated": 1571216537847,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292260",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292260&format=geojson",
+                "felt": 60,
+                "cdi": 4.6,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 76,
+                "net": "nc",
+                "code": "73292260",
+                "ids": ",nc73292260,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 52,
+                "dmin": 0.02883,
+                "rms": 0.07,
+                "gap": 61,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.8 - 1km NW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0665,
+                    37.9538333,
+                    12.33
+                ]
+            },
+            "id": "nc73292260"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.22,
+                "place": "4km NE of Fremont, CA",
+                "time": 1571141927400,
+                "updated": 1571147402982,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292215",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292215&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 23,
+                "net": "nc",
+                "code": "73292215",
+                "ids": ",nc73292215,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 8,
+                "dmin": 0.03888,
+                "rms": 0.02,
+                "gap": 106,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.2 - 4km NE of Fremont, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9544983,
+                    37.5698318,
+                    5.08
+                ]
+            },
+            "id": "nc73292215"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.31,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571135631030,
+                "updated": 1571144823751,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292190",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292190&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 26,
+                "net": "nc",
+                "code": "73292190",
+                "ids": ",nc73292190,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 12,
+                "dmin": 0.07041,
+                "rms": 0.03,
+                "gap": 97,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.3 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0670013,
+                    37.9384995,
+                    11.44
+                ]
+            },
+            "id": "nc73292190"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.23,
+                "place": "1km SW of Pleasant Hill, CA",
+                "time": 1571131204760,
+                "updated": 1571141463407,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292170",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292170&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 23,
+                "net": "nc",
+                "code": "73292170",
+                "ids": ",nc73292170,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 11,
+                "dmin": 0.06932,
+                "rms": 0.02,
+                "gap": 93,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.2 - 1km SW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0690002,
+                    37.9399986,
+                    10.85
+                ]
+            },
+            "id": "nc73292170"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.66,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571127474500,
+                "updated": 1571192523038,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292125",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292125&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 42,
+                "net": "nc",
+                "code": "73292125",
+                "ids": ",nc73292125,",
+                "sources": ",nc,",
+                "types": ",focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 60,
+                "dmin": 0.01918,
+                "rms": 0.08,
+                "gap": 62,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.7 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.063,
+                    37.9413333,
+                    13.01
+                ]
+            },
+            "id": "nc73292125"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.38,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571123829560,
+                "updated": 1571184723222,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292075",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292075&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 29,
+                "net": "nc",
+                "code": "73292075",
+                "ids": ",nc73292075,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 35,
+                "dmin": 0.01477,
+                "rms": 0.07,
+                "gap": 61,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.4 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0661667,
+                    37.9376667,
+                    12.02
+                ]
+            },
+            "id": "nc73292075"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1,
+                "place": "1km S of Pleasant Hill, CA",
+                "time": 1571123820940,
+                "updated": 1571183824143,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292070",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292070&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 15,
+                "net": "nc",
+                "code": "73292070",
+                "ids": ",nc73292070,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 28,
+                "dmin": 0.01485,
+                "rms": 0.08,
+                "gap": 61,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 1km S of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0636667,
+                    37.9356667,
+                    11.57
+                ]
+            },
+            "id": "nc73292070"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.09,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571123751770,
+                "updated": 1571124122675,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292065",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292065&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 18,
+                "net": "nc",
+                "code": "73292065",
+                "ids": ",nc73292065,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 9,
+                "dmin": 0.07169,
+                "rms": 0.02,
+                "gap": 97,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.1 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.06633,
+                    37.9411659,
+                    11.94
+                ]
+            },
+            "id": "nc73292065"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2.57,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571122505880,
+                "updated": 1571225311979,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292045",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292045&format=geojson",
+                "felt": 44,
+                "cdi": 4.2,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 120,
+                "net": "nc",
+                "code": "73292045",
+                "ids": ",nc73292045,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 118,
+                "dmin": 0.01526,
+                "rms": 0.12,
+                "gap": 23,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 2.6 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0648333,
+                    37.9373333,
+                    12.45
+                ]
+            },
+            "id": "nc73292045"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.14,
+                "place": "1km SW of Pleasant Hill, CA",
+                "time": 1571122395750,
+                "updated": 1571125803848,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292040",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292040&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 20,
+                "net": "nc",
+                "code": "73292040",
+                "ids": ",nc73292040,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 13,
+                "dmin": 0.06859,
+                "rms": 0.06,
+                "gap": 167,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.1 - 1km SW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0693359,
+                    37.9383316,
+                    10.44
+                ]
+            },
+            "id": "nc73292040"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.09,
+                "place": "1km N of Pleasant Hill, CA",
+                "time": 1571122302430,
+                "updated": 1571122681529,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292030",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292030&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 18,
+                "net": "nc",
+                "code": "73292030",
+                "ids": ",nc73292030,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 9,
+                "dmin": 0.07956,
+                "rms": 0.04,
+                "gap": 175,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.1 - 1km N of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0619965,
+                    37.9538345,
+                    10.52
+                ]
+            },
+            "id": "nc73292030"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2.06,
+                "place": "1km S of Pleasant Hill, CA",
+                "time": 1571122256790,
+                "updated": 1571177522252,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292025",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292025&format=geojson",
+                "felt": 31,
+                "cdi": 4.3,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 79,
+                "net": "nc",
+                "code": "73292025",
+                "ids": ",nc73292025,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 94,
+                "dmin": 0.0191,
+                "rms": 0.1,
+                "gap": 77,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 2.1 - 1km S of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0601667,
+                    37.939,
+                    13.63
+                ]
+            },
+            "id": "nc73292025"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.2,
+                "place": "1km WSW of Pleasant Hill, CA",
+                "time": 1571121438550,
+                "updated": 1571192584227,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292015",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292015&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 22,
+                "net": "nc",
+                "code": "73292015",
+                "ids": ",nc73292015,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 33,
+                "dmin": 0.07158,
+                "rms": 0.1,
+                "gap": 60,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.2 - 1km WSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0688333,
+                    37.9463333,
+                    11.25
+                ]
+            },
+            "id": "nc73292015"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.08,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571120714110,
+                "updated": 1571188082584,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291995",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291995&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 18,
+                "net": "nc",
+                "code": "73291995",
+                "ids": ",nc73291995,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 18,
+                "dmin": 0.07115,
+                "rms": 0.07,
+                "gap": 71,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.1 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0663333,
+                    37.9393333,
+                    9.99
+                ]
+            },
+            "id": "nc73291995"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.43,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571120622370,
+                "updated": 1571185503302,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291990",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291990&format=geojson",
+                "felt": 23,
+                "cdi": 4.3,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 41,
+                "net": "nc",
+                "code": "73291990",
+                "ids": ",nc73291990,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 50,
+                "dmin": 0.02022,
+                "rms": 0.07,
+                "gap": 62,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.4 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.063,
+                    37.9426667,
+                    11.95
+                ]
+            },
+            "id": "nc73291990"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.43,
+                "place": "0km NW of Pleasant Hill, CA",
+                "time": 1571120276270,
+                "updated": 1571186402633,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291985",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291985&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 31,
+                "net": "nc",
+                "code": "73291985",
+                "ids": ",nc73291985,",
+                "sources": ",nc,",
+                "types": ",focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 44,
+                "dmin": 0.07697,
+                "rms": 0.09,
+                "gap": 62,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.4 - 0km NW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0636667,
+                    37.9505,
+                    12.39
+                ]
+            },
+            "id": "nc73291985"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.22,
+                "place": "2km SSW of Pleasant Hill, CA",
+                "time": 1571120023220,
+                "updated": 1571187905563,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291980",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291980&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 23,
+                "net": "nc",
+                "code": "73291980",
+                "ids": ",nc73291980,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 30,
+                "dmin": 0.06756,
+                "rms": 0.07,
+                "gap": 58,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.2 - 2km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0698333,
+                    37.9358333,
+                    10.93
+                ]
+            },
+            "id": "nc73291980"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.74,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571119731370,
+                "updated": 1571182745041,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291970",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291970&format=geojson",
+                "felt": 167,
+                "cdi": 5.7,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 142,
+                "net": "nc",
+                "code": "73291970",
+                "ids": ",nc73291970,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 54,
+                "dmin": 0.01522,
+                "rms": 0.06,
+                "gap": 60,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.7 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0645,
+                    37.937,
+                    12.69
+                ]
+            },
+            "id": "nc73291970"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.13,
+                "place": "1km WSW of Pleasant Hill, CA",
+                "time": 1571119327320,
+                "updated": 1571191863980,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291965",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291965&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 20,
+                "net": "nc",
+                "code": "73291965",
+                "ids": ",nc73291965,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 25,
+                "dmin": 0.07282,
+                "rms": 0.07,
+                "gap": 74,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.1 - 1km WSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0665,
+                    37.945,
+                    11.72
+                ]
+            },
+            "id": "nc73291965"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.19,
+                "place": "1km SSE of Pacheco, CA",
+                "time": 1571119006740,
+                "updated": 1571196603440,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291960",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291960&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 22,
+                "net": "nc",
+                "code": "73291960",
+                "ids": ",nc73291960,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 24,
+                "dmin": 0.06885,
+                "rms": 0.07,
+                "gap": 80,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.2 - 1km SSE of Pacheco, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.069,
+                    37.9721667,
+                    10.99
+                ]
+            },
+            "id": "nc73291960"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.26,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571118989830,
+                "updated": 1571187123481,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc71111189",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc71111189&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 24,
+                "net": "nc",
+                "code": "71111189",
+                "ids": ",nc71111189,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 29,
+                "dmin": 0.06934,
+                "rms": 0.08,
+                "gap": 59,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.3 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0678333,
+                    37.9368333,
+                    10.56
+                ]
+            },
+            "id": "nc71111189"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.55,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571118917550,
+                "updated": 1571194083186,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291950",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291950&format=geojson",
+                "felt": 20,
+                "cdi": 4.2,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 45,
+                "net": "nc",
+                "code": "73291950",
+                "ids": ",nc73291950,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 36,
+                "dmin": 0.07244,
+                "rms": 0.07,
+                "gap": 61,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.6 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0641667,
+                    37.938,
+                    10.93
+                ]
+            },
+            "id": "nc73291950"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.23,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571118846310,
+                "updated": 1571186402400,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291945",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291945&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 23,
+                "net": "nc",
+                "code": "73291945",
+                "ids": ",nc73291945,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 32,
+                "dmin": 0.01594,
+                "rms": 0.08,
+                "gap": 61,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.2 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0638333,
+                    37.9375,
+                    12.29
+                ]
+            },
+            "id": "nc73291945"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.9,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571118814990,
+                "updated": 1571187605535,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291940",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291940&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 12,
+                "net": "nc",
+                "code": "73291940",
+                "ids": ",nc73291940,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 22,
+                "dmin": 0.07486,
+                "rms": 0.07,
+                "gap": 125,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 0.9 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.063,
+                    37.9433333,
+                    10.13
+                ]
+            },
+            "id": "nc73291940"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.98,
+                "place": "1km SSE of Pleasant Hill, CA",
+                "time": 1571118699900,
+                "updated": 1571175579283,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291930",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291930&format=geojson",
+                "felt": 261,
+                "cdi": 5.4,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 201,
+                "net": "nc",
+                "code": "73291930",
+                "ids": ",nc73291930,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 64,
+                "dmin": 0.02231,
+                "rms": 0.08,
+                "gap": 65,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 2.0 - 1km SSE of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0556667,
+                    37.9396667,
+                    13.12
+                ]
+            },
+            "id": "nc73291930"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.8,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571118641030,
+                "updated": 1571186223379,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291935",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291935&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 10,
+                "net": "nc",
+                "code": "73291935",
+                "ids": ",nc73291935,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 11,
+                "dmin": 0.07186,
+                "rms": 0.05,
+                "gap": 89,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 0.8 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0661667,
+                    37.9413333,
+                    11.21
+                ]
+            },
+            "id": "nc73291935"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.6,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571118444120,
+                "updated": 1571174763402,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291920",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291920&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 39,
+                "net": "nc",
+                "code": "73291920",
+                "ids": ",nc73291920,",
+                "sources": ",nc,",
+                "types": ",focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 31,
+                "dmin": 0.01516,
+                "rms": 0.05,
+                "gap": 60,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.6 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0666667,
+                    37.9385,
+                    10.91
+                ]
+            },
+            "id": "nc73291920"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.69,
+                "place": "1km SW of Pleasant Hill, CA",
+                "time": 1571118349200,
+                "updated": 1571187326086,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291925",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291925&format=geojson",
+                "felt": 1,
+                "cdi": 2.7,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 44,
+                "net": "nc",
+                "code": "73291925",
+                "ids": ",nc73291925,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 57,
+                "dmin": 0.07168,
+                "rms": 0.07,
+                "gap": 61,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.7 - 1km SW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0673333,
+                    37.9435,
+                    13.21
+                ]
+            },
+            "id": "nc73291925"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2.07,
+                "place": "0km W of Pleasant Hill, CA",
+                "time": 1571118105070,
+                "updated": 1571175663808,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291900",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291900&format=geojson",
+                "felt": 464,
+                "cdi": 5.6,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 326,
+                "net": "nc",
+                "code": "73291900",
+                "ids": ",nc73291900,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 76,
+                "dmin": 0.02481,
+                "rms": 0.09,
+                "gap": 62,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 2.1 - 0km W of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.063,
+                    37.9481667,
+                    12.86
+                ]
+            },
+            "id": "nc73291900"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.06,
+                "place": "1km SW of Pleasant Hill, CA",
+                "time": 1571118071100,
+                "updated": 1571171823123,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291895",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291895&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 17,
+                "net": "nc",
+                "code": "73291895",
+                "ids": ",nc73291895,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 25,
+                "dmin": 0.07194,
+                "rms": 0.05,
+                "gap": 60,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.1 - 1km SW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0663333,
+                    37.942,
+                    11.15
+                ]
+            },
+            "id": "nc73291895"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.19,
+                "place": "1km SW of Pleasant Hill, CA",
+                "time": 1571118028360,
+                "updated": 1571173502278,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291890",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291890&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 22,
+                "net": "nc",
+                "code": "73291890",
+                "ids": ",nc73291890,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 23,
+                "dmin": 0.0205,
+                "rms": 0.06,
+                "gap": 60,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.2 - 1km SW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0666667,
+                    37.9448333,
+                    10.31
+                ]
+            },
+            "id": "nc73291890"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 4.46,
+                "place": "1km SSE of Pleasant Hill, CA",
+                "time": 1571117622810,
+                "updated": 1571255119948,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291880",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291880&format=geojson",
+                "felt": 68746,
+                "cdi": 5.3,
+                "mmi": 6,
+                "alert": "green",
+                "status": "reviewed",
+                "tsunami": 1,
+                "sig": 836,
+                "net": "nc",
+                "code": "73291880",
+                "ids": ",at00pzei47,nc73291880,us70005u9d,",
+                "sources": ",at,nc,us,",
+                "types": ",dyfi,focal-mechanism,general-text,geoserve,impact-link,losspager,moment-tensor,nearby-cities,oaf,origin,phase-data,scitech-link,shakemap,",
+                "nst": 148,
+                "dmin": 0.0205,
+                "rms": 0.1,
+                "gap": 22,
+                "magType": "mw",
+                "type": "earthquake",
+                "title": "M 4.5 - 1km SSE of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.057,
+                    37.938,
+                    13.97
+                ]
+            },
+            "id": "nc73291880"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2.45,
+                "place": "1km S of Pleasant Hill, CA",
+                "time": 1571117038500,
+                "updated": 1571205865884,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291865",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291865&format=geojson",
+                "felt": 381,
+                "cdi": 5.6,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 306,
+                "net": "nc",
+                "code": "73291865",
+                "ids": ",nc73291865,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 104,
+                "dmin": 0.01859,
+                "rms": 0.09,
+                "gap": 62,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 2.5 - 1km S of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0595,
+                    37.9375,
+                    13.47
+                ]
+            },
+            "id": "nc73291865"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.69,
+                "place": "1km SSW of Pleasant Hill, CA",
+                "time": 1571116268650,
+                "updated": 1571185942660,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291850",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291850&format=geojson",
+                "felt": 4,
+                "cdi": 2.2,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 45,
+                "net": "nc",
+                "code": "73291850",
+                "ids": ",nc73291850,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 57,
+                "dmin": 0.01498,
+                "rms": 0.12,
+                "gap": 60,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.7 - 1km SSW of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0653333,
+                    37.9373333,
+                    12.68
+                ]
+            },
+            "id": "nc73291850"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.99,
+                "place": "1km S of Pleasant Hill, CA",
+                "time": 1571115662430,
+                "updated": 1571119323176,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291845",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291845&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 15,
+                "net": "nc",
+                "code": "73291845",
+                "ids": ",nc73291845,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 9,
+                "dmin": 0.07491,
+                "rms": 0.07,
+                "gap": 88,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 1km S of Pleasant Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0608368,
+                    37.9376678,
+                    10.79
+                ]
+            },
+            "id": "nc73291845"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.6,
+                "place": "1km NNE of Pacifica, CA",
+                "time": 1571094785330,
+                "updated": 1571123731267,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291720",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291720&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 39,
+                "net": "nc",
+                "code": "73291720",
+                "ids": ",nc73291720,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 14,
+                "dmin": 0.01352,
+                "rms": 0.03,
+                "gap": 136,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.6 - 1km NNE of Pacifica, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.4786682,
+                    37.6240005,
+                    8.23
+                ]
+            },
+            "id": "nc73291720"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2.56,
+                "place": "19km NE of Morgan Hill, CA",
+                "time": 1571016328610,
+                "updated": 1571183840721,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291345",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291345&format=geojson",
+                "felt": 10,
+                "cdi": 2.7,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 104,
+                "net": "nc",
+                "code": "73291345",
+                "ids": ",nc73291345,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 76,
+                "dmin": 0.09121,
+                "rms": 0.11,
+                "gap": 59,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 2.6 - 19km NE of Morgan Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.5096664,
+                    37.2593346,
+                    7.97
+                ]
+            },
+            "id": "nc73291345"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2.87,
+                "place": "19km NE of Morgan Hill, CA",
+                "time": 1571009527260,
+                "updated": 1571185920213,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291290",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291290&format=geojson",
+                "felt": 18,
+                "cdi": 2.7,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 132,
+                "net": "nc",
+                "code": "73291290",
+                "ids": ",nc73291290,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 79,
+                "dmin": 0.09137,
+                "rms": 0.14,
+                "gap": 61,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 2.9 - 19km NE of Morgan Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.5106659,
+                    37.2589989,
+                    7.8
+                ]
+            },
+            "id": "nc73291290"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.26,
+                "place": "2km SSE of Pleasanton, CA",
+                "time": 1570988888690,
+                "updated": 1571187063474,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73291165",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73291165&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 24,
+                "net": "nc",
+                "code": "73291165",
+                "ids": ",nc73291165,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 17,
+                "dmin": 0.02377,
+                "rms": 0.13,
+                "gap": 111,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.3 - 2km SSE of Pleasanton, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.867,
+                    37.6441667,
+                    4.55
+                ]
+            },
+            "id": "nc73291165"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.97,
+                "place": "2km SSE of Walnut Creek, CA",
+                "time": 1570925857290,
+                "updated": 1570929482933,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73290840",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73290840&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 14,
+                "net": "nc",
+                "code": "73290840",
+                "ids": ",nc73290840,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 10,
+                "dmin": 0.07462,
+                "rms": 0.03,
+                "gap": 97,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 2km SSE of Walnut Creek, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0596695,
+                    37.8911667,
+                    9.99
+                ]
+            },
+            "id": "nc73290840"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.27,
+                "place": "1km E of Vallejo, CA",
+                "time": 1570923621570,
+                "updated": 1570926302629,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73290830",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73290830&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 25,
+                "net": "nc",
+                "code": "73290830",
+                "ids": ",nc73290830,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 9,
+                "dmin": 0.04253,
+                "rms": 0.03,
+                "gap": 125,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.3 - 1km E of Vallejo, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.2223358,
+                    38.1134987,
+                    2.5
+                ]
+            },
+            "id": "nc73290830"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.22,
+                "place": "4km S of Loyola, CA",
+                "time": 1570813397550,
+                "updated": 1570842192513,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73290105",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73290105&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 23,
+                "net": "nc",
+                "code": "73290105",
+                "ids": ",nc73290105,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,",
+                "nst": 8,
+                "dmin": 0.01531,
+                "rms": 0.04,
+                "gap": 221,
+                "magType": "md",
+                "type": "quarry blast",
+                "title": "M 1.2 Quarry Blast - 4km S of Loyola, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.1011667,
+                    37.3201667,
+                    -0.33
+                ]
+            },
+            "id": "nc73290105"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.11,
+                "place": "4km ENE of Oakland, CA",
+                "time": 1570803952900,
+                "updated": 1570855505089,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73290035",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73290035&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 19,
+                "net": "nc",
+                "code": "73290035",
+                "ids": ",nc73290035,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 20,
+                "dmin": 0.05415,
+                "rms": 0.06,
+                "gap": 90,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.1 - 4km ENE of Oakland, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.1898333,
+                    37.8065,
+                    8.93
+                ]
+            },
+            "id": "nc73290035"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.89,
+                "place": "4km SSW of Vallejo, CA",
+                "time": 1570797784570,
+                "updated": 1570806243436,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73290000",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73290000&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 55,
+                "net": "nc",
+                "code": "73290000",
+                "ids": ",nc73290000,",
+                "sources": ",nc,",
+                "types": ",focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 32,
+                "dmin": 0.005918,
+                "rms": 0.12,
+                "gap": 50,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.9 - 4km SSW of Vallejo, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.2613297,
+                    38.081501,
+                    6.19
+                ]
+            },
+            "id": "nc73290000"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.94,
+                "place": "11km N of Morgan Hill, CA",
+                "time": 1570791573660,
+                "updated": 1570794243945,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73289960",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73289960&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 58,
+                "net": "nc",
+                "code": "73289960",
+                "ids": ",nc73289960,",
+                "sources": ",nc,",
+                "types": ",focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 32,
+                "dmin": 0.03403,
+                "rms": 0.09,
+                "gap": 66,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.9 - 11km N of Morgan Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.6473312,
+                    37.2318344,
+                    6.84
+                ]
+            },
+            "id": "nc73289960"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2.08,
+                "place": "2km SE of Healdsburg, CA",
+                "time": 1570731229900,
+                "updated": 1570743003487,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73289750",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73289750&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 67,
+                "net": "nc",
+                "code": "73289750",
+                "ids": ",nc73289750,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 4,
+                "dmin": 0.2143,
+                "rms": 0.09,
+                "gap": 220,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 2.1 - 2km SE of Healdsburg, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.856163,
+                    38.5953331,
+                    3.64
+                ]
+            },
+            "id": "nc73289750"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 3.25,
+                "place": "8km ENE of Alum Rock, CA",
+                "time": 1570612516640,
+                "updated": 1571182782952,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73289220",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73289220&format=geojson",
+                "felt": 1472,
+                "cdi": 4.3,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 592,
+                "net": "nc",
+                "code": "73289220",
+                "ids": ",nc73289220,us70005shx,",
+                "sources": ",nc,us,",
+                "types": ",dyfi,focal-mechanism,geoserve,moment-tensor,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 145,
+                "dmin": 0.03006,
+                "rms": 0.07,
+                "gap": 33,
+                "magType": "mw",
+                "type": "earthquake",
+                "title": "M 3.3 - 8km ENE of Alum Rock, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.7328333,
+                    37.3818333,
+                    9.27
+                ]
+            },
+            "id": "nc73289220"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.02,
+                "place": "7km E of Alum Rock, CA",
+                "time": 1570580623560,
+                "updated": 1570581122206,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73289050",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73289050&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 16,
+                "net": "nc",
+                "code": "73289050",
+                "ids": ",nc73289050,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 5,
+                "dmin": 0.02152,
+                "rms": 0.03,
+                "gap": 132,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 7km E of Alum Rock, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.7441635,
+                    37.3641663,
+                    2.11
+                ]
+            },
+            "id": "nc73289050"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.39,
+                "place": "10km E of Alum Rock, CA",
+                "time": 1570491593200,
+                "updated": 1570495743556,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73288450",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73288450&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 30,
+                "net": "nc",
+                "code": "73288450",
+                "ids": ",nc73288450,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 6,
+                "dmin": 0.0454,
+                "rms": 0.01,
+                "gap": 188,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.4 - 10km E of Alum Rock, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.7133331,
+                    37.3626671,
+                    3.41
+                ]
+            },
+            "id": "nc73288450"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.97,
+                "place": "6km SSW of San Francisco Zoo, CA",
+                "time": 1570420964920,
+                "updated": 1570843804975,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73287765",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73287765&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 14,
+                "net": "nc",
+                "code": "73287765",
+                "ids": ",nc73287765,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 15,
+                "dmin": 0.06857,
+                "rms": 0.04,
+                "gap": 186,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 6km SSW of San Francisco Zoo, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.5376667,
+                    37.6843333,
+                    8.55
+                ]
+            },
+            "id": "nc73287765"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2.01,
+                "place": "20km NE of Morgan Hill, CA",
+                "time": 1570403561220,
+                "updated": 1570410183596,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73287640",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73287640&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 62,
+                "net": "nc",
+                "code": "73287640",
+                "ids": ",nc73287640,",
+                "sources": ",nc,",
+                "types": ",focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 42,
+                "dmin": 0.08996,
+                "rms": 0.09,
+                "gap": 59,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 2.0 - 20km NE of Morgan Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.5076675,
+                    37.2610016,
+                    8.44
+                ]
+            },
+            "id": "nc73287640"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.84,
+                "place": "12km NNE of Morgan Hill, CA",
+                "time": 1570398429200,
+                "updated": 1570843742969,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73287600",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73287600&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 11,
+                "net": "nc",
+                "code": "73287600",
+                "ids": ",nc73287600,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 15,
+                "dmin": 0.0491,
+                "rms": 0.06,
+                "gap": 70,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 0.8 - 12km NNE of Morgan Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.6191667,
+                    37.2353333,
+                    3.16
+                ]
+            },
+            "id": "nc73287600"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.67,
+                "place": "19km NE of Morgan Hill, CA",
+                "time": 1570360974510,
+                "updated": 1570363863733,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73287235",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73287235&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 43,
+                "net": "nc",
+                "code": "73287235",
+                "ids": ",nc73287235,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 18,
+                "dmin": 0.09435,
+                "rms": 0.06,
+                "gap": 109,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.7 - 19km NE of Morgan Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.5058365,
+                    37.2568321,
+                    9.4
+                ]
+            },
+            "id": "nc73287235"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2.04,
+                "place": "9km ENE of Milpitas, CA",
+                "time": 1570324357400,
+                "updated": 1570403332532,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73287085",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73287085&format=geojson",
+                "felt": 3,
+                "cdi": 2.7,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 65,
+                "net": "nc",
+                "code": "73287085",
+                "ids": ",nc73287085,",
+                "sources": ",nc,",
+                "types": ",dyfi,focal-mechanism,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 44,
+                "dmin": 0.01337,
+                "rms": 0.07,
+                "gap": 58,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 2.0 - 9km ENE of Milpitas, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.8148346,
+                    37.4571648,
+                    5.09
+                ]
+            },
+            "id": "nc73287085"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.72,
+                "place": "5km WSW of Colma, CA",
+                "time": 1570295689990,
+                "updated": 1570836183046,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286995",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286995&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 8,
+                "net": "nc",
+                "code": "73286995",
+                "ids": ",nc73286995,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 10,
+                "dmin": 0.03768,
+                "rms": 0.09,
+                "gap": 171,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 0.7 - 5km WSW of Colma, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.5096667,
+                    37.6628333,
+                    7.52
+                ]
+            },
+            "id": "nc73286995"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.78,
+                "place": "6km WSW of Colma, CA",
+                "time": 1570294661850,
+                "updated": 1570422891027,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286985",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286985&format=geojson",
+                "felt": 11,
+                "cdi": 4.1,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 53,
+                "net": "nc",
+                "code": "73286985",
+                "ids": ",nc73286985,",
+                "sources": ",nc,",
+                "types": ",dyfi,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 21,
+                "dmin": 0.04336,
+                "rms": 0.05,
+                "gap": 107,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.8 - 6km WSW of Colma, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.5196686,
+                    37.6619987,
+                    8.17
+                ]
+            },
+            "id": "nc73286985"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.84,
+                "place": "11km NNE of Alum Rock, CA",
+                "time": 1570294181530,
+                "updated": 1571214424347,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286980",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286980&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 11,
+                "net": "nc",
+                "code": "73286980",
+                "ids": ",nc73286980,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 13,
+                "dmin": 0.02337,
+                "rms": 0.05,
+                "gap": 91,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 0.8 - 11km NNE of Alum Rock, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.771,
+                    37.4501667,
+                    6.35
+                ]
+            },
+            "id": "nc73286980"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.95,
+                "place": "6km WSW of Colma, CA",
+                "time": 1570290525070,
+                "updated": 1570326240430,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286940",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286940&format=geojson",
+                "felt": 44,
+                "cdi": 3.8,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 75,
+                "net": "nc",
+                "code": "73286940",
+                "ids": ",nc73286940,",
+                "sources": ",nc,",
+                "types": ",dyfi,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 31,
+                "dmin": 0.04377,
+                "rms": 0.05,
+                "gap": 107,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 2.0 - 6km WSW of Colma, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.5199966,
+                    37.6623344,
+                    8.11
+                ]
+            },
+            "id": "nc73286940"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.86,
+                "place": "5km WSW of Colma, CA",
+                "time": 1570290450760,
+                "updated": 1570311846124,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286935",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286935&format=geojson",
+                "felt": 42,
+                "cdi": 3.8,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 69,
+                "net": "nc",
+                "code": "73286935",
+                "ids": ",nc73286935,",
+                "sources": ",nc,",
+                "types": ",dyfi,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 19,
+                "dmin": 0.04421,
+                "rms": 0.04,
+                "gap": 106,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.9 - 5km WSW of Colma, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.5186691,
+                    37.6645012,
+                    7.46
+                ]
+            },
+            "id": "nc73286935"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 3.54,
+                "place": "5km WSW of Colma, CA",
+                "time": 1570290066700,
+                "updated": 1571237140259,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286930",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286930&format=geojson",
+                "felt": 12525,
+                "cdi": 4.3,
+                "mmi": 5.64,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 623,
+                "net": "nc",
+                "code": "73286930",
+                "ids": ",nc73286930,us70005r3k,",
+                "sources": ",nc,us,",
+                "types": ",dyfi,focal-mechanism,geoserve,moment-tensor,nearby-cities,origin,phase-data,scitech-link,shakemap,",
+                "nst": 233,
+                "dmin": 0.03045,
+                "rms": 0.09,
+                "gap": 97,
+                "magType": "mw",
+                "type": "earthquake",
+                "title": "M 3.5 - 5km WSW of Colma, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.5145,
+                    37.6598333,
+                    7.45
+                ]
+            },
+            "id": "nc73286930"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.28,
+                "place": "11km NE of Milpitas, CA",
+                "time": 1570280473590,
+                "updated": 1570290482552,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286905",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286905&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 25,
+                "net": "nc",
+                "code": "73286905",
+                "ids": ",nc73286905,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 12,
+                "dmin": 0.04268,
+                "rms": 0.02,
+                "gap": 139,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.3 - 11km NE of Milpitas, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.8115005,
+                    37.4921684,
+                    7.77
+                ]
+            },
+            "id": "nc73286905"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.07,
+                "place": "3km E of Dublin, CA",
+                "time": 1570278764050,
+                "updated": 1570758003854,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286890",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286890&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 18,
+                "net": "nc",
+                "code": "73286890",
+                "ids": ",nc73286890,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 10,
+                "dmin": 0.09242,
+                "rms": 0.05,
+                "gap": 75,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.1 - 3km E of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.8976667,
+                    37.7023333,
+                    10.15
+                ]
+            },
+            "id": "nc73286890"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.69,
+                "place": "1km E of Pacifica, CA",
+                "time": 1570243923780,
+                "updated": 1570755004261,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286675",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286675&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 7,
+                "net": "nc",
+                "code": "73286675",
+                "ids": ",nc73286675,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 8,
+                "dmin": 0.02319,
+                "rms": 0.06,
+                "gap": 146,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 0.7 - 1km E of Pacifica, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.4765,
+                    37.614,
+                    10.26
+                ]
+            },
+            "id": "nc73286675"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.97,
+                "place": "3km N of Dublin, CA",
+                "time": 1570225471770,
+                "updated": 1570754824247,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286495",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286495&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 14,
+                "net": "nc",
+                "code": "73286495",
+                "ids": ",nc73286495,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 10,
+                "dmin": 0.1028,
+                "rms": 0.05,
+                "gap": 144,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 3km N of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9356667,
+                    37.7296667,
+                    9.62
+                ]
+            },
+            "id": "nc73286495"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.09,
+                "place": "4km WNW of Orinda, CA",
+                "time": 1570210388440,
+                "updated": 1571210105892,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286440",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286440&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 18,
+                "net": "nc",
+                "code": "73286440",
+                "ids": ",nc73286440,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 16,
+                "dmin": 0.0205,
+                "rms": 0.08,
+                "gap": 66,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.1 - 4km WNW of Orinda, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.219,
+                    37.892,
+                    3.82
+                ]
+            },
+            "id": "nc73286440"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.08,
+                "place": "3km N of Dublin, CA",
+                "time": 1570161213600,
+                "updated": 1570754707234,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286270",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286270&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 18,
+                "net": "nc",
+                "code": "73286270",
+                "ids": ",nc73286270,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 11,
+                "dmin": 0.102,
+                "rms": 0.05,
+                "gap": 121,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.1 - 3km N of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9365,
+                    37.731,
+                    9.33
+                ]
+            },
+            "id": "nc73286270"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.3,
+                "place": "17km E of Angwin, CA",
+                "time": 1570157885070,
+                "updated": 1571189042685,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286225",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286225&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 26,
+                "net": "nc",
+                "code": "73286225",
+                "ids": ",nc73286225,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 13,
+                "dmin": 0.004072,
+                "rms": 0.05,
+                "gap": 160,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.3 - 17km E of Angwin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.2573333,
+                    38.5728333,
+                    10.79
+                ]
+            },
+            "id": "nc73286225"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.14,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1570146583400,
+                "updated": 1570841943801,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73286105",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73286105&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 20,
+                "net": "nc",
+                "code": "73286105",
+                "ids": ",nc73286105,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 16,
+                "dmin": 0.02908,
+                "rms": 0.06,
+                "gap": 96,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.1 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9241667,
+                    37.7371667,
+                    8.92
+                ]
+            },
+            "id": "nc73286105"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.06,
+                "place": "5km E of Vallejo, CA",
+                "time": 1570139691840,
+                "updated": 1570838908126,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285960",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285960&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 17,
+                "net": "nc",
+                "code": "73285960",
+                "ids": ",nc73285960,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,",
+                "nst": 9,
+                "dmin": 0.02486,
+                "rms": 0.05,
+                "gap": 149,
+                "magType": "md",
+                "type": "quarry blast",
+                "title": "M 1.1 Quarry Blast - 5km E of Vallejo, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.1803333,
+                    38.1188333,
+                    -0.11
+                ]
+            },
+            "id": "nc73285960"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.38,
+                "place": "20km NE of Morgan Hill, CA",
+                "time": 1570135575400,
+                "updated": 1570147624912,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285925",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285925&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 29,
+                "net": "nc",
+                "code": "73285925",
+                "ids": ",nc73285925,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 13,
+                "dmin": 0.09336,
+                "rms": 0.03,
+                "gap": 109,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.4 - 20km NE of Morgan Hill, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.5028305,
+                    37.2584991,
+                    9.64
+                ]
+            },
+            "id": "nc73285925"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.33,
+                "place": "3km S of Loyola, CA",
+                "time": 1570135056050,
+                "updated": 1570838998593,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285920",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285920&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 27,
+                "net": "nc",
+                "code": "73285920",
+                "ids": ",nc73285920,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,",
+                "nst": 6,
+                "dmin": 0.01479,
+                "rms": 0.04,
+                "gap": 128,
+                "magType": "md",
+                "type": "quarry blast",
+                "title": "M 1.3 Quarry Blast - 3km S of Loyola, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.103,
+                    37.3216667,
+                    -0.26
+                ]
+            },
+            "id": "nc73285920"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.84,
+                "place": "3km SW of Clayton, CA",
+                "time": 1570123123600,
+                "updated": 1570839088986,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285850",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285850&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 11,
+                "net": "nc",
+                "code": "73285850",
+                "ids": ",nc73285850,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,",
+                "nst": 5,
+                "dmin": 0.03078,
+                "rms": 0.02,
+                "gap": 203,
+                "magType": "md",
+                "type": "quarry blast",
+                "title": "M 0.8 Quarry Blast - 3km SW of Clayton, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.959,
+                    37.9211667,
+                    -0.21
+                ]
+            },
+            "id": "nc73285850"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.29,
+                "place": "8km NW of San Francisco Zoo, CA",
+                "time": 1570102484890,
+                "updated": 1570111025138,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285725",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285725&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 26,
+                "net": "nc",
+                "code": "73285725",
+                "ids": ",nc73285725,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 9,
+                "dmin": 0.08283,
+                "rms": 0.03,
+                "gap": 192,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.3 - 8km NW of San Francisco Zoo, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.5758362,
+                    37.7734985,
+                    8.7
+                ]
+            },
+            "id": "nc73285725"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.63,
+                "place": "6km S of Livermore, CA",
+                "time": 1570092510720,
+                "updated": 1570583642546,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285670",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285670&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 6,
+                "net": "nc",
+                "code": "73285670",
+                "ids": ",nc73285670,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 9,
+                "dmin": 0.01067,
+                "rms": 0.03,
+                "gap": 86,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 0.6 - 6km S of Livermore, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.763,
+                    37.6316667,
+                    7.15
+                ]
+            },
+            "id": "nc73285670"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.94,
+                "place": "6km NNE of Dublin, CA",
+                "time": 1570062329950,
+                "updated": 1570840563664,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285525",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285525&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 14,
+                "net": "nc",
+                "code": "73285525",
+                "ids": ",nc73285525,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 6,
+                "dmin": 0.1024,
+                "rms": 0.05,
+                "gap": 150,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 0.9 - 6km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9023333,
+                    37.745,
+                    7.27
+                ]
+            },
+            "id": "nc73285525"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.32,
+                "place": "6km E of Santa Venetia, CA",
+                "time": 1570041143210,
+                "updated": 1570054023627,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285365",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285365&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 27,
+                "net": "nc",
+                "code": "73285365",
+                "ids": ",nc73285365,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 11,
+                "dmin": 0.02103,
+                "rms": 0.07,
+                "gap": 149,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.3 - 6km E of Santa Venetia, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.4524994,
+                    37.9903336,
+                    1.7
+                ]
+            },
+            "id": "nc73285365"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.97,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1570023550980,
+                "updated": 1570841583766,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285225",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285225&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 14,
+                "net": "nc",
+                "code": "73285225",
+                "ids": ",nc73285225,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 13,
+                "dmin": 0.1124,
+                "rms": 0.06,
+                "gap": 97,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9231667,
+                    37.7345,
+                    8.96
+                ]
+            },
+            "id": "nc73285225"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.25,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1570017162680,
+                "updated": 1570847643345,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285190",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285190&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 24,
+                "net": "nc",
+                "code": "73285190",
+                "ids": ",nc73285190,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 24,
+                "dmin": 0.02761,
+                "rms": 0.06,
+                "gap": 78,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.3 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9228333,
+                    37.7353333,
+                    8.91
+                ]
+            },
+            "id": "nc73285190"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.84,
+                "place": "4km N of Dublin, CA",
+                "time": 1570003733230,
+                "updated": 1570841824788,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285145",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285145&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 11,
+                "net": "nc",
+                "code": "73285145",
+                "ids": ",nc73285145,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 13,
+                "dmin": 0.1071,
+                "rms": 0.04,
+                "gap": 61,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 0.8 - 4km N of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9298333,
+                    37.7346667,
+                    9.01
+                ]
+            },
+            "id": "nc73285145"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.95,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569990953320,
+                "updated": 1570668363526,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285080",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285080&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 14,
+                "net": "nc",
+                "code": "73285080",
+                "ids": ",nc73285080,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 14,
+                "dmin": 0.1117,
+                "rms": 0.02,
+                "gap": 96,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.924,
+                    37.7366667,
+                    9.57
+                ]
+            },
+            "id": "nc73285080"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.19,
+                "place": "8km S of Calistoga, CA",
+                "time": 1569987034080,
+                "updated": 1570680905070,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73285060",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73285060&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 22,
+                "net": "nc",
+                "code": "73285060",
+                "ids": ",nc73285060,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 33,
+                "dmin": 0.0753,
+                "rms": 0.15,
+                "gap": 108,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.2 - 8km S of Calistoga, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.5673333,
+                    38.5108333,
+                    8.55
+                ]
+            },
+            "id": "nc73285060"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569970443220,
+                "updated": 1570670642749,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc71111159",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc71111159&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 15,
+                "net": "nc",
+                "code": "71111159",
+                "ids": ",nc71111159,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 14,
+                "dmin": 0.1145,
+                "rms": 0.04,
+                "gap": 98,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9205,
+                    37.7348333,
+                    9.96
+                ]
+            },
+            "id": "nc71111159"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.93,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569962506170,
+                "updated": 1570667703430,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284870",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284870&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 13,
+                "net": "nc",
+                "code": "73284870",
+                "ids": ",nc73284870,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 12,
+                "dmin": 0.1154,
+                "rms": 0.04,
+                "gap": 99,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 0.9 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9193333,
+                    37.7348333,
+                    9.96
+                ]
+            },
+            "id": "nc73284870"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.99,
+                "place": "16km E of Seven Trees, CA",
+                "time": 1569960713270,
+                "updated": 1570852803798,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284845",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284845&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 15,
+                "net": "nc",
+                "code": "73284845",
+                "ids": ",nc73284845,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 11,
+                "dmin": 0.02017,
+                "rms": 0.05,
+                "gap": 111,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 16km E of Seven Trees, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.6601667,
+                    37.2763333,
+                    1.12
+                ]
+            },
+            "id": "nc73284845"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569936139370,
+                "updated": 1569937023951,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284745",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284745&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 15,
+                "net": "nc",
+                "code": "73284745",
+                "ids": ",nc73284745,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 6,
+                "dmin": 0.1162,
+                "rms": 0.01,
+                "gap": 99,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.918335,
+                    37.7366676,
+                    9.38
+                ]
+            },
+            "id": "nc73284745"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.94,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569923954340,
+                "updated": 1570667403860,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284690",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284690&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 14,
+                "net": "nc",
+                "code": "73284690",
+                "ids": ",nc73284690,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 16,
+                "dmin": 0.1126,
+                "rms": 0.04,
+                "gap": 96,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 0.9 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9228333,
+                    37.7406667,
+                    9.02
+                ]
+            },
+            "id": "nc73284690"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.44,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569921767810,
+                "updated": 1569922623460,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284680",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284680&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 32,
+                "net": "nc",
+                "code": "73284680",
+                "ids": ",nc73284680,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 12,
+                "dmin": 0.1105,
+                "rms": 0.02,
+                "gap": 112,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.4 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.925499,
+                    37.737999,
+                    9.24
+                ]
+            },
+            "id": "nc73284680"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.87,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569920421390,
+                "updated": 1570667282974,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284665",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284665&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 12,
+                "net": "nc",
+                "code": "73284665",
+                "ids": ",nc73284665,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 11,
+                "dmin": 0.02779,
+                "rms": 0.03,
+                "gap": 135,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 0.9 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.927,
+                    37.7363333,
+                    9.26
+                ]
+            },
+            "id": "nc73284665"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 0.98,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569916510430,
+                "updated": 1570667162962,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284645",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284645&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 15,
+                "net": "nc",
+                "code": "73284645",
+                "ids": ",nc73284645,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 20,
+                "dmin": 0.02714,
+                "rms": 0.09,
+                "gap": 97,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9235,
+                    37.735,
+                    8.37
+                ]
+            },
+            "id": "nc73284645"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.74,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569912030490,
+                "updated": 1569926703889,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284600",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284600&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 47,
+                "net": "nc",
+                "code": "73284600",
+                "ids": ",nc73284600,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 15,
+                "dmin": 0.1126,
+                "rms": 0.03,
+                "gap": 93,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.7 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9228363,
+                    37.7355003,
+                    10.27
+                ]
+            },
+            "id": "nc73284600"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569911851760,
+                "updated": 1570666982944,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284595",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284595&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 15,
+                "net": "nc",
+                "code": "73284595",
+                "ids": ",nc73284595,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 16,
+                "dmin": 0.114,
+                "rms": 0.05,
+                "gap": 91,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9211667,
+                    37.735,
+                    9.37
+                ]
+            },
+            "id": "nc73284595"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.24,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569906534220,
+                "updated": 1569917763970,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284530",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284530&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 24,
+                "net": "nc",
+                "code": "73284530",
+                "ids": ",nc73284530,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 8,
+                "dmin": 0.1129,
+                "rms": 0.02,
+                "gap": 146,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.2 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9225006,
+                    37.7340012,
+                    9.86
+                ]
+            },
+            "id": "nc73284530"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.82,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569903679580,
+                "updated": 1569905883468,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284510",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284510&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 51,
+                "net": "nc",
+                "code": "73284510",
+                "ids": ",nc73284510,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 12,
+                "dmin": 0.1096,
+                "rms": 0.04,
+                "gap": 128,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.8 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9266663,
+                    37.7368317,
+                    9.4
+                ]
+            },
+            "id": "nc73284510"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.83,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569903472150,
+                "updated": 1569915243638,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284505",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284505&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 52,
+                "net": "nc",
+                "code": "73284505",
+                "ids": ",nc73284505,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 9,
+                "dmin": 0.1143,
+                "rms": 0.05,
+                "gap": 98,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.8 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9208298,
+                    37.7335014,
+                    10.45
+                ]
+            },
+            "id": "nc73284505"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569902012930,
+                "updated": 1570666863930,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284490",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284490&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 15,
+                "net": "nc",
+                "code": "73284490",
+                "ids": ",nc73284490,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 19,
+                "dmin": 0.02573,
+                "rms": 0.09,
+                "gap": 48,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.0 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.9248333,
+                    37.7338333,
+                    8.53
+                ]
+            },
+            "id": "nc73284490"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.64,
+                "place": "4km NNE of Dublin, CA",
+                "time": 1569901620060,
+                "updated": 1569903363058,
+                "tz": -480,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73284485",
+                "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73284485&format=geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 41,
+                "net": "nc",
+                "code": "73284485",
+                "ids": ",nc73284485,",
+                "sources": ",nc,",
+                "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 10,
+                "dmin": 0.1105,
+                "rms": 0.02,
+                "gap": 94,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.6 - 4km NNE of Dublin, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.8926697,
+                    37.2006683,
+                    1.57
+                ]
+            },
+            "id": "nc73275115"
+        }
+    ],
+    "bbox": [
+        -122.856163,
+        37.1063333,
+        -0.41,
+        -121.386,
+        38.5953331,
+        18.38
+    ]
+}
