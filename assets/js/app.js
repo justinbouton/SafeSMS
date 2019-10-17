@@ -80,47 +80,58 @@ for (var i = 0; i < numberOfUsers; i++) {
 function getEarthquakeData() {
     console.log('getEarthquakeData')
     
-    // fetch call to API
-    // search radius in km
-    const radius = '100'
+    // Declare varibles for radius, latitude and longitude.
+// ///// FUTURE Google geolocation for lat/long /////
+// ///// FUTURE radius selection under settings /////
+    const radius = '100' // radius in km
     const latitude = "37.773972"
     const longitude = "-122.431297"
 
-    // API call to earthquake.usgs.gov
+    // EXAMPLE Search lat/long, radius 100km, order by time:
+    // https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=37.773972&longitude=-122.431297&maxradiuskm=100&orderby=time
+
+    // API url to earthquake.usgs.gov
     const url = `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=${latitude}&longitude=${longitude}&maxradiuskm=${radius}&orderby=time`
 
-
+    // fetch call to API
     fetch(url)
     .then((resp) => resp.json()) // Transform the data into json
     .then(function(data) {
 
-        // List of objects.
+        // If earthquake exists in db or time now in ms" > five mins from time in reponse) {
+            //do nothing
+        // } else {
+            // push to earthquake db
+        // }
+
+        // List of earthquake objects
         var parsedEarthquakeData = [];
 
-        // Earthquake constructor.
-        function Earthquake(time, place, url, mag) {
+        // Earthquake constructor
+        function Earthquake(id, time, place, url, mag) {
+            this.id = id;
             this.time = time;
             this.place = place;	
             this.url = url;
             this.mag = mag;
-            //parsedEarthquakeData.push(this); // This works
-            this.pushToTheList = function() { 
-                parsedEarthquakeData.push(this);
-            }
-            this.pushToTheList(); // And so does this.
+            //parsedEarthquakeData.push(this); 
+            this.pushToTheList = () => parsedEarthquakeData.push(this);
+
+            this.pushToTheList();
         }
 
         // Loop through each response i to parse time, place, url, mag, store in temp array
         const respLength = data.features.length
         for (let i = 0; i < respLength; i++) {    
-            // Declare var response to store earthquakes array from data.features 
+            // Declare var response to store earthquakes data from data.features[i].properties and .id
             const response = data.features[i].properties
+            const id = data.features[i].id
 
             // ES6 destructuring to parse out; time, place, url, mag
             const { time, place, url, mag } = response;
 
             // push attributes to parsedEarthquakeData
-            new Earthquake(time, place, url, mag)
+            new Earthquake(id, time, place, url, mag)
 
         // check arrray against exisiting array in earthquakes db
         // Admin notified, earthquake threshold met, mass SMS sent
@@ -128,9 +139,6 @@ function getEarthquakeData() {
             console.log(parsedEarthquakeData);
     })
     .catch((err) => console.log("API call error") + err);
-    
-    // Search lat/long, radius 100km, order by time:
-    // https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=37.773972&longitude=-122.431297&maxradiuskm=100&orderby=time
     
     // setTimeout(() => getEarthquakeData(), 300000)//300000 = 5 minutes
 };
