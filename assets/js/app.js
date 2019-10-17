@@ -89,57 +89,43 @@ function getEarthquakeData() {
     // API call to earthquake.usgs.gov
     const url = `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=${latitude}&longitude=${longitude}&maxradiuskm=${radius}&orderby=time`
 
+
     fetch(url)
     .then((resp) => resp.json()) // Transform the data into json
     .then(function(data) {
-        console.log(data.features[1])
-        
-        // Declare var response to store earthquakes array from data.features 
-        const response = data.features[0].properties
 
-        // forEach ES6 spread parse out; time, place, url, mag
-        const { time, place, url, mag } = response;
+        // List of objects.
+        var parsedEarthquakeData = [];
 
-        console.log("time: " + time);
-        console.log("place: " + place  );
-        console.log("url: " + url);
-        console.log("mag: " + mag);
+        // Earthquake constructor.
+        function Earthquake(time, place, url, mag) {
+            this.time = time;
+            this.place = place;	
+            this.url = url;
+            this.mag = mag;
+            //parsedEarthquakeData.push(this); // This works
+            this.pushToTheList = function() { 
+                parsedEarthquakeData.push(this);
+            }
+            this.pushToTheList(); // And so does this.
+        }
 
+        // Loop through each response i to parse time, place, url, mag, store in temp array
+        const respLength = data.features.length
+        for (let i = 0; i < respLength; i++) {    
+            // Declare var response to store earthquakes array from data.features 
+            const response = data.features[i].properties
 
-        // RESPONSE IN JSON:
-// {
-//     "type": "Feature",
-//     "properties": {
-//         "mag": 1.35,
-//         "place": "1km WNW of Pleasant Hill, CA",
-//         "time": 1571206815020,
-//         "updated": 1571212684169,
-//         "tz": -480,
-//         "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292715",
-//         "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=nc73292715&format=geojson",
-//         "felt": null,
-//         "cdi": null,
-//         "mmi": null,
-//         "alert": null,
-//         "status": "automatic",
-//         "tsunami": 0,
-//         "sig": 28,
-//         "net": "nc",
-//         "code": "73292715",
-//         "ids": ",nc73292715,",
-//         "sources": ",nc,",
-//         "types": ",geoserve,nearby-cities,origin,phase-data,scitech-link,",
-//         "nst": 20,
-//         "dmin": 0.07382,
-//         "rms": 0.05,
-//         "gap": 78,
-//         "magType": "md",
-//         "type": "earthquake",
-//         "title": "M 1.4 - 1km WNW of Pleasant Hill, CA"
-//     },
+            // ES6 destructuring to parse out; time, place, url, mag
+            const { time, place, url, mag } = response;
 
+            // push attributes to parsedEarthquakeData
+            new Earthquake(time, place, url, mag)
 
-
+        // check arrray against exisiting array in earthquakes db
+        // Admin notified, earthquake threshold met, mass SMS sent
+        };  console.log("parsedEarthquakeData: ");
+            console.log(parsedEarthquakeData);
     })
     .catch((err) => console.log("API call error") + err);
     
