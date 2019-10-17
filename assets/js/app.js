@@ -79,29 +79,34 @@ for (var i = 0; i < numberOfUsers; i++) {
 // Recursive function with time delay
 function getEarthquakeData() {
     console.log('getEarthquakeData')
+    
     // fetch call to API
     // search radius in km
     const radius = '100'
-    // url for API call
-    const url = `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=37.773972&longitude=-122.431297&maxradiuskm=${radius}&orderby=time`
+    const latitude = "37.773972"
+    const longitude = "-122.431297"
 
-    const response = fetch(url);
-console.log((response));
+    // API call to earthquake.usgs.gov
+    const url = `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=${latitude}&longitude=${longitude}&maxradiuskm=${radius}&orderby=time`
 
-    // Search lat/long, radius 100km, order by time:
-    // https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=37.773972&longitude=-122.431297&maxradiuskm=100&orderby=time
-    // setTimeout(() => getEarthquakeData(), 300000)//300000 = 5 minutes
-};
+    fetch(url)
+    .then((resp) => resp.json()) // Transform the data into json
+    .then(function(data) {
+        console.log(data.features[1])
+        
+        // Declare var response to store earthquakes array from data.features 
+        const response = data.features[0].properties
 
-getEarthquakeData();
+        // forEach ES6 spread parse out; time, place, url, mag
+        const { time, place, url, mag } = response;
+
+        console.log("time: " + time);
+        console.log("place: " + place  );
+        console.log("url: " + url);
+        console.log("mag: " + mag);
 
 
-
-// Date/time in ms.
-// Function to convert date/time
-
-// Parse out response objects; time, place, url, mag
-// RESPONSE IN JSON:
+        // RESPONSE IN JSON:
 // {
 //     "type": "Feature",
 //     "properties": {
@@ -132,6 +137,24 @@ getEarthquakeData();
 //         "type": "earthquake",
 //         "title": "M 1.4 - 1km WNW of Pleasant Hill, CA"
 //     },
+
+
+
+    })
+    .catch((err) => console.log("API call error") + err);
+    
+    // Search lat/long, radius 100km, order by time:
+    // https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=37.773972&longitude=-122.431297&maxradiuskm=100&orderby=time
+    
+    // setTimeout(() => getEarthquakeData(), 300000)//300000 = 5 minutes
+};
+
+getEarthquakeData();
+
+
+
+// Date/time in ms.
+// Function to convert date/time
 
 
 // Step 3
