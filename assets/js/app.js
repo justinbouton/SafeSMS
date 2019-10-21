@@ -51,6 +51,48 @@ users = [
     }
 ]
 
+
+// STEP 3
+
+// TEST EARTHQUAKE DATA
+earthquakeDb = [
+    {
+        "mag": 1.35,
+        "place": "1km WNW of Pleasant Hill, CA",
+        "time": 1571206815020,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292715",
+        "id": "nc73292715"
+    },
+    {
+        "mag": 1.11,
+        "place": "1km SW of Pleasant Hill, CA",
+        "time": 1571193421370,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292605",
+        "id": "nc73292605"
+    },
+    {
+        "mag": 3.38,
+        "place": "0km ESE of Pleasant Hill, CA",
+        "time": 1571191918530,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292585",
+        "id": "nc73292585"
+    },
+    {
+        "mag": 1.77,
+        "place": "1km NW of Pleasant Hill, CA",
+        "time": 1571152194360,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292260",
+        "id": "nc73292260"
+    },
+    {
+        "mag": 1.22,
+        "place": "4km NE of Fremont, CA",
+        "time": 1571141927400,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292215",
+        "id": "nc73292215"
+    }
+];
+
 // Dynamically create content forEach user.
 let numberOfUsers = users.length;
 
@@ -98,12 +140,6 @@ function getEarthquakeData() {
     .then((resp) => resp.json()) // Transform the data into json
     .then(function(data) {
 
-        // If earthquake exists in db or time now in ms" > five mins from time in reponse) {
-            //do nothing
-        // } else {
-            // push to earthquake db
-        // }
-
         // List of earthquake objects
         var parsedEarthquakeData = [];
 
@@ -116,7 +152,6 @@ function getEarthquakeData() {
             this.mag = mag;
             //parsedEarthquakeData.push(this); 
             this.pushToTheList = () => parsedEarthquakeData.push(this);
-
             this.pushToTheList();
         }
 
@@ -130,25 +165,42 @@ function getEarthquakeData() {
             // ES6 destructuring to parse out; time, place, url, mag
             const { time, place, url, mag } = response;
 
-            // push attributes to parsedEarthquakeData
-            new Earthquake(id, time, place, url, mag)
+            // Convert ms to date/time.
+            const dateTime = new Date(time); 
 
-        // check arrray against exisiting array in earthquakes db
+            // Push attributes to parsedEarthquakeData
+            new Earthquake(id, dateTime, place, url, mag)
+
+            // Check parsedEarthquakeData array against exisiting array in earthquakes db
+            // If parsedEarthquakeData doesn't exit in earthquake db add to earthquake db.
+
+            // if(JSON.stringify(parsedEarthquakeData)==JSON.stringify(earthquake.db)) {
+            //     console.log("True"); 
+            // } else {
+            //     console.log("False"); 
+            // }
+
+
+
+            // If earthquake exists in db or time now in ms > five mins from time of call) {
+                //do nothing
+            // } else {
+                // push to earthquake db
+            // }
+
+
         // Admin notified, earthquake threshold met, mass SMS sent
-        };  console.log("parsedEarthquakeData: ");
-            console.log(parsedEarthquakeData);
+        };  
+        console.log("parsedEarthquakeData: ");
+        console.log(parsedEarthquakeData);
     })
-    .catch((err) => console.log("API call error") + err);
+    .catch((err) => console.log("API call error - " + err));
     
     // setTimeout(() => getEarthquakeData(), 300000)//300000 = 5 minutes
 };
 
+// WORKING GET EARTHQUAKE DATA 
 getEarthquakeData();
-
-
-
-// Date/time in ms.
-// Function to convert date/time
 
 
 // Step 3
