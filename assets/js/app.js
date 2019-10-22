@@ -11,7 +11,7 @@ users = [
     },
     {
         first: "Joseph",
-        last: "Andrew",
+        last: "Andrews",
         phone: ""
     },
     {
@@ -180,6 +180,22 @@ function getEarthquakeData() {
             //     console.log("False"); 
             // }
 
+
+// TEST: display data for alerts
+    // Select main-content area append earthquake data
+    $('.alert-content').append( 
+        $(` 
+            <a target="_blank" href="${url}">
+                <div class="p-5 bd-highlight m-auto">
+                    <img src="assets/images/redLight.png" alt="status" height="15px">  
+                    <span class='place'>${id}</span>
+                    <span class='place'>${dateTime}</span>
+                    <span class='magnitude'>${mag}</span> 
+                    <span class='place'>${place}</span>
+                </div>
+            </a>
+        `)
+    ); 
 
 
             // If earthquake exists in db or time now in ms > five mins from time of call) {
