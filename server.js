@@ -23,7 +23,7 @@ app.use(express.static("public"));
 const routes = require("./controllers/safeSMS_controller.js");
 
 
-// TEMP disabled for safeSMS_controller // 
+// safeSMS_controller // 
 app.use(routes);
 
 // const router = express.Router();
@@ -57,8 +57,8 @@ app.use(routes);
 
 // // Server and port
 app.listen(PORT, () => {
-    console.log("\n Server listening on http://localhost:" + PORT, "\n");
-    console.log("CRTL C to stop server", "\n");
+    console.log("\n     Server listening on http://localhost:" + PORT);
+    console.log("\n     CRTL C to stop server", "\n");
 });
 
 

@@ -2,29 +2,31 @@ console.log("\n safeSMS_controller.js started \n");
 
 const express = require('express');
 const router = express.Router();
-const db = require("../config/connection");
-
-// const user = require("../models/safesms.js");
+const User = require("../config/connection");
+const Users = User
+// NOT NEEDED const user = require("../models/safesms.js");
 
 router.get("/", function (req, res) {
         console.log("Redirect to status page")
         res.redirect("status");
+        // connection
 });
+
 
 router.get("/status", function (req, res) {
     console.log("Render home page");
     // Query: In our database, go to the animals collection, then "find" everything
-    // db.users.find({}, function(err, found) {
-    //     // Log any errors if the server encounters one
-    //     if (err) {
-    //       console.log(err);
-    //     }
-    //     // Otherwise, send the result of this query to the browser
-    //     else {
-    //       res.json(found);
-    //     }
-    //   });
-    res.render("index");
+    Users.find({}, function(err, found) {
+        // Log any errors if the server encounters one
+        if (err) {
+          console.log(err);
+        }
+        // Otherwise, send the result of this query to the browser
+        else {
+          res.json(found);
+        }
+      });
+    // res.render("index");
 });
 
 router.get("/alerts", function (req, res) {

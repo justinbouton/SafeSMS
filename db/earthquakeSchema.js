@@ -1,12 +1,12 @@
-console.log("\n usersSchema.js started \n");
+console.log("\n earthquakeSchema.js started \n");
 
 //Require Mongoose
 const mongoose = require('mongoose');
 
 //Define a schema
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
+const earthquakeSchema = new Schema({
     firstName: String,
     lastName: String,
     email: String,
@@ -14,4 +14,4 @@ const userSchema = new Schema({
 });
 
 //Export function to create "SomeModel" model class
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Earthquake', earthquakeSchema);

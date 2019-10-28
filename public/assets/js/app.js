@@ -1,54 +1,55 @@
-console.log("\n app.js started \n");
+console.log("app.js started");
+const users = require('../../../db/users.js'); // WON'T WORK, client side. 
 
 // Pull user and earthquake data from MongoDB safesms
 // TEST USER ARRAY
-users = [
-    {
-        first: "Justin",
-        last: "Bouton",
-        phone: ""
-    },
-    {
-        first: "Joseph",
-        last: "Andrews",
-        phone: ""
-    },
-    {
-        first: "Michael",
-        last: "Triolo",
-        phone: ""
-    },
-    {
-        first: "Janice",
-        last: "Bouton",
-        phone: ""
-    },
-    {
-        first: "Daniel",
-        last: "Bouton",
-        phone: ""
-    },
-    {
-        first: "Nicole",
-        last: "Davis",
-        phone: ""
-    },
-    {
-        first: "Matthew",
-        last: "Bouton",
-        phone: ""
-    },
-    {
-        first: "David",
-        last: "Bouton",
-        phone: ""
-    },
-    {
-        first: "Caleb",
-        last: "Bouton",
-        phone: ""
-    }
-]
+// users = [
+//     {
+//         first: "Justin",
+//         last: "Bouton",
+//         phone: ""
+//     },
+//     {
+//         first: "Joseph",
+//         last: "Andrews",
+//         phone: ""
+//     },
+//     {
+//         first: "Michael",
+//         last: "Triolo",
+//         phone: ""
+//     },
+//     {
+//         first: "Janice",
+//         last: "Bouton",
+//         phone: ""
+//     },
+//     {
+//         first: "Daniel",
+//         last: "Bouton",
+//         phone: ""
+//     },
+//     {
+//         first: "Nicole",
+//         last: "Davis",
+//         phone: ""
+//     },
+//     {
+//         first: "Matthew",
+//         last: "Bouton",
+//         phone: ""
+//     },
+//     {
+//         first: "David",
+//         last: "Bouton",
+//         phone: ""
+//     },
+//     {
+//         first: "Caleb",
+//         last: "Bouton",
+//         phone: ""
+//     }
+// ]
 
 // TEST EARTHQUAKE DATA
 earthquake = [
@@ -169,6 +170,7 @@ function getEarthquakeData() {
 
             // Check parsedEarthquakeData array against exisiting array in earthquakes db
             // If parsedEarthquakeData doesn't exit in earthquake db add to earthquake db.
+            // Trigger sendAlert function to notify admin of the recent earthquake. Ask if the admin would like to notice all users. setTimeout to five minutes then automatically send the notice
 
             // if(JSON.stringify(parsedEarthquakeData)==JSON.stringify(earthquake.db)) {
             //     console.log("True"); 
