@@ -20,34 +20,34 @@ db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
 // WORKING
 // Each user in users array add to User db with User.create.
 // Convert to onClick function for when users are entered manually or csv is uploaded.
-// const userArrLength = users.length  
-// for (var i = 0; i < userArrLength; i++) {
+const userArrLength = users.length  
+for (var i = 0; i < userArrLength; i++) {
 
-//   const firstName = users[i].firstName 
-//   const lastName = users[i].lastName 
-//   const email = users[i].email 
-//   const phone = users[i].phone
+  const firstName = users[i].firstName 
+  const lastName = users[i].lastName 
+  const email = users[i].email 
+  const phone = users[i].phone
 
-// User.create({ firstName, lastName, email, phone }, function (err, user) {
-//     if (err) return handleError(err);
-//     // saved!
-//     console.log("\n\nUser created: \n\n" + user);
-//   });
-// };
+User.create({ firstName, lastName, email, phone }, function (err, user) {
+    if (err) return handleError(err);
+    // saved!
+    console.log("\n\nUser created: \n\n" + user);
+  });
+};
 
 
 
 
 // User.Find by lastName  // WORKING
-var nameBouton = "Bouton";
+// var nameBouton = "Bouton";
 
-function findUser(name) {
-    User.find({ "lastName": name }, 'firstName lastName', function (err, user) {
-        if (err) return handleError(err);
-            // 'user' contains the list of user that match the criteria.
-            console.log(`\nFound user: \n\n${user}`);
-    })
-};
+// function findUser(name) {
+//     User.find({ "lastName": name }, 'firstName lastName', function (err, user) {
+//         if (err) return handleError(err);
+//             // 'user' contains the list of user that match the criteria.
+//             console.log(`\nFound user: \n\n${user}`);
+//     })
+// };
 
 // findUser(nameBouton) // WORKING
 

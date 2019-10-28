@@ -1,5 +1,5 @@
 console.log("app.js started");
-const users = require('../../../db/users.js'); // WON'T WORK, client side. 
+// const users = require('../../../db/users.js'); // WON'T WORK, client side. 
 
 // Pull user and earthquake data from MongoDB safesms
 // TEST USER ARRAY
@@ -90,23 +90,24 @@ earthquake = [
     }
 ];
 
-// Dynamically create content forEach user.
-let numberOfUsers = users.length;
+// // MOVING to index.handlebars to pass "found" data.
+// // Dynamically create content forEach user.
+// let numberOfUsers = users.length;
 
-for (var i = 0; i < numberOfUsers; i++) {
-    // Select main-content area append userInfo
-    $('.main-content').append( 
-        $(` 
-            <a href="#">
-                <div class="p-5 bd-highlight m-auto">
-                    <img src="assets/images/redLight.png" alt="status" height="15px">  
-                    <span class='firstName'>${users[i].first}</span> 
-                    <span class='lastName'>${users[i].last}</span>
-                </div>
-            </a>
-        `)
-    ); 
-};
+// for (var i = 0; i < numberOfUsers; i++) {
+//     // Select main-content area append userInfo
+//     $('.main-content').append( 
+//         $(` 
+//             <a href="#">
+//                 <div class="p-5 bd-highlight m-auto">
+//                     <img src="assets/images/redLight.png" alt="status" height="15px">  
+//                     <span class='firstName'>${users[i].first}</span> 
+//                     <span class='lastName'>${users[i].last}</span>
+//                 </div>
+//             </a>
+//         `)
+//     ); 
+// };
 
 
 
