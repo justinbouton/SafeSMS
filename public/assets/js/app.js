@@ -1,5 +1,6 @@
-console.log("app.js started");
+$(document).ready(function() {
 
+console.log("app.js started");
 
 // Natral disaster trigger
 // Every five minutes call API to see if there has been an earthquake. If an earthquake of x magnitude capture that data to be displayed under earthquake history.
@@ -105,6 +106,48 @@ function getEarthquakeData() {
 getEarthquakeData();
 
 
-// Step 3
+
+}) // RUN AFTER DOM LOADS
+console.log("AFTER DOM")
+// Create on click function. If nav-item active toggle class "active", toggle class of nav-item to active when clicked.
+$(function() {
+
+    var page = window.location.pathname;
+    
+console.log("PAGE: " + page)
+    $('.nav-item').filter(function(){
+       return $(this).find('a').attr('href').indexOf(page) !== -1
+    }).addClass('active');
+  
+    $(".nav a").on("click", function() {
+      $(".nav").find(".active").removeClass("active");
+      $(this).parent().addClass("active");
+    });
+  });
+
+
+// const nav = $('.nav-item')
+
+// console.log("NAV: " + nav.length)
+
+// for (var i = 0; i < nav.length; i++) {
+//   nav[i].addEventListener("click", function() {
+//   var current = document.getElementsByClassName("active");
+//   current[0].className = current[0].className.replace(" active", "");
+//   this.className += " active";
+//   });
+// };
+
+
+// nav.click(function(){
+//     if (nav === "active") {
+//         // Toggle class active
+//         $('nav-item').toggleClass("active")
+//     } else {
+//         // Toggle class of current button to active
+//         $('nav-item').toggleClass("")
+//     };
+// });
+
 
 // SMS send receive
