@@ -1,9 +1,13 @@
 console.log("\n safeSMS_controller.js started \n");
 
+
 const express = require('express');
 const router = express.Router();
-const User = require("../config/connection");
-const Users = User 
+// Connection required to access db.
+const connection = require("../config/connection"); 
+const User = require('../db/usersSchema'); // WORKING!
+const Earthquake = require('../db/earthquakeSchema'); // Test
+
 
 router.get("/", function (req, res) {
         console.log("Redirect to status page")
@@ -13,10 +17,10 @@ router.get("/", function (req, res) {
 
 
 router.get("/status", function (req, res) {
-    console.log("Render home page");
+    console.log("Render Status 'home' page");
     // Query: In our database, go to the animals collection, then "find" everything
-    Users.find({ }, function(err, found) {
-        var data = found
+    User.find({ }, function(err, users) {
+        var data = users
         // Log any errors if the server encounters one
         if (err) {
           console.log(err);
@@ -28,15 +32,30 @@ router.get("/status", function (req, res) {
             res.render("index", {
                 data
             });
-            //   res.json(found);
+            //   res.json(users);
         }
         
     });
 });
 
 router.get("/alerts", function (req, res) {
-    console.log("Render alert page")
-    res.render("alerts");
+    console.log("Render Alerts page")
+    Earthquake.find({ }, function(err, earthquakes) {
+        var data = earthquakes
+        // Log any errors if the server encounters one
+        if (err) {
+          console.log(err);
+        }
+        // Otherwise, send the result of this query to the browser
+        else {
+            console.log("Reading from alert DB")
+        // Once the DB query completes
+            res.render("alerts", {
+                data
+            });
+            //   res.json(earthquakes);
+        } 
+    });
 });
 
 // router.get("/status", function (req, res) {

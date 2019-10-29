@@ -1,120 +1,11 @@
 console.log("app.js started");
-// const users = require('../../../db/users.js'); // WON'T WORK, client side. 
 
-// Pull user and earthquake data from MongoDB safesms
-// TEST USER ARRAY
-// users = [
-//     {
-//         first: "Justin",
-//         last: "Bouton",
-//         phone: ""
-//     },
-//     {
-//         first: "Joseph",
-//         last: "Andrews",
-//         phone: ""
-//     },
-//     {
-//         first: "Michael",
-//         last: "Triolo",
-//         phone: ""
-//     },
-//     {
-//         first: "Janice",
-//         last: "Bouton",
-//         phone: ""
-//     },
-//     {
-//         first: "Daniel",
-//         last: "Bouton",
-//         phone: ""
-//     },
-//     {
-//         first: "Nicole",
-//         last: "Davis",
-//         phone: ""
-//     },
-//     {
-//         first: "Matthew",
-//         last: "Bouton",
-//         phone: ""
-//     },
-//     {
-//         first: "David",
-//         last: "Bouton",
-//         phone: ""
-//     },
-//     {
-//         first: "Caleb",
-//         last: "Bouton",
-//         phone: ""
-//     }
-// ]
-
-// TEST EARTHQUAKE DATA
-earthquake = [
-    {
-        "mag": 1.35,
-        "place": "1km WNW of Pleasant Hill, CA",
-        "time": 1571206815020,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292715",
-        "id": "nc73292715"
-    },
-    {
-        "mag": 1.11,
-        "place": "1km SW of Pleasant Hill, CA",
-        "time": 1571193421370,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292605",
-        "id": "nc73292605"
-    },
-    {
-        "mag": 3.38,
-        "place": "0km ESE of Pleasant Hill, CA",
-        "time": 1571191918530,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292585",
-        "id": "nc73292585"
-    },
-    {
-        "mag": 1.77,
-        "place": "1km NW of Pleasant Hill, CA",
-        "time": 1571152194360,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292260",
-        "id": "nc73292260"
-    },
-    {
-        "mag": 1.22,
-        "place": "4km NE of Fremont, CA",
-        "time": 1571141927400,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73292215",
-        "id": "nc73292215"
-    }
-];
-
-// // MOVING to index.handlebars to pass "found" data.
-// // Dynamically create content forEach user.
-// let numberOfUsers = users.length;
-
-// for (var i = 0; i < numberOfUsers; i++) {
-//     // Select main-content area append userInfo
-//     $('.main-content').append( 
-//         $(` 
-//             <a href="#">
-//                 <div class="p-5 bd-highlight m-auto">
-//                     <img src="assets/images/redLight.png" alt="status" height="15px">  
-//                     <span class='firstName'>${users[i].first}</span> 
-//                     <span class='lastName'>${users[i].last}</span>
-//                 </div>
-//             </a>
-//         `)
-//     ); 
-// };
-
-
-
-// Step 2
 
 // Natral disaster trigger
 // Every five minutes call API to see if there has been an earthquake. If an earthquake of x magnitude capture that data to be displayed under earthquake history.
+
+// List of earthquake objects
+var parsedEarthquakeData = [];
 
 // Recursive function with time delay
 function getEarthquakeData() {
@@ -137,9 +28,6 @@ function getEarthquakeData() {
     fetch(url)
     .then((resp) => resp.json()) // Transform the data into json
     .then(function(data) {
-
-        // List of earthquake objects
-        var parsedEarthquakeData = [];
 
         // Earthquake constructor
         function Earthquake(id, time, place, url, mag) {
@@ -182,18 +70,18 @@ function getEarthquakeData() {
 
 // TEST: display data for alerts
     // Select main-content area append earthquake data
-    $('.alert-content').append( 
-        $(` 
-            <a target="_blank" href="${url}">
-                <div earthquake-data="${id}" class="p-5 bd-highlight m-auto">
-                    <img src="assets/images/redLight.png" alt="status" height="15px">  
-                    <span class='place'>${dateTime}</span>
-                    <span class='magnitude'>${mag}</span> 
-                    <span class='place'>${place}</span>
-                </div>
-            </a>
-        `)
-    ); 
+    // $('.alert-content').append( 
+    //     $(` 
+    //         <a target="_blank" href="${url}">
+    //             <div earthquake-data="${id}" class="p-5 bd-highlight m-auto">
+    //                 <img src="assets/images/redLight.png" alt="status" height="15px">  
+    //                 <span class='place'>${dateTime}</span>
+    //                 <span class='magnitude'>${mag}</span> 
+    //                 <span class='place'>${place}</span>
+    //             </div>
+    //         </a>
+    //     `)
+    // ); 
 
 
             // If earthquake exists in db or time now in ms > five mins from time of call) {

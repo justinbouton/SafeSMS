@@ -1,6 +1,3 @@
-const User = require('../db/usersSchema'); // WORKING!
-const Earthquake = require('../db/earthquakeSchema'); // Test
-const users = require('../db/users'); // WORKING!
 var connection;
 
 //Set up mongoose connection
@@ -17,25 +14,48 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
 
 
-// WORKING
-// Each user in users array add to User db with User.create.
-// Convert to onClick function for when users are entered manually or csv is uploaded.
-const userArrLength = users.length  
-for (var i = 0; i < userArrLength; i++) {
 
-  const firstName = users[i].firstName 
-  const lastName = users[i].lastName 
-  const email = users[i].email 
-  const phone = users[i].phone
+// // WORKING uncomment to load static quake data.
 
-User.create({ firstName, lastName, email, phone }, function (err, user) {
-    if (err) return handleError(err);
-    // saved!
-    console.log("\n\nUser created: \n\n" + user);
-  });
-};
+// const Earthquake = require('../db/earthquakeSchema'); // Test
+// const earthquake = require('../db/earthquake')
+// const userArrLength = earthquake.length  
+
+// for (var i = 0; i < userArrLength; i++) {
+
+//   const id = earthquake[i].id 
+//   const time = earthquake[i].time 
+//   const place = earthquake[i].place 
+//   const url = earthquake[i].url
+//   const mag = earthquake[i].mag
+
+// Earthquake.create({ id, time, place, url, mag }, function (err, earthquake) {
+//     if (err) return handleError(err);
+//     // saved!
+//     console.log("\n\nUser entry to Earthquake DB: \n\n" + earthquake);
+//   });
+// };
 
 
+
+// // WORKING uncomment to load static user data.
+
+// const Users = require('../db/earthquakeSchema'); // Test
+// const users = require('../db/users');
+// const userArrLength = users.length  
+// for (var i = 0; i < userArrLength; i++) {
+
+//   const firstName = users[i].firstName 
+//   const lastName = users[i].lastName 
+//   const email = users[i].email 
+//   const phone = users[i].phone
+
+// User.create({ firstName, lastName, email, phone }, function (err, user) {
+//     if (err) return handleError(err);
+//     // saved!
+//     console.log("\n\nUser created: \n\n" + user);
+//   });
+// };
 
 
 // User.Find by lastName  // WORKING
@@ -51,5 +71,5 @@ User.create({ firstName, lastName, email, phone }, function (err, user) {
 
 // findUser(nameBouton) // WORKING
 
-// Export for ./orm.js temp directly to safeSMS_controller
-module.exports = User;
+// Export to safeSMS_controller
+module.exports = connection;

@@ -26,6 +26,13 @@ const routes = require("./controllers/safeSMS_controller.js");
 // safeSMS_controller // 
 app.use(routes);
 
+
+
+
+
+
+
+
 // const router = express.Router();
 
 // router.get("/", function (req, res) {

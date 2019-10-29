@@ -7,10 +7,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const earthquakeSchema = new Schema({
-    firstName: String,
-    lastName: String,
-    email: String,
-    phone: Number
+    id: String,
+    time: String,
+    place: String,
+    url: String,
+    mag: Number
 });
 
 //Export function to create "SomeModel" model class
