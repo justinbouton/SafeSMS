@@ -3,6 +3,9 @@ console.log("\n \n server.js started \n");
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8080;
+const routes = require("./controllers/safesms_controller.js");
+const exphbs = require("express-handlebars")
+
 // const bodyParser = require("body-parse");
 // const session = require("express-session");
 // const passport = require("passport");
@@ -12,55 +15,14 @@ const PORT = process.env.PORT || 8080;
 // Set handlebars
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-const exphbs = require("express-handlebars")
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //Serve public folder
 app.use(express.static("public"));
-const routes = require("./controllers/safeSMS_controller.js");
 
-
-// safeSMS_controller // 
+// safesms_controller.js // 
 app.use(routes);
-
-
-
-
-
-
-
-
-// const router = express.Router();
-
-// router.get("/", function (req, res) {
-//     console.log("Redirect to status page")
-//     res.redirect("status");
-// });
-
-// router.get("/status", function (req, res) {
-// console.log("Render home page");
-// // Query: In our database, go to the animals collection, then "find" everything
-// db.users.find({}, function(err, found) {
-//     // Log any errors if the server encounters one
-//     if (err) {
-//       console.log(err);
-//     }
-//     // Otherwise, send the result of this query to the browser
-//     else {
-//         console.log(found);
-//       res.json(found);
-//     }
-//   });
-// // res.render("index");
-// });
-
-// router.get("/alerts", function (req, res) {
-// console.log("Render alert page")
-// res.render("alerts");
-// });
 
 // // Server and port
 app.listen(PORT, () => {

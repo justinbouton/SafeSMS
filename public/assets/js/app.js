@@ -1,5 +1,3 @@
-$(document).ready(function() {
-
 console.log("app.js started");
 
 // Natral disaster trigger
@@ -105,16 +103,10 @@ function getEarthquakeData() {
 // WORKING GET EARTHQUAKE DATA 
 getEarthquakeData();
 
-
-
-}) // RUN AFTER DOM LOADS
-console.log("AFTER DOM")
 // Create on click function. If nav-item active toggle class "active", toggle class of nav-item to active when clicked.
 $(function() {
-
     var page = window.location.pathname;
     
-console.log("PAGE: " + page)
     $('.nav-item').filter(function(){
        return $(this).find('a').attr('href').indexOf(page) !== -1
     }).addClass('active');
@@ -123,7 +115,7 @@ console.log("PAGE: " + page)
       $(".nav").find(".active").removeClass("active");
       $(this).parent().addClass("active");
     });
-  });
+});
 
 
 // const nav = $('.nav-item')

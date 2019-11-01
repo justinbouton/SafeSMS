@@ -18,7 +18,7 @@ db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
 // // WORKING uncomment to load static quake data.
 
 // const Earthquake = require('../db/earthquakeSchema'); // Test
-// const earthquake = require('../db/earthquake')
+// const earthquake = require('../db/earthquakeData')
 // const userArrLength = earthquake.length  
 
 // for (var i = 0; i < userArrLength; i++) {
@@ -41,7 +41,7 @@ db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
 // // WORKING uncomment to load static user data.
 
 // const Users = require('../db/earthquakeSchema'); // Test
-// const users = require('../db/users');
+// const users = require('../db/usersData');
 // const userArrLength = users.length  
 // for (var i = 0; i < userArrLength; i++) {
 
