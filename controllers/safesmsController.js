@@ -1,49 +1,34 @@
-console.log("\n safesms_controller.js started \n");
+console.log("\n safesmsController.js started");
 
 
 const express = require('express');
 const router = express.Router();
 
-// REMOVE AFTER TEST
 // Connection required to access db.
 const connection = require("../config/connection"); // DB
 
 // TODO verify user login
 
 // API route controller
-const userController = require('../controllers/api/userController');
-const earthquakeController = require('../controllers/api/earthquakeController');
-const messagingController = require('../controllers/api/messagingController');
+const userController = require('./api/userController');
+const earthquakeController = require('./api/earthquakeController');
+const messagingController = require('./api/messagingController');
 
 
 router.get("/", function (req, res) {
-    console.log("Redirect to status page")
+    console.log("Redirect to home page")
     res.redirect("status");
 });
 
 
 router.get("/status", userController.getUsers);
+router.post("/status", userController.createUser);
 router.get("/alerts", earthquakeController.getEarthquakes);
 // router.get("/messaging", messagingController.getMessages);
 
 router.get("/messaging", function (req, res) {
     console.log("Render Messaging page")
-    // Messages.find({ }, function(err, earthquakes) {
-    //     var data = messages
-    //     // Log any errors if the server encounters one
-    //     if (err) {
-    //       console.log(err);
-    //     }
-    //     // Otherwise, send the result of this query to the browser
-    //     else {
-    //         console.log("Reading from messaging DB")
-    //     // Once the DB query completes
-    //         res.render("alerts", {
-    //             data
-    //         });
-              res.render("messaging");
-        // } 
-    // });
+    res.render("messaging");
 });
 
 // router.post("/burgers/create", function (req, res) {

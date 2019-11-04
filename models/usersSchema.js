@@ -1,4 +1,4 @@
-console.log("\n usersSchema.js started \n");
+console.log("\n usersSchema.js started");
 
 //Require Mongoose
 const mongoose = require('mongoose');

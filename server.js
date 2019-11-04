@@ -3,7 +3,7 @@ console.log("\n \n server.js started \n");
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8080;
-const routes = require("./controllers/safesms_controller.js");
+const routes = require("./controllers/safesmsController.js");
 const exphbs = require("express-handlebars")
 
 // const bodyParser = require("body-parse");

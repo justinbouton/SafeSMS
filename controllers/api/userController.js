@@ -1,21 +1,19 @@
-const User = require('../../models/usersSchema');
+console.log("\n userController.js started");
 
+const User = require('../../models/usersSchema');
 
 const getUsers = async (req, res, next) => {
     try {
 
+        console.log("Retreiving users from DB")
+
         let users = await User.find({});
 
         if (users.length > 0) {
-            console.log("Rendering status page")
+            console.log("Render Status page")
             return res
                 .status(200)
                 .render("status", { users })
-
-                // return res.status(200).json({
-            //     'message': 'users fetched successfully',
-            //     'data': users
-            // });
         }
 
         return res.status(404).json({

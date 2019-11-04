@@ -1,5 +1,6 @@
-const Earthquake = require('../../models/earthquakeSchema');
+console.log("\n earthquakeController.js started");
 
+const Earthquake = require('../../models/earthquakeSchema');
 
 const getEarthquakes = async (req, res, next) => {
     try {
@@ -7,15 +8,10 @@ const getEarthquakes = async (req, res, next) => {
         let earthquakes = await Earthquake.find({});
 
         if (earthquakes.length > 0) {
-            console.log("Rendering earthquake page")
+            console.log("Render Alerts page")
             return res
                 .status(200)
                 .render("alerts", { earthquakes })
-
-                // return res.status(200).json({
-            //     'message': 'earthquakes fetched successfully',
-            //     'data': earthquakes
-            // });
         }
 
         return res.status(404).json({

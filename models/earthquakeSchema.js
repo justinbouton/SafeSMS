@@ -1,4 +1,4 @@
-console.log("\n earthquakeSchema.js started \n");
+console.log("\n earthquakeSchema.js started");
 
 //Require Mongoose
 const mongoose = require('mongoose');

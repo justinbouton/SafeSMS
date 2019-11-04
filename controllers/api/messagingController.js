@@ -1,5 +1,6 @@
-const Messaging = require('../../models/messagingSchema');
+console.log("\n messagingController.js started");
 
+const Messaging = require('../../models/messagingSchema');
 
 const getMessagings = async (req, res, next) => {
     try {
