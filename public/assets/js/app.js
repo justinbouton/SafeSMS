@@ -116,30 +116,3 @@ $(function() {
       $(this).parent().addClass("active");
     });
 });
-
-
-// const nav = $('.nav-item')
-
-// console.log("NAV: " + nav.length)
-
-// for (var i = 0; i < nav.length; i++) {
-//   nav[i].addEventListener("click", function() {
-//   var current = document.getElementsByClassName("active");
-//   current[0].className = current[0].className.replace(" active", "");
-//   this.className += " active";
-//   });
-// };
-
-
-// nav.click(function(){
-//     if (nav === "active") {
-//         // Toggle class active
-//         $('nav-item').toggleClass("active")
-//     } else {
-//         // Toggle class of current button to active
-//         $('nav-item').toggleClass("")
-//     };
-// });
-
-
-// SMS send receive

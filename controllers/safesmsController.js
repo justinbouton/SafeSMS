@@ -17,14 +17,17 @@ const messagingController = require('./api/messagingController');
 
 router.get("/", function (req, res) {
     console.log("Redirect to home page")
-    res.redirect("status");
+    res.redirect("users");
 });
 
 
-router.get("/status", userController.getUsers);
-router.post("/status", userController.createUser);
+router.get("/users", userController.getUsers);
+router.post("/users", userController.createUser);
 router.get("/alerts", earthquakeController.getEarthquakes);
 // router.get("/messaging", messagingController.getMessages);
+
+router.get("/users/edit", earthquakeController.getEarthquakes);
+
 
 router.get("/messaging", function (req, res) {
     console.log("Render Messaging page")

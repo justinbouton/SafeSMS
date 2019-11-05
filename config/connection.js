@@ -17,7 +17,7 @@ db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
 
 // // WORKING uncomment to load static quake data.
 
-// const Earthquake = require('../db/earthquakeSchema'); // Test
+// const Earthquake = require('../models/earthquakeSchema'); // Test
 // const earthquake = require('../db/earthquakeData')
 // const userArrLength = earthquake.length  
 
@@ -40,17 +40,19 @@ db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
 
 // // WORKING uncomment to load static user data.
 
-// const Users = require('../db/earthquakeSchema'); // Test
+// const User = require('../models/usersSchema'); 
 // const users = require('../db/usersData');
 // const userArrLength = users.length  
 // for (var i = 0; i < userArrLength; i++) {
 
+//   const created = users[i].created 
+//   const modified = users[i].modified 
 //   const firstName = users[i].firstName 
 //   const lastName = users[i].lastName 
 //   const email = users[i].email 
 //   const phone = users[i].phone
 
-// User.create({ firstName, lastName, email, phone }, function (err, user) {
+// User.create({ created, modified, firstName, lastName, email, phone }, function (err, user) {
 //     if (err) return handleError(err);
 //     // saved!
 //     console.log("\n\nUser created: \n\n" + user);

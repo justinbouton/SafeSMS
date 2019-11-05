@@ -5,15 +5,16 @@ const User = require('../../models/usersSchema');
 const getUsers = async (req, res, next) => {
     try {
 
-        console.log("Retreiving users from DB")
-
         let users = await User.find({});
-
+console.log("Retreiving users from DB")
         if (users.length > 0) {
-            console.log("Render Status page")
+            console.log("Render Users page")
             return res
                 .status(200)
-                .render("status", { users })
+                .render("users", { users })
+        } else if (users.length <= 0) {
+            console.log("No users found, redirecting to /users/edit")
+            return res.redirect("/users/edit")
         }
 
         return res.status(404).json({
@@ -56,9 +57,12 @@ const createUser = async (req, res, next) => {
     try {
 
         const {
-            name,
+            firstName,
+            lastName,
             email
-        } = req.body;
+        } = req.body; // TEST
+
+        const name = firstName && lastName; // TEST
 
         if (name === undefined || name === '') {
             return res.status(422).json({
