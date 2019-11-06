@@ -54,6 +54,7 @@ const getUserById = async (req, res, next) => {
 }
 
 const createUser = async (req, res, next) => {
+
     try {        
         const {
             created,
@@ -62,9 +63,9 @@ const createUser = async (req, res, next) => {
             lastName,
             email,
             phone
-        } = req.body; // Works once.
+        } = req.body;
 
-        const name = firstName && lastName; // WORKING
+        const name = firstName && lastName;
 
         if (name === undefined || name === '') {
             return res.status(422).json({
@@ -107,10 +108,13 @@ const createUser = async (req, res, next) => {
         let newUser = await User.create(temp);
 
         if (newUser) {
-            return res.status(201).json({
+            console.log("User created successfully:")
+            console.log(temp)
+            return res
+                .status(201).json({
                 'message': 'user created successfully',
                 'data': newUser
-            });
+                })
         } else {
             throw new Error('something went worng');
         }

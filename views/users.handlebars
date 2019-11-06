@@ -2,37 +2,74 @@
     <div class="d-flex flex-wrap main-content">
         <!-- users data will append here -->
         <!-- Dynamically create content forEach user by appending userInfo to  main-content. -->
-        <h4 class="p-2">Welcome to the users page! Please add new users below.</h4>
-        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-
-        <form class="form-inline p-2 my-2 my-lg-0" name="userForm" method="post">
-            <input class="form-control mr-sm-2" id="input-width" type="text" placeholder="First Name">
-            <input class="form-control mr-sm-2" id="input-width" type="text" placeholder="Last Name">
-            <input class="form-control mr-sm-2" id="input-width" type="email" placeholder="Email Address">
-            <input class="form-control mr-sm-2" id="input-width" type="tel" placeholder="Phone Number">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add</button>
+        <h5 class="p-2">Welcome to the users page! Please add new users below.</h5>
+        <form class="form-inline p-2 my-2 my-lg-0" name="newUser" method="post" action="/users/create">
+            <input class="form-control mr-sm-2 addUser firstName" id="input-width" type="text" placeholder="First Name">
+            <input class="form-control mr-sm-2 addUser lastName" id="input-width" type="text" placeholder="Last Name">
+            <input class="form-control mr-sm-2 addUser email" id="input-width" type="email" placeholder="Email Address">
+            <input class="form-control mr-sm-2 addUser phone" id="input-width" type="tel" placeholder="Phone Number">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="btnAddUser" onclick="addUser(this.form)" type="button" value="Submit form">Add</button>
         </form>
-        {{!-- {{#if users}} --}}
+
         {{#each users}}
-        <a href="#">
-            <div class="p-5 bd-highlight m-auto">
-                <img src="assets/images/redLight.png" alt="status" height="15px">
-                <span class='firstName'>{{firstName}}</span>
-                <span class='lastName'>{{lastName}}</span>
-            </div>
-        </a>
+            <a href="#">
+                <div class="p-5 bd-highlight m-auto">
+                    <img src="assets/images/redLight.png" alt="status" height="15px">
+                    <span class='firstName'>{{firstName}}</span>
+                    <span class='lastName'>{{lastName}}</span>
+                </div>
+            </a>
         {{/each}}
 
-        {{!-- {{else}}
-        <h3 class="p-2">Welcome to the users page! Please add new users below.</h3>
-        <form class="form-inline p-2 my-2 my-lg-0">
-            <input class="form-control mr-sm-2" id="input-width" type="search" placeholder="First Name">
-            <input class="form-control mr-sm-2" id="input-width" type="search" placeholder="Last Name">
-            <input class="form-control mr-sm-2" id="input-width" type="search" placeholder="Email Address">
-            <input class="form-control mr-sm-2" id="input-width" type="search" placeholder="Phone Number">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add</button>
-        </form>
-        {{/if}} --}}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
+        <script>
+            // Add button onSubmit(), validate fields, capture values, wrap into JSON, post newUser to /users/create.
+
+function addUser(form) {
+  event.preventDefault();
+
+  // Super basic validation - increase errorCount variable if any fields are blank
+  var errorCount = 0;
+  $('.addUser').each(function(index, val) {
+    if($(this).val() === '') { errorCount++; }
+  });
+
+  // Check and make sure errorCount's still at zero
+  if(errorCount === 0) {
+
+    // If it is, compile all user info into one object
+    var newUser = {
+      'firstName': $('.firstName').val(),
+      'lastName': $('.lastName').val(),
+      'email': $('.email').val(),
+      'phone': $('.phone').val()
+    }
+
+console.log(newUser)
+
+    // Use AJAX to post the object to our adduser service
+    $.ajax({
+      type: 'POST',
+      data: newUser,
+      url: '/users/create',
+      dataType: 'JSON'
+    }).done(function( response ) {
+
+console.log(response)
+
+window.location.reload()
+
+    });
+  }
+  else {
+    // If errorCount is more than 0, error out
+    alert('Please fill in all fields');
+    return false;
+  }
+};
+
+
+        </script>
     </div>
 </div>

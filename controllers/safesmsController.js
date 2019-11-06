@@ -22,13 +22,9 @@ router.get("/", function (req, res) {
 
 
 router.get("/users", userController.getUsers);
-router.post("/users", userController.createUser);
+router.post("/users/create", userController.createUser);
 router.get("/alerts", earthquakeController.getEarthquakes);
 // router.get("/messaging", messagingController.getMessages);
-
-router.get("/users/edit", function (req, res) {
-    console.log("Hit /users/edit")
-});
 
 
 router.get("/messaging", function (req, res) {

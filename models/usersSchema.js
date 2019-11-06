@@ -8,7 +8,7 @@ var Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     created: Date,
-    modified: Date,
+    modified: {type: Date, default: Date.now},
     firstName: String,
     lastName: String,
     email: String,
