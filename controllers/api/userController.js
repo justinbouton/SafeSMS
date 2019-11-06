@@ -1,4 +1,4 @@
-console.log("\n userController.js started");
+// console.log("\n userController.js started");
 
 const User = require('../../models/usersSchema');
 
@@ -13,8 +13,8 @@ console.log("Retreive users from DB")
                 .status(200)
                 .render("users", { users })
         } else if (users.length <= 0) {
-            console.log("No users found, redirecting to /users/edit")
-            return res.redirect("/users/edit")
+            console.log("No users found")
+            return res.render("users")
         }
 
         return res.status(404).json({

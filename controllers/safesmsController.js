@@ -1,4 +1,4 @@
-console.log("\n safesmsController.js started");
+// console.log("\n safesmsController.js started");
 
 
 const express = require('express');
@@ -26,7 +26,9 @@ router.post("/users", userController.createUser);
 router.get("/alerts", earthquakeController.getEarthquakes);
 // router.get("/messaging", messagingController.getMessages);
 
-router.get("/users/edit", earthquakeController.getEarthquakes);
+router.get("/users/edit", function (req, res) {
+    console.log("Hit /users/edit")
+});
 
 
 router.get("/messaging", function (req, res) {

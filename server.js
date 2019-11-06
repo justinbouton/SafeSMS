@@ -1,4 +1,4 @@
-console.log("\n \n server.js started \n");
+// console.log("\n \n server.js started \n");
 
 const express = require("express");
 const app = express();

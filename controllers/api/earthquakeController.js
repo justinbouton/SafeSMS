@@ -1,4 +1,4 @@
-console.log("\n earthquakeController.js started");
+// console.log("\n earthquakeController.js started");
 
 const Earthquake = require('../../models/earthquakeSchema');
 

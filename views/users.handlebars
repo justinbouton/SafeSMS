@@ -1,16 +1,38 @@
 <div class="container mt-3 bg-light border rounded">
     <div class="d-flex flex-wrap main-content">
-    <!-- users data will append here -->
-    <!-- Dynamically create content forEach user by appending userInfo to  main-content. -->
+        <!-- users data will append here -->
+        <!-- Dynamically create content forEach user by appending userInfo to  main-content. -->
+        <h4 class="p-2">Welcome to the users page! Please add new users below.</h4>
+        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
 
+        <form class="form-inline p-2 my-2 my-lg-0" name="userForm" method="post">
+            <input class="form-control mr-sm-2" id="input-width" type="text" placeholder="First Name">
+            <input class="form-control mr-sm-2" id="input-width" type="text" placeholder="Last Name">
+            <input class="form-control mr-sm-2" id="input-width" type="email" placeholder="Email Address">
+            <input class="form-control mr-sm-2" id="input-width" type="tel" placeholder="Phone Number">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add</button>
+        </form>
+        {{!-- {{#if users}} --}}
         {{#each users}}
-            <a href="#">
-                <div class="p-5 bd-highlight m-auto">
-                    <img src="assets/images/redLight.png" alt="status" height="15px">  
-                    <span class='firstName'>{{firstName}}</span> 
-                    <span class='lastName'>{{lastName}}</span>
-                </div>
-            </a>
+        <a href="#">
+            <div class="p-5 bd-highlight m-auto">
+                <img src="assets/images/redLight.png" alt="status" height="15px">
+                <span class='firstName'>{{firstName}}</span>
+                <span class='lastName'>{{lastName}}</span>
+            </div>
+        </a>
         {{/each}}
+
+        {{!-- {{else}}
+        <h3 class="p-2">Welcome to the users page! Please add new users below.</h3>
+        <form class="form-inline p-2 my-2 my-lg-0">
+            <input class="form-control mr-sm-2" id="input-width" type="search" placeholder="First Name">
+            <input class="form-control mr-sm-2" id="input-width" type="search" placeholder="Last Name">
+            <input class="form-control mr-sm-2" id="input-width" type="search" placeholder="Email Address">
+            <input class="form-control mr-sm-2" id="input-width" type="search" placeholder="Phone Number">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add</button>
+        </form>
+        {{/if}} --}}
+
     </div>
 </div>

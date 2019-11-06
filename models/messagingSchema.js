@@ -1,4 +1,4 @@
-console.log("\n messagingSchema.js started \n");
+// console.log("\n messagingSchema.js started \n");
 
 //Require Mongoose
 const mongoose = require('mongoose');
