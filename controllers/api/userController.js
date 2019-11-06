@@ -6,7 +6,7 @@ const getUsers = async (req, res, next) => {
     try {
 
         let users = await User.find({});
-console.log("Retreiving users from DB")
+console.log("Retreive users from DB")
         if (users.length > 0) {
             console.log("Render Users page")
             return res
@@ -54,15 +54,17 @@ const getUserById = async (req, res, next) => {
 }
 
 const createUser = async (req, res, next) => {
-    try {
-
+    try {        
         const {
+            created,
+            modified,
             firstName,
             lastName,
-            email
-        } = req.body; // TEST
+            email,
+            phone
+        } = req.body; // Works once.
 
-        const name = firstName && lastName; // TEST
+        const name = firstName && lastName; // WORKING
 
         if (name === undefined || name === '') {
             return res.status(422).json({
@@ -94,8 +96,12 @@ const createUser = async (req, res, next) => {
         }
 
         const temp = {
-            name: name,
-            email: email
+            created: created,
+            modified: modified,
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            phone: phone
         }
 
         let newUser = await User.create(temp);
@@ -111,7 +117,7 @@ const createUser = async (req, res, next) => {
     } catch (error) {
         return res.status(500).json({
             'code': 'SERVER_ERROR',
-            'description': 'something went wrong, Please try again'
+            'description': 'something went wrong, Please try again. ERROR: ' + error
         });
     }
 }
