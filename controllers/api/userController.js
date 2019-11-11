@@ -31,6 +31,8 @@ console.log("Retreive users from DB")
 
 const getUserById = async (req, res, next) => {
     try {
+        console.log("getUserById")
+        console.log(req.params.id)
         let user = await User.findById(req.params.id);
         if (user) {
             return res.status(200).json({

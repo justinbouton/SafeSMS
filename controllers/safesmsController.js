@@ -23,6 +23,8 @@ router.get("/", function (req, res) {
 
 router.get("/users", userController.getUsers);
 router.post("/users/create", userController.createUser);
+router.get("/users/:id", userController.getUserById);
+
 router.get("/alerts", earthquakeController.getEarthquakes);
 // router.get("/messaging", messagingController.getMessages);
 
@@ -32,8 +34,8 @@ router.get("/messaging", function (req, res) {
     res.render("messaging");
 });
 
-router.get("/error404", function (req, res) {
-    console.log("Error 404");
+router.get("/err404", function (req, res) {
+    console.log("error 404");
     res.render("error404");
 });
 

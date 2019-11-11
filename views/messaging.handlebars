@@ -1,15 +1,7 @@
 <div class="container mt-3 bg-light border rounded">
-    <div class="d-flex flex-wrap alert-content">
-        <!-- earthquake data will append here -->
-        {{#each data}}
-            <a target="_blank" href="{{url}}">
-                <div earthquake-data="{{id}}" class="p-5 bd-highlight m-auto">
-                    <img src="assets/images/redLight.png" alt="status" height="15px">  
-                    <span class='p-2 font-weight-bold time'></span>{{time}}
-                    <span class='p-2 font-weight-bold magnitude'>Mag:</span>{{mag}}
-                    <span class='p-2 font-weight-bold place'>Location:</span>{{place}}
-                </div>
-            </a>
-        {{/each}}
+    <div class="d-flex flex-wrap">
+
+        {{!-- Do I need a messaging tab? --}}
+       
     </div>
 </div>
