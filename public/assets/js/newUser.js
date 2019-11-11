@@ -1,0 +1,57 @@
+// Add button onSubmit(), validate fields, capture values, wrap into JSON, post newUser to /users/create.
+function addUser(form) {
+console.log("addUser clicked")
+    event.preventDefault();
+  
+    // Super basic validation - increase errorCount variable if any fields are blank
+
+    var errorCount = 0;
+    $('.addUser').each(function(index, val) {
+      if($(this).val() === '') { 
+          errorCount++; 
+          // toggle this.class red border
+          console.log(this)
+          this.className = "redBorder";
+        } else {
+            this.classList.remove("redBorder")
+        }
+    });
+console.log("errorCount: " + errorCount);
+
+  
+    // Check and make sure errorCount's still at zero
+    if(errorCount === 0) {
+  
+      // If it is, compile all user info into one object
+      var newUser = {
+        'created': Date.now,
+        'modified': Date.now,
+        'firstName': $('.firstName').val(),
+        'lastName': $('.lastName').val(),
+        'email': $('.email').val(),
+        'phone': $('.phone').val()
+      }
+  
+  console.log(newUser)
+  
+      // Use AJAX to post the object to our newUser service
+      $.ajax({
+        type: 'POST',
+        data: newUser,
+        url: '/users/create',
+        dataType: 'JSON'
+      }).done(function( response ) {
+  
+  console.log(response)
+  
+  // Reloads the current page
+  window.location.reload()
+  
+      });
+    }
+    else {
+      // If errorCount is more than 0, error out
+      alert('Please fill in all fields');
+      return false;
+    }
+  };

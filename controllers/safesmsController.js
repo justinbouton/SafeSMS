@@ -28,8 +28,13 @@ router.get("/alerts", earthquakeController.getEarthquakes);
 
 
 router.get("/messaging", function (req, res) {
-    console.log("Render Messaging page")
+    console.log("Render Messaging page");
     res.render("messaging");
+});
+
+router.get("/error404", function (req, res) {
+    console.log("Error 404");
+    res.render("error404");
 });
 
 // router.post("/burgers/create", function (req, res) {

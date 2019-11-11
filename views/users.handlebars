@@ -20,56 +20,6 @@
                 </div>
             </a>
         {{/each}}
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-        <script>
-            // Add button onSubmit(), validate fields, capture values, wrap into JSON, post newUser to /users/create.
-
-function addUser(form) {
-  event.preventDefault();
-
-  // Super basic validation - increase errorCount variable if any fields are blank
-  var errorCount = 0;
-  $('.addUser').each(function(index, val) {
-    if($(this).val() === '') { errorCount++; }
-  });
-
-  // Check and make sure errorCount's still at zero
-  if(errorCount === 0) {
-
-    // If it is, compile all user info into one object
-    var newUser = {
-      'firstName': $('.firstName').val(),
-      'lastName': $('.lastName').val(),
-      'email': $('.email').val(),
-      'phone': $('.phone').val()
-    }
-
-console.log(newUser)
-
-    // Use AJAX to post the object to our adduser service
-    $.ajax({
-      type: 'POST',
-      data: newUser,
-      url: '/users/create',
-      dataType: 'JSON'
-    }).done(function( response ) {
-
-console.log(response)
-
-window.location.reload()
-
-    });
-  }
-  else {
-    // If errorCount is more than 0, error out
-    alert('Please fill in all fields');
-    return false;
-  }
-};
-
-
-        </script>
+        {{!-- See newUser.js for adding new users. --}}
     </div>
 </div>
