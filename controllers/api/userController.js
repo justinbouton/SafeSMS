@@ -31,14 +31,14 @@ console.log("Retreive users from DB")
 
 const getUserById = async (req, res, next) => {
     try {
-        console.log("getUserById")
-        console.log(req.params.id)
+        console.log("getUserById: " + req.params.id)
         let user = await User.findById(req.params.id);
         if (user) {
-            return res.status(200).json({
-                'message': `user with id ${req.params.id} fetched successfully`,
-                'data': user
-            });
+            return res
+                .status(200)
+                .render("usersMessaging")
+                // 'message': `user with id ${req.params.id} fetched successfully`,
+                // 'data': user
         }
 
         return res.status(404).json({
