@@ -38,6 +38,30 @@ db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
 
 
 
+// // WORKING uncomment to load static quake data.
+
+// const Messaging = require('../models/messagingSchema'); // Test
+// const messaging = require('../db/messagingData')
+// const messagingArrLength = messaging.length  
+
+// for (var i = 0; i < messagingArrLength; i++) {
+
+//   const created = messaging[i].created 
+//   const userId = messaging[i].userId 
+//   const messageId = messaging[i].messageId
+//   const messageBody = messaging[i].messageBody
+//   const messageStatus = messaging[i].messageStatus
+
+
+// Messaging.create({ created, userId, messageId, messageBody, messageStatus }, function (err, messaging) {
+//     if (err) console.log(err);
+//     // saved!
+//     console.log("\n\nMessage entry to Messaging DB: \n\n" + messaging);
+//   });
+// };
+
+
+
 // // WORKING uncomment to load static user data.
 
 // const User = require('../models/usersSchema'); 

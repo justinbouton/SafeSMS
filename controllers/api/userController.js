@@ -1,6 +1,8 @@
 // console.log("\n userController.js started");
+const messagingController = require('../../controllers/api/messagingController');
 
 const User = require('../../models/usersSchema');
+const Messaging = require('../../models/messagingSchema');
 
 const getUsers = async (req, res, next) => {
     try {
@@ -31,13 +33,26 @@ console.log("Retreive users from DB")
 
 const getUserById = async (req, res, next) => {
     try {
-        console.log("getUserById: " + req.params.id)
-        let user = await User.findById(req.params.id);
+        let reqParamsId = req.params.id
+        console.log("getUserById: " + reqParamsId)
+        // let user = await User.findById(reqParamsId);5dca0d82c65e1348c1961097
+        let user = await User.findById(reqParamsId);
         if (user) {
+
+            // Need to setup db.chat with Id as the array for messaging
+            // Get static db.chat.:id which include all correspondence
+            console.log("retreiving userMessages + sendMessages");
+            // let userMessage = await Messaging.findById(reqParamsId);
+            let userMessage = await Messaging.find({userId: reqParamsId}); // TEST
+            let senderMessage = await Messaging.find({userId: "Sender"}); // TEST
+
+console.log(userMessage)
+console.log(senderMessage)
+
             return res
                 .status(200)
-                .render("usersMessaging")
-                // 'message': `user with id ${req.params.id} fetched successfully`,
+                .render("usersMessaging", { userMessage, senderMessage })
+                // 'userMessage': `user with id ${reqParamsId} fetched successfully`,
                 // 'data': user
         }
 

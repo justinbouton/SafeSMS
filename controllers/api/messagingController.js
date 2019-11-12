@@ -28,6 +28,8 @@ const getMessagings = async (req, res, next) => {
 
 const getMessagingById = async (req, res, next) => {
     try {
+        console.log("getMessagingById: ")
+
         let messaging = await Messaging.findById(req.params.id);
         if (messaging) {
             return res.status(200).json({
@@ -53,44 +55,23 @@ const getMessagingById = async (req, res, next) => {
 const createMessaging = async (req, res, next) => {
     try {
 
+        console.log("createdMessaging: " + req.params.id.messageSender)
         const {
-            name,
-            email
+            created,
+            userId,
+            messageId,
+            messageBody,
+            messageStatus
         } = req.body;
 
-        if (name === undefined || name === '') {
-            return res.status(422).json({
-                'code': 'REQUIRED_FIELD_MISSING',
-                'description': 'name is required',
-                'field': 'name'
-            });
-        }
-
-        if (email === undefined || email === '') {
-            return res.status(422).json({
-                'code': 'REQUIRED_FIELD_MISSING',
-                'description': 'email is required',
-                'field': 'email'
-            });
-        }
-
-
-        let isEmailExists = await Messaging.findOne({
-            "email": email
-        });
-
-        if (isEmailExists) {
-            return res.status(409).json({
-                'code': 'ENTITY_ALREAY_EXISTS',
-                'description': 'email already exists',
-                'field': 'email'
-            });
-        }
-
         const temp = {
-            name: name,
-            email: email
+            created: created,
+            userId: userId,
+            messageId: messageId,
+            messageBody: messageBody,
+            messageStatus: messageStatus
         }
+        
 
         let newMessaging = await Messaging.create(temp);
 

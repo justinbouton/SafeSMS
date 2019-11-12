@@ -31,7 +31,8 @@ router.get("/alerts", earthquakeController.getEarthquakes);
 
 router.get("/messaging", function (req, res) {
     console.log("Render Messaging page");
-    res.render("messaging");
+    // res.render("messaging");
+    res.render("error404");
 });
 
 router.get("/err404", function (req, res) {
