@@ -3,28 +3,23 @@
     <div class="container mt-3 bg-white border rounded">
         {{!-- Do I need a messaging NAV tab? --}}
 
-
-        {{!-- user messages align left, date stamp --}}
-        {{#each userMessage}}
+        {{!-- user messages align left, admin align right, date stamp --}}
+        {{#each messages}}
             {{#if messageAdmin}}
-                <h3 id="ownerMessage">{{userId}}</h3>
+                {{!-- <h3 id="ownerMessage">{{userId}}</h3> --}}
                 <h5 id="ownerMessage">{{messageBody}}</h5>
                 <h6 id="ownerMessage">{{created}}</h6>
             {{/if}}
             {{#unless messageAdmin}}
-                <h3 id="userMessage">{{userId}}</h3>
+                {{!-- <h3 id="userMessage">{{userId}}</h3> --}}
                 <h5>{{messageBody}}</h5>
                 <h6>{{created}}</h6> 
             {{/unless}}
         {{/each}} 
+        {{#if noMessages}}
+            <h1>No messages</h1>
+        {{/if}}
 
-        {{!-- owner messages align right, date stamp --}}
-        {{!-- <h3 id="ownerMessage">Test sender<h6 id="ownerMessage">Time/Date Stamp</h6> </h3> --}}
-        {{!-- {{#each senderMessage}}
-            <h3 id="ownerMessage">{{userId}}</h3>
-                <h5 id="ownerMessage"{{messageBody}}</h5>
-                <h6 id="ownerMessage">{{created}}</h6> 
-        {{/each}}  --}}
     </div>
     <form class="form-inline py-3" name="newMessage" method="post" action="/users/"{{id}}>
         <input class="form-control mr-sm-2" id="" type="text" placeholder="Type response here">

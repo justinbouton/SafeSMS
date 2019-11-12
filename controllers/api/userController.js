@@ -34,24 +34,27 @@ console.log("Retreive users from DB")
 const getUserById = async (req, res, next) => {
     try {
         let reqParamsId = req.params.id
-        console.log("getUserById: " + reqParamsId)
+        console.log("\ngetUserById: " + reqParamsId)
         // let user = await User.findById(reqParamsId);5dca0d82c65e1348c1961097
         let user = await User.findById(reqParamsId);
         if (user) {
 
             // Need to setup db.chat with Id as the array for messaging
             // Get static db.chat.:id which include all correspondence
-            console.log("retreiving userMessages + sendMessages");
-            // let userMessage = await Messaging.findById(reqParamsId);
-            let userMessage = await Messaging.find({ messageId: reqParamsId }); // TEST
-            // let senderMessage = await Messaging.find({userId: "Sender", messageId: reqParamsId}); // TEST
-
-// console.log(userMessage)
+            console.log("retreiving chat messages");
+            // let messages = await Messaging.findById(reqParamsId);
+            let messages = await Messaging.find({ messageId: reqParamsId }); // WORKING
+            let noMessages = false;
+            if (messages.length === 0) {
+                // usersMessaging appends "No user";
+                console.log("No messages found")
+                noMessages = "true";
+            }
 
             return res
                 .status(200)
-                .render("usersMessaging", { userMessage })
-                // 'userMessage': `user with id ${reqParamsId} fetched successfully`,
+                .render("usersMessaging", { messages, noMessages })
+                // 'messages': `user with id ${reqParamsId} fetched successfully`,
                 // 'data': user
         }
 
