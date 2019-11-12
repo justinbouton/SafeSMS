@@ -1,25 +1,14 @@
-<style>
-    #ownerMessage {
-        text-align: left;
-    }
-
-    #userMessage {
-        text-align: right;
-    }
-</style>
-
-
 <div class="container mt-3 bg-light border rounded">
     <div class="container mt-3 bg-white border rounded">
         {{!-- Do I need a messaging NAV tab? --}}
-        <h3 id="ownerMessage">Test <h6>Time/Date Stamp</h6> </h3>
-        <h3 id="userMessage">Test <h6 id="userMessage">Time/Date Stamp</h6> </h3>
+        <h3 id="userMessage">Test user <h6>Time/Date Stamp</h6> </h3>
+        <h3 id="ownerMessage">Test sender<h6 id="ownerMessage">Time/Date Stamp</h6> </h3>
         {{!-- Create messaging window --}}
         {{!-- Sender messages align left, date stamp --}}
         {{!-- Receipient messages align right, date stamp --}}
 
     </div>
-    <form class="form-inline p-2 my-2 my-lg-0" name="newMessage" method="post" action="/users/"{{id}}>
+    <form class="form-inline py-3" name="newMessage" method="post" action="/users/"{{id}}>
         <input class="form-control mr-sm-2" id="" type="text" placeholder="Type response here">
         <button class="btn btn-outline-success my-2 my-sm-0" id="userSendMessage" type="button"
             value="Send message now">Send</button>

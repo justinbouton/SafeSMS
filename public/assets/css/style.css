@@ -1,0 +1,20 @@
+/* users page */
+a,a:hover {
+    color: inherit;
+    text-decoration: inherit;
+}  
+#input-width {
+    width: 250px;
+}
+.redBorder {
+    border: 2px solid red;
+}
+
+/* usersMessaging page  */
+#userMessage {
+    text-align: left;
+}
+
+#ownerMessage {
+    text-align: right;
+}
