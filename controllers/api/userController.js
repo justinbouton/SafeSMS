@@ -43,15 +43,14 @@ const getUserById = async (req, res, next) => {
             // Get static db.chat.:id which include all correspondence
             console.log("retreiving userMessages + sendMessages");
             // let userMessage = await Messaging.findById(reqParamsId);
-            let userMessage = await Messaging.find({userId: reqParamsId}); // TEST
-            let senderMessage = await Messaging.find({userId: "Sender"}); // TEST
+            let userMessage = await Messaging.find({ messageId: reqParamsId }); // TEST
+            // let senderMessage = await Messaging.find({userId: "Sender", messageId: reqParamsId}); // TEST
 
-console.log(userMessage)
-console.log(senderMessage)
+// console.log(userMessage)
 
             return res
                 .status(200)
-                .render("usersMessaging", { userMessage, senderMessage })
+                .render("usersMessaging", { userMessage })
                 // 'userMessage': `user with id ${reqParamsId} fetched successfully`,
                 // 'data': user
         }

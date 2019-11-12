@@ -11,7 +11,7 @@ const messagingSchema = new Schema({
     userId: String,
     messageId: String,
     messageBody: String,
-    messageStatus:{type: Boolean, default: false}
+    messageAdmin:{type: Boolean, default: false}
 });
 
 //Export function to create "SomeModel" model class

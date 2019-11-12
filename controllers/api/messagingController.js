@@ -61,7 +61,7 @@ const createMessaging = async (req, res, next) => {
             userId,
             messageId,
             messageBody,
-            messageStatus
+            messageAdmin
         } = req.body;
 
         const temp = {
@@ -69,7 +69,7 @@ const createMessaging = async (req, res, next) => {
             userId: userId,
             messageId: messageId,
             messageBody: messageBody,
-            messageStatus: messageStatus
+            messageAdmin: messageAdmin
         }
         
 
