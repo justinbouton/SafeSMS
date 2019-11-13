@@ -22,8 +22,9 @@ router.get("/", function (req, res) {
 
 
 router.get("/users", userController.getUsers);
-router.post("/users/create", userController.createUser);
+router.post("/users/newUser", userController.createUser);
 router.get("/users/:id", userController.getUserById);
+router.post("/users/newMessage", messagingController.createMessage);
 
 router.get("/alerts", earthquakeController.getEarthquakes);
 // router.get("/messaging", messagingController.getMessages);

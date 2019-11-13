@@ -48,12 +48,11 @@ db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
 
 //   const created = messaging[i].created 
 //   const userId = messaging[i].userId 
-//   const messageId = messaging[i].messageId
 //   const messageBody = messaging[i].messageBody
 //   const messageAdmin = messaging[i].messageAdmin
 
 
-// Messaging.create({ created, userId, messageId, messageBody, messageAdmin }, function (err, messaging) {
+// Messaging.create({ created, userId, messageBody, messageAdmin }, function (err, messaging) {
 //     if (err) console.log(err);
 //     // saved!
 //     console.log("\n\nMessage entry to Messaging DB: \n\n" + messaging);

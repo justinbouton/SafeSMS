@@ -6,12 +6,10 @@
         {{!-- user messages align left, admin align right, date stamp --}}
         {{#each messages}}
             {{#if messageAdmin}}
-                {{!-- <h3 id="ownerMessage">{{userId}}</h3> --}}
-                <h5 id="ownerMessage">{{messageBody}}</h5>
-                <h6 id="ownerMessage">{{created}}</h6>
+                <h5 id="messageAdmin">{{messageBody}}</h5>
+                <h6 id="messageAdmin">{{created}}</h6>
             {{/if}}
             {{#unless messageAdmin}}
-                {{!-- <h3 id="userMessage">{{userId}}</h3> --}}
                 <h5>{{messageBody}}</h5>
                 <h6>{{created}}</h6> 
             {{/unless}}
@@ -21,9 +19,8 @@
         {{/if}}
 
     </div>
-    <form class="form-inline py-3" name="newMessage" method="post" action="/users/"{{id}}>
-        <input class="form-control mr-sm-2" id="" type="text" placeholder="Type response here">
-        <button class="btn btn-outline-success my-2 my-sm-0" id="userSendMessage" type="button"
-            value="send">Send</button>
+    <form class="form-inline py-3" name="newMessage" method="post" action="/users/newMessage">
+        <input class="form-control mr-sm-2" id="newMessage" type="text" placeholder="Type response here">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="newMessage" onclick="sendMessage(this.form)" type="button" value="Submit form">Send</button>
     </form>
 </div>

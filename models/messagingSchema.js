@@ -9,7 +9,6 @@ const Schema = mongoose.Schema;
 const messagingSchema = new Schema({
     created: { type: Date, default: Date.now },
     userId: String,
-    messageId: String,
     messageBody: String,
     messageAdmin:{type: Boolean, default: false}
 });

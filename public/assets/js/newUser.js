@@ -38,11 +38,11 @@ console.log("errorCount: " + errorCount);
       $.ajax({
         type: 'POST',
         data: newUser,
-        url: '/users/create',
+        url: '/users/newUser',
         dataType: 'JSON'
       }).done(function( response ) {
   
-  console.log(response)
+        console.log(response)
   
   // Reloads the current page
   window.location.reload()

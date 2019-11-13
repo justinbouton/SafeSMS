@@ -11,10 +11,10 @@ a,a:hover {
 }
 
 /* usersMessaging page  */
-#userMessage {
+#messageUser {
     text-align: left;
 }
 
-#ownerMessage {
+#messageAdmin {
     text-align: right;
 }

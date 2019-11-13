@@ -43,7 +43,7 @@ const getUserById = async (req, res, next) => {
             // Get static db.chat.:id which include all correspondence
             console.log("retreiving chat messages");
             // let messages = await Messaging.findById(reqParamsId);
-            let messages = await Messaging.find({ messageId: reqParamsId }); // WORKING
+            let messages = await Messaging.find({ userId: reqParamsId }); // WORKING
             let noMessages = false;
             if (messages.length === 0) {
                 // usersMessaging appends "No user";
@@ -128,12 +128,14 @@ const createUser = async (req, res, next) => {
 
         if (newUser) {
             console.log("User created successfully:")
-            console.log(temp)
+            console.log(temp);
+            console.log("Refreshing page")
+
             return res
                 .status(201).json({
                 'message': 'user created successfully',
                 'data': newUser
-                })
+            });
         } else {
             throw new Error('something went worng');
         }

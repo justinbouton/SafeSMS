@@ -1,11 +1,11 @@
 // console.log("\n messagingController.js started");
 
-const Messaging = require('../../models/messagingSchema');
+const Message = require('../../models/messagingSchema');
 
-const getMessagings = async (req, res, next) => {
+const getMessages = async (req, res, next) => {
     try {
 
-        let messages = await Messaging.find({});
+        let messages = await Message.find({});
 
         if (messages.length > 0) {
             console.log("Rendering messaging page")
@@ -26,15 +26,15 @@ const getMessagings = async (req, res, next) => {
     }
 }
 
-const getMessagingById = async (req, res, next) => {
+const getMessageById = async (req, res, next) => {
     try {
-        console.log("getMessagingById: ")
+        console.log("getMessageById: ")
 
-        let messaging = await Messaging.findById(req.params.id);
-        if (messaging) {
+        let message = await Message.findById(req.params.id);
+        if (message) {
             return res.status(200).json({
-                'message': `messaging with id ${req.params.id} fetched successfully`,
-                'data': messaging
+                'message': `message with id ${req.params.id} fetched successfully`,
+                'data': message
             });
         }
 
@@ -52,14 +52,12 @@ const getMessagingById = async (req, res, next) => {
     }
 }
 
-const createMessaging = async (req, res, next) => {
+const createMessage = async (req, res, next) => {
     try {
 
-        console.log("createdMessaging: " + req.params.id.messageSender)
         const {
             created,
             userId,
-            messageId,
             messageBody,
             messageAdmin
         } = req.body;
@@ -67,18 +65,17 @@ const createMessaging = async (req, res, next) => {
         const temp = {
             created: created,
             userId: userId,
-            messageId: messageId,
             messageBody: messageBody,
             messageAdmin: messageAdmin
         }
         
 
-        let newMessaging = await Messaging.create(temp);
+        let newMessage = await Message.create(temp);
 
-        if (newMessaging) {
+        if (newMessage) {
             return res.status(201).json({
-                'message': 'messaging created successfully',
-                'data': newMessaging
+                'message': 'message created successfully',
+                'data': newMessage
             });
         } else {
             throw new Error('something went worng');
@@ -91,11 +88,11 @@ const createMessaging = async (req, res, next) => {
     }
 }
 
-const updateMessaging = async (req, res, next) => {
+const updateMessage = async (req, res, next) => {
     try {
 
 
-        const messagingId = req.params.id;
+        const messageId = req.params.id;
 
         const {
             name,
@@ -119,12 +116,12 @@ const updateMessaging = async (req, res, next) => {
         }
 
 
-        let isMessagingExists = await Messaging.findById(messagingId);
+        let isMessageExists = await Message.findById(messageId);
 
-        if (!isMessagingExists) {
+        if (!isMessageExists) {
             return res.status(404).json({
                 'code': 'BAD_REQUEST_ERROR',
-                'description': 'No messaging found in the system'
+                'description': 'No message found in the system'
             });
         }
 
@@ -133,14 +130,14 @@ const updateMessaging = async (req, res, next) => {
             email: email
         }
 
-        let updateMessaging = await Messaging.findByIdAndUpdate(messagingId, temp, {
+        let updateMessage = await Message.findByIdAndUpdate(messageId, temp, {
             new: true
         });
 
-        if (updateMessaging) {
+        if (updateMessage) {
             return res.status(200).json({
-                'message': 'messaging updated successfully',
-                'data': updateMessaging
+                'message': 'message updated successfully',
+                'data': updateMessage
             });
         } else {
             throw new Error('something went worng');
@@ -154,12 +151,12 @@ const updateMessaging = async (req, res, next) => {
     }
 }
 
-const deleteMessaging = async (req, res, next) => {
+const deleteMessage = async (req, res, next) => {
     try {
-        let messaging = await Messaging.findByIdAndRemove(req.params.id);
-        if (messaging) {
+        let message = await Message.findByIdAndRemove(req.params.id);
+        if (message) {
             return res.status(204).json({
-                'message': `messaging with id ${req.params.id} deleted successfully`
+                'message': `message with id ${req.params.id} deleted successfully`
             });
         }
 
@@ -178,11 +175,11 @@ const deleteMessaging = async (req, res, next) => {
 }
 
 module.exports = {
-    getMessagings: getMessagings,
-    getMessagingById: getMessagingById,
-    createMessaging: createMessaging,
-    updateMessaging: updateMessaging,
-    deleteMessaging: deleteMessaging
+    getMessages: getMessages,
+    getMessageById: getMessageById,
+    createMessage: createMessage,
+    updateMessage: updateMessage,
+    deleteMessage: deleteMessage
 }
 
 
