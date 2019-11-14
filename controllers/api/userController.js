@@ -129,10 +129,9 @@ const createUser = async (req, res, next) => {
         if (newUser) {
             console.log("User created successfully:")
             console.log(temp);
-            console.log("Refreshing page")
+            console.log("Refreshing page") // See newUser.js
 
-            return res
-                .status(201).json({
+            return res.status(201).json({
                 'message': 'user created successfully',
                 'data': newUser
             });

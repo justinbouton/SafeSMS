@@ -1,24 +1,28 @@
-// Add button onSubmit(), capture values, wrap into JSON, post newMessage to /users/newMessage.
-function sendMessage(form) {
-  console.log("newMessage clicked")
-  event.preventDefault();
+// On key up check for enter. If enter sendMessage()
+$("#newMessage").keyup(function () {
+  if (event.keyCode === 13) {
+    event.preventDefault()
+    sendMessage()
+  };
+});
 
-  // get the user id path
+$("#newMessageSend").click(function () {
+  event.preventDefault()
+  sendMessage()
+});
+
+function sendMessage() {
+  var messageBody = $('#newMessage').val()
   var pathArray = window.location.pathname.split('/');
   var url = pathArray[2];
-
-  console.log("url: ")
-  console.log(url)
 
   // If it is, compile all user info into one object
   var newMessage = {
     'messageAdmin': true,
     'created': Date.now,
-    'userId': url, // TODO pull _id from URL
-    'messageBody': $('#newMessage').val()
+    'userId': url,
+    'messageBody': messageBody
   }
-
-  console.log(newMessage)
 
   // Use AJAX to post the object to our newUser service
   $.ajax({
@@ -27,11 +31,7 @@ function sendMessage(form) {
     url: '/users/newMessage',
     dataType: 'JSON'
   }).done(function (response) {
-
-    console.log(response)
-
+    });
     // Reloads the current page
     window.location.reload()
-
-  });
 };

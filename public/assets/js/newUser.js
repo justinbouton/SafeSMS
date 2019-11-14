@@ -41,12 +41,12 @@ console.log("errorCount: " + errorCount);
         url: '/users/newUser',
         dataType: 'JSON'
       }).done(function( response ) {
-  
-        console.log(response)
-  
+
+console.log(response);
+
   // Reloads the current page
   window.location.reload()
-  
+
       });
     }
     else {

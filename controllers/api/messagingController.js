@@ -56,27 +56,30 @@ const createMessage = async (req, res, next) => {
     try {
 
         const {
+            messageAdmin,
             created,
             userId,
-            messageBody,
-            messageAdmin
+            messageBody
         } = req.body;
 
         const temp = {
+            messageAdmin: messageAdmin,
             created: created,
             userId: userId,
-            messageBody: messageBody,
-            messageAdmin: messageAdmin
+            messageBody: messageBody
         }
         
-
         let newMessage = await Message.create(temp);
 
         if (newMessage) {
-            return res.status(201).json({
-                'message': 'message created successfully',
-                'data': newMessage
-            });
+            console.log("New message created:")
+            console.log(temp)
+            // console.log("Refreshing page") // See newMessage.js // NOT WORKING
+
+            // return res.status(201).json({
+            //     'message': 'message created successfully',
+            //     'data': newMessage
+            // });
         } else {
             throw new Error('something went worng');
         }
