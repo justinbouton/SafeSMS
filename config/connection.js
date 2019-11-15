@@ -38,7 +38,7 @@ db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
 
 
 
-// // WORKING uncomment to load static quake data.
+// // WORKING uncomment to load static megissaging data.
 
 // const Messaging = require('../models/messagingSchema'); // Test
 // const messaging = require('../db/messagingData')

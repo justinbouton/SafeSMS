@@ -1,10 +1,24 @@
 // On key up check for enter. If enter sendMessage()
 $("#newMessage").keyup(function () {
-  if (event.keyCode === 13) {
-    event.preventDefault()
-    sendMessage()
-  };
+// check for val if true allow enter press  
+
+    if (event.keyCode === 13) {
+      event.preventDefault()
+      sendMessage()
+    };
 });
+
+// var messageBody = $('#newMessage').val()
+
+//   if (messageBody) {
+//     console.log(messageBody)
+//     if (event.keyCode === 13) {
+//       event.preventDefault()
+//       // sendMessage()
+//       console.log("CLICKED");
+//     };
+//   }
+// });
 
 $("#newMessageSend").click(function () {
   event.preventDefault()
