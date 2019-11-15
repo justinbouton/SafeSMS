@@ -1,27 +1,33 @@
 const messaging = [
     {
-        created: "2019-11-07T16:41:09.809Z",
-        userId: "Sender",
-        messageBody: "This is a test string",
-        messageAdmin: true
-    },
-    {
-        created: "2019-11-07T16:41:59.001Z",
+        messageAdmin: true,
+        created: "2019-11-14T21:54:34.037Z",
         userId: "5dca0d82c65e1348c1961097",
-        messageBody: "This is a reponse",
-        messageAdmin: false
+        messageBody: "This is a test from the admin",
     },
     {
-        created: "2019-11-07T16:42:13.004Z",
+        messageAdmin: false,
+        created: "2019-11-14T29:41:09.809Z",
         userId: "5dca0d82c65e1348c1961097",
-        messageBody: "Twice",
-        messageAdmin: false
+        messageBody: "Response from individual",
     },
     {
-        created: "2019-11-07T16:42:16.143Z",
+        messageAdmin: true,
+        created: "2019-11-14T33:04:59.001Z",
+        userId: "5dca0d82c65e1348c1961097",
+        messageBody: "Are you ok?",
+    },
+    {
+        messageAdmin: false,
+        created: "2019-11-14T33:42:13.004Z",
+        userId: "5dca0d82c65e1348c1961097",
+        messageBody: "Yes!",
+    },
+    {
+        messageAdmin: true,
+        created: "2019-11-14T50:42:16.143Z",
         userId: "Sender",
         messageBody: "The end.",
-        messageAdmin: true
     }
 ]
 

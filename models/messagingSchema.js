@@ -7,10 +7,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const messagingSchema = new Schema({
+    messageAdmin:{type: Boolean, default: false},
     created: { type: Date, default: Date.now },
     userId: String,
-    messageBody: String,
-    messageAdmin:{type: Boolean, default: false}
+    messageBody: String
 });
 
 //Export function to create "SomeModel" model class

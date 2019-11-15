@@ -1,17 +1,17 @@
 {{!-- Messaging window --}}
 <div class="container mt-3 bg-light border rounded">
-    <div class="container mt-3 bg-white border rounded">
+    <div class="container mt-3 pt-3 bg-white border rounded">
         {{!-- Do I need a messaging NAV tab? --}}
 
         {{!-- user messages align left, admin align right, date stamp --}}
         {{#each messages}}
             {{#if messageAdmin}}
-                <h5 id="messageAdmin">{{messageBody}}</h5>
                 <h6 id="messageAdmin">{{created}}</h6>
+                <h5 id="messageAdmin">{{messageBody}}</h5>
             {{/if}}
             {{#unless messageAdmin}}
-                <h5>{{messageBody}}</h5>
                 <h6>{{created}}</h6> 
+                <h5>{{messageBody}}</h5>
             {{/unless}}
         {{/each}} 
         {{#if noMessages}}
