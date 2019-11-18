@@ -7,9 +7,8 @@ const router = express.Router();
 // Connection required to access db.
 const connection = require("../config/connection"); // DB
 
-// TODO verify user login
-
 // API route controller
+const loginController = require('./api/loginController');
 const userController = require('./api/userController');
 const earthquakeController = require('./api/earthquakeController');
 const messagingController = require('./api/messagingController');
@@ -20,10 +19,22 @@ router.get("/", function (req, res) {
     res.redirect("users");
 });
 
+// Login controller
+// TODO User cannot sign up unless isAdmin: true. If true and password exist redirect to login. If true and no password allow sign up. 
+// TODO sign up 
+// router.get("/signup", loginController.signUp);
+// TODO verify user login
+// router.get("/login", loginController.login);
+router.get("/login", function (req, res) {
+    res.render("login")
+}); // TEST mock up page
 
+// Users controller
 router.get("/users", userController.getUsers);
 router.post("/users/newUser", userController.createUser);
 router.get("/users/:id", userController.getUserById);
+
+// Messaging controller
 router.post("/users/newMessage", messagingController.createMessage);
 
 router.get("/alerts", earthquakeController.getEarthquakes);
