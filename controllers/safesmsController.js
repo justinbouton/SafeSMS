@@ -23,8 +23,13 @@ router.get("/", function (req, res) {
 // TODO User cannot sign up unless isAdmin: true. If true and password exist redirect to login. If true and no password allow sign up. 
 // TODO sign up 
 // router.get("/signup", loginController.signUp);
+router.get("/signUp", function (req, res) {
+    res.render("signUp")
+}); // TEST mock up page
+
+
 // TODO verify user login
-// router.get("/login", loginController.login);
+// router.get("/login", loginController.login); // TODO convert to loginController
 router.get("/login", function (req, res) {
     res.render("login")
 }); // TEST mock up page
