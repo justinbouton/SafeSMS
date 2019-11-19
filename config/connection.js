@@ -1,10 +1,12 @@
 var connection;
 
 //Set up mongoose connection
-var mongoose = require('mongoose');
-var dbName = "safesms";
-var mongoDB = `mongodb://localhost:27017/${dbName}`;
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
+const config = require('../config');
+const mongoose = require('mongoose');
+const dbName = config.connectionString;
+// var dbName = "safesms"; // changed mongoose.connect(mongoDb to ||
+// var mongoDB = `mongodb://localhost:27017/${dbName}`;
+mongoose.connect(process.env.MONGODB_URI || dbName, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 
 /////////// WARNING THIS WILL DROP THE CURRENT DATABASE ///////////
@@ -12,6 +14,7 @@ var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
+// db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
 
 
 

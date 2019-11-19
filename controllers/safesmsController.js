@@ -36,7 +36,6 @@ router.get("/login", function (req, res) {
 router.get("/users", userController.getUsers);
 router.post("/users/newUser", userController.createUser);
 router.get("/users/:id", userController.getUserById);
-    hash: { type: String, required: true },
 
 // Messaging controller
 router.post("/users/newMessage", messagingController.createMessage);

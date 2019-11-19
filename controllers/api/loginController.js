@@ -1,10 +1,47 @@
-// console.log("\n userController.js started");
-const messagingController = require('../../controllers/api/messagingController');
+// TESTING with bcrypt
+const config = require('../../config');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+const db = require('../../config/connection');
+// TESTING with bcrypt
 
+// Load User and Login schemas to access DB
 const User = require('../../models/usersSchema');
 const Login = require('../../models/loginSchema');
 
-// 
+// TESTING with bcrypt
+
+
+const authenticate = async (req, res, next) => {
+    try {
+        const { username, password } = req.body
+        const user = await User.findOne({ username });
+        if (user && bcrypt.compareSync(password, user.hash)) {
+            const { hash, ...userWithoutHash } = user.toObject();
+            const token = jwt.sign({ sub: user.id }, config.secret);
+            return {
+                ...userWithoutHash,
+                token
+            };
+        }
+    } catch (error) {
+        return res.status(500).json({
+            'code': 'SERVER_ERROR',
+            'description': 'something went wrong, Please try again'
+        });
+    }
+}
+
+module.exports = {
+    authenticate: authenticate
+    // getUsers: getUsers,
+    // getUserById: getUserById,
+    // createUser: createUser,
+    // updateUser: updateUser,
+    // deleteUser: deleteUser
+}
+// TESTING with bcrypt
+
 
 // const getUsers = async (req, res, next) => {
 //     try {
