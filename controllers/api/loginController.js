@@ -4,11 +4,7 @@ const messagingController = require('../../controllers/api/messagingController')
 const User = require('../../models/usersSchema');
 const Login = require('../../models/loginSchema');
 
-// User flow, sign up, sign in. First users setup isAdmin === true. 
-// Capture firstName, lastName, email, phone number, and password, isAdmin is set to true on first login.
-
-
-
+// 
 
 // const getUsers = async (req, res, next) => {
 //     try {

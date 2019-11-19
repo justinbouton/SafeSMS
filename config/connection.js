@@ -60,22 +60,24 @@ db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
 // };
 
 
-
-// // WORKING uncomment to load static user data.
+// // TODO test uncomment to load static user data.
 
 // const User = require('../models/usersSchema'); 
 // const users = require('../db/usersData');
 // const userArrLength = users.length  
 // for (var i = 0; i < userArrLength; i++) {
 
+//   const isAdmin = users[i].isAdmin 
 //   const created = users[i].created 
-//   const modified = users[i].modified 
+//   const hash = users[i].hash 
+//   const companyId = users[i].companyId 
+//   const updated = users[i].updated 
 //   const firstName = users[i].firstName 
 //   const lastName = users[i].lastName 
 //   const email = users[i].email 
 //   const phone = users[i].phone
 
-// User.create({ created, modified, firstName, lastName, email, phone }, function (err, user) {
+// User.create({ isAdmin, created, hash, companyId, updated, firstName, lastName, email, phone }, function (err, user) {
 //     if (err) return handleError(err);
 //     // saved!
 //     console.log("\n\nUser created: \n\n" + user);

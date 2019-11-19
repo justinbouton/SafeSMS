@@ -1,12 +1,11 @@
 <div class="container">
 <div class="container-fluid my-3 bg-light border rounded mx-auto" style="width: 300px;">
     <div class="d-flex flex-wrap main-content">
-        <form class="form-inline p-2 my-2 my-lg-0" name="newUser" method="post" action="/users/create">
+        <form class="form-inline p-2 my-2 my-lg-0" name="newUser" method="post" action="/signup">
             <input class="form-control mb-3 mr-sm-2 addUser firstName" id="input-width" type="text" placeholder="First Name">
             <input class="form-control mr-sm-2 addUser lastName" id="input-width" type="text" placeholder="Last Name">
             <input class="form-control my-3 mr-sm-2 addUser email" id="input-width" type="email" placeholder="Email Address">
             <input class="form-control mr-sm-2 addUser phone" id="input-width" type="tel" placeholder="Phone Number">
-            <input class="form-control my-3 mr-sm-2 addUser password" id="input-width" type="password" placeholder="Password">
             <button class="my-3 btn btn-outline-success my-sm-0" id="btnAddUser" onclick="addUser(this.form)"
                 type="button" value="Submit form">Sign up!</button> <a class="" href="/login">Login</a>
         </form>

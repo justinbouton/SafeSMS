@@ -1,6 +1,3 @@
-// console.log("\n safesmsController.js started");
-
-
 const express = require('express');
 const router = express.Router();
 
@@ -25,19 +22,21 @@ router.get("/", function (req, res) {
 // router.get("/signup", loginController.signUp);
 router.get("/signUp", function (req, res) {
     res.render("signUp")
-}); // TEST mock up page
+}); // WORKING mock up page
+// router.post("/users/newUser", loginController.signUp); TODO
 
 
 // TODO verify user login
 // router.get("/login", loginController.login); // TODO convert to loginController
 router.get("/login", function (req, res) {
     res.render("login")
-}); // TEST mock up page
+}); // WORKING mock up page
 
 // Users controller
 router.get("/users", userController.getUsers);
 router.post("/users/newUser", userController.createUser);
 router.get("/users/:id", userController.getUserById);
+    hash: { type: String, required: true },
 
 // Messaging controller
 router.post("/users/newMessage", messagingController.createMessage);

@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 
 const loginSchema = new Schema({
     created: { type: Date, default: Date.now },
-    isAdmin: Boolean, 
+    // isAdmin: Boolean, 
     // TODO companyId: String, // Pull from companySchema id
     email: String,
     password: String
