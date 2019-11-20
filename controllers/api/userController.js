@@ -73,11 +73,9 @@ const getUserById = async (req, res, next) => {
 }
 
 const createUser = async (req, res, next) => {
-
-    try {        
+    try {      
+        const hash = "null";  
         const {
-            created,
-            modified,
             firstName,
             lastName,
             email,
@@ -116,13 +114,14 @@ const createUser = async (req, res, next) => {
         }
 
         const temp = {
-            created: created,
-            modified: modified,
+            isAdmin: false,
+            hash: hash,
             firstName: firstName,
             lastName: lastName,
             email: email,
             phone: phone
         }
+        console.log(temp)
 
         let newUser = await User.create(temp);
 
@@ -139,6 +138,7 @@ const createUser = async (req, res, next) => {
             throw new Error('something went worng');
         }
     } catch (error) {
+        console.log("ERROR: " + error)
         return res.status(500).json({
             'code': 'SERVER_ERROR',
             'description': 'something went wrong, Please try again. ERROR: ' + error

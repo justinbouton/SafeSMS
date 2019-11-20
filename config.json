@@ -1,4 +1,4 @@
 {
-    "connectionString": "mongodb://localhost/safesms",
+    "connectionString": "mongodb://localhost:27017/safesms",
     "secret": "BaconEggsPancakes"
 }

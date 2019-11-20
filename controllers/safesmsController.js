@@ -5,7 +5,7 @@ const router = express.Router();
 const connection = require("../config/connection"); // DB
 
 // API route controller
-const loginController = require('./api/loginController');
+// const loginController = require('./api/loginController');
 const userController = require('./api/userController');
 const earthquakeController = require('./api/earthquakeController');
 const messagingController = require('./api/messagingController');
@@ -23,7 +23,7 @@ router.get("/", function (req, res) {
 router.get("/signUp", function (req, res) {
     res.render("signUp")
 }); // WORKING mock up page
-// router.post("/users/newUser", loginController.signUp); TODO
+router.post("/signUp/newUser", userController.createUser); // TODO
 
 
 // TODO verify user login

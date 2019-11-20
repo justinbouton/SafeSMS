@@ -11,7 +11,7 @@ const userSchema = new Schema({
     created: Date,
     modified: {type: Date, default: Date.now}, // TODO change to updated
     hash: { type: String, required: true },
-    companyId: String, // Pull from companySchema id
+    // companyId: String, // Pull from companySchema id
     firstName: String,
     lastName: String,
     email: String,
