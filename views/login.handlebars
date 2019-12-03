@@ -1,13 +1,13 @@
-<div class="container mt-5">
+<div class="container">
         <div class="container my-3 bg-light border rounded mx-auto" style="width: 300px;">
-            <h5 class="p-2">Please sign in or <a class="blue" href="/signUp">Sign up!</a></h5>
+            <h5 class="p-2">Please login or <a class="btn btn-outline-success my-sm-0" href="/signUp">Sign up!</a></h5>
             <form class="form-inline p-2 my-2 my-lg-0" name="newUser" method="post" action="/users/create">
                 <input class="form-control mr-sm-2 addUser email" id="input-width" type="email"
                     placeholder="Email Address">
                 <input class="form-control mr-sm-2 my-3 addUser password" id="input-width" type="password"
                     placeholder="Password">
-                <button class="btn btn-outline-success mt-3 my-sm-0" id="signIn" onclick="signIn(this.form)"
-                    type="button" value="Submit form">Sign in</button>
+                <button class="btn btn-outline-success" id="signIn" onclick="signIn(this.form)"
+                    type="button" value="Submit form">Login</button>
             </form>
         </div>
     </div>

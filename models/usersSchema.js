@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    isAdmin: {type: Boolean, default: Date.now},// Cannot sign up unless true. If admin true and password exist redirect
+    isAdmin: {type: Boolean, default: false},// Cannot sign up unless true. If admin true and password exist redirect
     created: Date,
     modified: {type: Date, default: Date.now}, // TODO change to updated
     hash: { type: String, required: true },

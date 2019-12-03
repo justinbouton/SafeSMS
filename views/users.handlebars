@@ -4,11 +4,12 @@
         <!-- Dynamically create content forEach user by appending userInfo to  main-content. -->
         <h5 class="p-2">Please add new users below.</h5>
         <form class="form-inline p-2 my-2 my-lg-0" name="newUser" method="post" action="/users/create">
-            <input class="form-control mr-sm-2 addUser firstName" id="input-width" type="text" placeholder="First Name">
-            <input class="form-control mr-sm-2 addUser lastName" id="input-width" type="text" placeholder="Last Name">
-            <input class="form-control mr-sm-2 addUser email" id="input-width" type="email" placeholder="Email Address">
-            <input class="form-control mr-sm-2 addUser phone" id="input-width" type="tel" placeholder="Phone Number">
-            <button class="btn btn-outline-success my-2 my-sm-0" id="btnAddUser" onclick="addUser(this.form)"
+            <button class="btn btn-outline-success mr-sm-2" id="isAdmin" onclick="isAdmin)" type="button" value="no">Admin?</button>
+            <input class="form-control mr-sm-2 addUser firstName" id="" type="text" placeholder="First Name">
+            <input class="form-control mr-sm-2 addUser lastName" id="" type="text" placeholder="Last Name">
+            <input class="form-control mr-sm-2 addUser email" id="" type="email" placeholder="Email Address">
+            <input class="form-control mr-sm-2 addUser phone" id="" type="tel" placeholder="Phone Number">
+            <button class="btn btn-outline-success mr-sm-2" id="btnAddUser" onclick="addUser(this.form)"
                 type="button" value="Submit form">Add</button>
         </form>
         <div class="container">

@@ -74,6 +74,7 @@ const getUserById = async (req, res, next) => {
 
 const createUser = async (req, res, next) => {
     try {      
+
         const hash = "null";  
         const {
             firstName,
@@ -82,61 +83,113 @@ const createUser = async (req, res, next) => {
             phone
         } = req.body;
 
-        const name = firstName && lastName;
 
-        if (name === undefined || name === '') {
-            return res.status(422).json({
-                'code': 'REQUIRED_FIELD_MISSING',
-                'description': 'name is required',
-                'field': 'name'
-            });
-        }
-
-        if (email === undefined || email === '') {
-            return res.status(422).json({
-                'code': 'REQUIRED_FIELD_MISSING',
-                'description': 'email is required',
-                'field': 'email'
-            });
-        }
-
-
-        let isEmailExists = await User.findOne({
-            "email": email
+        let UserExists = await User.find({
+            email: { $exists: true }
         });
+console.log("UserExist: ")
+console.log((isEmpty(UserExists)))
 
-        if (isEmailExists) {
-            return res.status(409).json({
-                'code': 'ENTITY_ALREAY_EXISTS',
-                'description': 'email already exists',
-                'field': 'email'
-            });
-        }
 
-        const temp = {
-            isAdmin: false,
-            hash: hash,
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            phone: phone
-        }
-        console.log(temp)
+function isEmpty(value){
+    return (value == null || value.length === 0);
+  }
+  
+// if no email adress exist add new user as admin
+if (!isEmpty) {
+    // return res.status(200);
+    console.log("Admin exists. Could not create: " + firstName, lastName);
+    // return res.status(409).json({
+    //     'code': 'ENTITY_ALREAY_EXISTS',
+    //     'description': 'email already exists',
+    //     'field': 'email'
+    // });
+} else {
+    console.log("Create admin: " + firstName, lastName);
+    const temp = {
+        isAdmin: false,
+        hash: hash,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone
+    }
+    // console.log(temp)
 
-        let newUser = await User.create(temp);
+    let newUser = await User.create(temp);
 
-        if (newUser) {
-            console.log("User created successfully:")
-            console.log(temp);
-            console.log("Refreshing page") // See newUser.js
+    if (newUser) {
+    // if (true) {
+        console.log("User created successfully:")
+        console.log(temp);
+        console.log("Refreshing page") // See newUser.js
 
-            return res.status(201).json({
-                'message': 'user created successfully',
-                'data': newUser
-            });
-        } else {
-            throw new Error('something went worng');
-        }
+        return res.status(201).json({
+            'message': 'user created successfully',
+            'data': newUser
+            // 'data': temp 
+        });
+    } else {
+        throw new Error('something went worng');
+    }
+}
+
+
+        // if (name === undefined || name === '') {
+        //     return res.status(422).json({
+        //         'code': 'REQUIRED_FIELD_MISSING',
+        //         'description': 'name is required',
+        //         'field': 'name'
+        //     });
+        // }
+
+        // if (email === undefined || email === '') {
+        //     return res.status(422).json({
+        //         'code': 'REQUIRED_FIELD_MISSING',
+        //         'description': 'email is required',
+        //         'field': 'email'
+        //     });
+        // }
+
+
+        // let isEmailExists = await User.findOne({
+        //     "email": email
+        // });
+
+        // if (isEmailExists) {
+        //     return res.status(409).json({
+        //         'code': 'ENTITY_ALREAY_EXISTS',
+        //         'description': 'email already exists',
+        //         'field': 'email'
+        //     });
+        // }
+
+        // const temp = {
+        //     isAdmin: false,
+        //     hash: hash,
+        //     firstName: firstName,
+        //     lastName: lastName,
+        //     email: email,
+        //     phone: phone
+        // }
+        // // console.log(temp)
+
+        // let newUser = await User.create(temp);
+
+        // if (newUser) {
+        // // if (true) {
+        //     console.log("User created successfully:")
+        //     console.log(temp);
+        //     console.log("Refreshing page") // See newUser.js
+
+        //     return res.status(201).json({
+        //         'message': 'user created successfully',
+        //         'data': newUser
+        //         // 'data': temp 
+        //     });
+        // } else {
+        //     throw new Error('something went worng');
+        // }
     } catch (error) {
         console.log("ERROR: " + error)
         return res.status(500).json({

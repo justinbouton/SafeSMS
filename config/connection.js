@@ -13,7 +13,7 @@ var db = mongoose.connection;
 // db.dropDatabase();
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
+db.once('open', () => console.log(`\nConnected to DB ${dbName} \n`));
 // db.once('open', () => console.log(`\nConnected to database: ${dbName} \n`));
 
 

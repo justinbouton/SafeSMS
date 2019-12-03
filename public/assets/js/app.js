@@ -1,4 +1,4 @@
-console.log("app.js started");
+console.log("app.js started 'client side'");
 
 // // Natral disaster trigger
 // // Every five minutes call API to see if there has been an earthquake. If an earthquake of x magnitude capture that data to be displayed under earthquake history.

@@ -29,3 +29,9 @@ app.listen(PORT, () => {
     console.log("\n     Server listening on http://localhost:" + PORT);
     console.log("\n     CRTL C to stop server", "\n");
 });
+
+
+// TEST get earthquake data server side
+const earthquake = require("./earthquake");
+
+// getEarthquakeData() 
