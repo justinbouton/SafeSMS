@@ -26,11 +26,11 @@ router.get("/signUp", function (req, res) {
 router.post("/signUp/newUser", userController.createUser); // TODO
 
 
-// TODO verify user login
+// TODO setup/verify user login
 // router.get("/login", loginController.login); // TODO convert to loginController
 router.get("/login", function (req, res) {
     res.render("login")
-}); // WORKING mock up page
+});
 
 // Users controller
 router.get("/users", userController.getUsers);
@@ -39,8 +39,6 @@ router.get("/users/:id", userController.getUserById);
 
 // Messaging controller
 router.post("/users/newMessage", messagingController.createMessage);
-
-router.get("/alerts", earthquakeController.getEarthquakes);
 // router.get("/messaging", messagingController.getMessages);
 
 
@@ -55,23 +53,9 @@ router.get("/err404", function (req, res) {
     res.render("error404");
 });
 
-// router.post("/burgers/create", function (req, res) {
-//     burger.insertOne(req.body.burger_name, function(data) {
-//         console.log("burg_controller data: " + data);
-
-//         res.redirect("/");
-//     });
-// });
-
-// router.put("/burgers/:id", function(req, res) { 
-//     var id = req.params.id;
-
-//     burger.updateOne(id, function(result) {
-//     console.log(result);
-    
-//     res.sendStatus(200)
-//     });
-// });
+// earthquake controller
+router.get("/alerts", earthquakeController.getEarthquakes);
+// router.post("/alerts", earthquakeController.createEarthquakes);
 
 // Export to 
 module.exports = router;

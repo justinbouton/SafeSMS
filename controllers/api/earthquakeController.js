@@ -4,15 +4,18 @@ const Earthquake = require('../../models/earthquakeSchema');
 
 const getEarthquakes = async (req, res, next) => {
     try {
-
         let earthquakes = await Earthquake.find({});
-
+        console.log("Retreive earthquakes from DB")
+        
         if (earthquakes.length > 0) {
             console.log("Render Alerts page")
             return res
                 .status(200)
                 .render("alerts", { earthquakes })
-        }
+        } else if (earthquakes.length <= 0) {
+            console.log("no earthquakes found")
+            return res.send("No earthquakes found. Please setup your locaton in settings")
+        };
 
         return res.status(404).json({
             'code': 'BAD_REQUEST_ERROR',
@@ -58,34 +61,6 @@ const createEarthquake = async (req, res, next) => {
             email
         } = req.body;
 
-        if (name === undefined || name === '') {
-            return res.status(422).json({
-                'code': 'REQUIRED_FIELD_MISSING',
-                'description': 'name is required',
-                'field': 'name'
-            });
-        }
-
-        if (email === undefined || email === '') {
-            return res.status(422).json({
-                'code': 'REQUIRED_FIELD_MISSING',
-                'description': 'email is required',
-                'field': 'email'
-            });
-        }
-
-
-        let isEmailExists = await Earthquake.findOne({
-            "email": email
-        });
-
-        if (isEmailExists) {
-            return res.status(409).json({
-                'code': 'ENTITY_ALREAY_EXISTS',
-                'description': 'email already exists',
-                'field': 'email'
-            });
-        }
 
         const temp = {
             name: name,

@@ -5,6 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const routes = require("./controllers/safesmsController.js");
 const exphbs = require("express-handlebars")
+const earthquake = require("./earthquake");
 
 // const bodyParser = require("body-parse");
 // const session = require("express-session");
@@ -29,9 +30,3 @@ app.listen(PORT, () => {
     console.log("\n     Server listening on http://localhost:" + PORT);
     console.log("\n     CRTL C to stop server", "\n");
 });
-
-
-// TEST get earthquake data server side
-const earthquake = require("./earthquake");
-
-// getEarthquakeData() 

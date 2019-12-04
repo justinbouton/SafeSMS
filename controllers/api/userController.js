@@ -8,7 +8,7 @@ const getUsers = async (req, res, next) => {
     try {
 
         let users = await User.find({});
-console.log("Retreive users from DB")
+        console.log("Retreive users from DB")
         if (users.length > 0) {
             console.log("Render Users page")
             return res
@@ -35,15 +35,12 @@ const getUserById = async (req, res, next) => {
     try {
         let reqParamsId = req.params.id
         console.log("\ngetUserById: " + reqParamsId)
-        // let user = await User.findById(reqParamsId);5dca0d82c65e1348c1961097
         let user = await User.findById(reqParamsId);
         if (user) {
 
-            // Need to setup db.chat with Id as the array for messaging
-            // Get static db.chat.:id which include all correspondence
+            // Get db.chat.":id" which include all correspondence
             console.log("retreiving chat messages");
-            // let messages = await Messaging.findById(reqParamsId);
-            let messages = await Messaging.find({ userId: reqParamsId }); // WORKING
+            let messages = await Messaging.find({ userId: reqParamsId });
             let noMessages = false;
             if (messages.length === 0) {
                 // usersMessaging appends "No user";

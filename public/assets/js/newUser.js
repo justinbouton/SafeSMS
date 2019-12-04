@@ -4,7 +4,6 @@ console.log("addUser clicked")
     event.preventDefault();
   
     // Super basic validation - increase errorCount variable if any fields are blank
-
     var errorCount = 0;
     $('.addUser').each(function(index, val) {
       if($(this).val() === '') { 
@@ -55,3 +54,12 @@ console.log(response);
       return false;
     }
   };
+
+  // TEST setAdmin 
+  $('#isAdmin').click(function () {
+    event.preventDefault()
+    var a = "btn-outline-success";
+    var b = "btn-success";
+    var state = this.className.indexOf(a) > -1; $(this).toggleClass(a, !state).toggleClass(b, state)
+  //   $(this).toggle.val("yes");
+  });
