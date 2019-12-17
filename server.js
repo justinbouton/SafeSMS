@@ -12,12 +12,22 @@ const earthquake = require("./earthquake");
 // const passport = require("passport");
 // const env = require("dotenv").load();
 
-
 // Set handlebars
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+// Moment handlebars helper
+const moment = require("moment");
+moment().format();
+
+// Handlebars helper dateTime converter
+const hbs = require("handlebars");
+hbs.registerHelper("convert", function (dateTime) {
+    const milliseconds = moment.unix(dateTime / 1000).format("LLLL");
+    return(milliseconds)
+})
 
 //Serve public folder
 app.use(express.static("public"));

@@ -1,11 +1,10 @@
-// console.log("\n earthquakeController.js started");
-
 const Earthquake = require('../../models/earthquakeSchema');
 
 const getEarthquakes = async (req, res, next) => {
     try {
         let earthquakes = await Earthquake.find({});
         console.log("Retreive earthquakes from DB")
+        // console.log(earthquakes)
         
         if (earthquakes.length > 0) {
             console.log("Render Alerts page")

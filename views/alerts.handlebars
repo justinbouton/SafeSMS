@@ -2,14 +2,17 @@
     <div class="d-flex flex-wrap alert-content">
         <!-- earthquake data will append here -->
         {{#each earthquakes}}
-            <a target="_blank" href="{{url}}">
-                <div earthquake-data="{{id}}" class="p-5 bd-highlight m-auto">
-                    <img src="assets/images/redLight.png" alt="status" height="15px">  
-                    <span class='p-2 col-sm-12 font-weight-bold time'></span>{{time}}
-                    <span class='p-2 col-sm-12 font-weight-bold magnitude'>Mag:</span>{{mag}}
-                    <span class='p-2 col-sm-12 font-weight-bold place'>Location:</span>{{place}}
+            <a class="my-3" style="width:80%;" target="_blank" href="{{url}}">
+                {{!-- <img class='' src="assets/images/redLight.png" alt="status" height="15px">   --}}
+                <div earthquake-data="{{id}}" class="bd-highlight m-auto">
+                    {{!-- convert helper in server.js --}}
+                    <span class='col-sm-10 col-md-8 col-lg-10 font-weight-bold dateTime'>{{convert time}}</span>
+                    <span class='col-sm-10 col-md-8 col-lg-10 magnitude'>Mag: </span> 
+                    <span class="font-weight-bold font-weight-bold ">{{mag}}</span>
+                    <span class='col-sm-10 col-md-8 col-lg-10 place'>Location: </span>{{place}}
                 </div>
             </a>
+            <span class='p-2 my-2 col-sm-2 col-md-2 col-lg-2 btn btn-outline-success mr-sm-2'>Notes</span>
         {{/each}}
     </div>
 </div>

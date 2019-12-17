@@ -1,6 +1,6 @@
 ## SafeSMS is a natural disaster SMS based check-in app to verify the safety of team(s) post disaster. 
 
-### Technologies: Node, Express, Handlebars, MongoDB/Mongoose, Axios, HTML, and Bootstrap.
+### Technologies: Node, Express, Handlebars, Handlebar Internalizers, MongoDB/Mongoose, Bcrypt, Axios, HTML, and Bootstrap.
 
 ### How it works:
 When an earthquake of X magnitude occurs it triggers an automated SMS to a list of people. On the Users page the user reply status light changes from red to green upon SMS response of "Yes or Y" signifying they are safe. People can reply directly to the SMS with a breif message. Messaging is available to the admin via SMS or the Users page by clicking on the individual. The admin is notified via SMS of all triggered events and all SMS responses.

@@ -85,22 +85,4 @@ function compareEarthquakeData() { // TEST partialy working
             console.log("Woohoo! Found earthquake data.")
         }
     }).catch((err) => console.log("compareEarthquakeData error: " + err));
-
-
-}; 
-
-
-// TEST: display data for alerts
-// Select main-content area append earthquake data
-// $('.alert-content').append( 
-//     $(` 
-//         <a target="_blank" href="${url}">
-//             <div earthquake-data="${id}" class="p-5 bd-highlight m-auto">
-//                 <img src="assets/images/redLight.png" alt="status" height="15px">  
-//                 <span class='place'>${dateTime}</span>
-//                 <span class='magnitude'>${mag}</span> 
-//                 <span class='place'>${place}</span>
-//             </div>
-//         </a>
-//     `)
-// ); 
+};

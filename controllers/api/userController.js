@@ -289,24 +289,3 @@ module.exports = {
     updateUser: updateUser,
     deleteUser: deleteUser
 }
-
-
-
-    // console.log("Render Status page");
-    // // Query: In our database, go to the users collection, then "find" everything
-    // User.find({}).sort('firstName').exec (function(err, users) {
-    //     // Log any errors if the server encounters one
-    //     if (err) {
-    //       console.log(err);
-    //     }
-    //     // Otherwise, send the result of this query to the browser
-    //     else {
-    //         console.log("Reading from users DB")
-    //     // Once the DB query completes
-    //         res.render("status", {
-    //             users
-    //         });
-    //         //   res.json(users);
-    //     }
-        
-    // });
