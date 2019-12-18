@@ -37,7 +37,7 @@ router.get("/users", userController.getUsers);
 router.post("/users/newUser", userController.createUser);
 router.get("/users/:id", userController.getUserById);
 
-// Messaging controller
+// Messaging
 router.post("/users/newMessage", messagingController.createMessage);
 // router.get("/messaging", messagingController.getMessages);
 
@@ -55,6 +55,7 @@ router.get("/err404", function (req, res) {
 
 // earthquake controller
 router.get("/alerts", earthquakeController.getEarthquakes);
+router.get("/alerts/:id", earthquakeController.getEarthquakeById);
 // router.post("/alerts", earthquakeController.createEarthquakes);
 
 // Export to 

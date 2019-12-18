@@ -1,0 +1,26 @@
+{{!-- Messaging window --}}
+<div class="container mt-3 bg-light border rounded">
+    <div class="container mt-3 pt-3 bg-white border rounded">
+        {{!-- Do I need a messaging NAV tab? --}}
+
+        {{!-- user messages align left, admin align right, date stamp --}}
+        {{#each messages}}
+            {{#if messageAdmin}}
+                <h6 id="messageAdmin">{{created}}</h6>
+                <h5 id="messageAdmin">{{messageBody}}</h5>
+            {{/if}}
+            {{#unless messageAdmin}}
+                <h6>{{created}}</h6> 
+                <h5>{{messageBody}}</h5>
+            {{/unless}}
+        {{/each}} 
+        {{#if noMessages}}
+            <h1>No messages</h1>
+        {{/if}}
+
+    </div>
+    <form class="form-inline py-3" name="newMessage" method="post" action="/users/newMessage">
+        <input class="form-control mr-sm-2" id="newMessage" type="text" placeholder="Enter to send">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="newMessageSend">Send</button>
+    </form>
+</div>
