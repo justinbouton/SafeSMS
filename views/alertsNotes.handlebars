@@ -3,11 +3,13 @@
     <div class="container mt-3 pt-3 bg-white border rounded">
 
         {{#each notes}}
-        <h1>{{noteBody}}</h1>
+            <h6>{{created}}</h6>
+            <h5 class="font-weight-bold">{{noteBody}}</h5>
+            <br>
 
         {{/each}} 
         {{#if noNotes}}
-            <h1>No Notes</h1>
+            <h5 class="font-weight-bold">No Notes</h5>
         {{/if}}
 
     </div>

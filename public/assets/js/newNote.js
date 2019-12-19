@@ -17,18 +17,15 @@ $("#newNote").keyup(function () {
       var noteBody = $('#newNote').val()
       var pathArray = window.location.pathname.split('/');
       var url = pathArray[2];
-
-      alert(noteBody)
-      alert(url)
     
-      // If it is, compile all user info into one object
+      // If it is, compile all info into one object
       var newNote = {
         'created': Date.now,
         'earthquakeId': url,
         'noteBody': noteBody
       }
     
-      // Use AJAX to post the object to our newUser service
+      // Use AJAX to post the object to our newNote
       $.ajax({
         type: 'POST',
         data: newNote,

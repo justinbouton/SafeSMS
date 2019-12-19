@@ -1,20 +1,24 @@
-<div class="container mt-3 bg-light border rounded">
-    <div class="d-flex flex-wrap alert-content">
+<div class='container mt-3 py-2 bg-light border rounded'>
+    <div class='d-flex flex-wrap alert-content'>
         <!-- earthquake data will append here -->
         {{#each earthquakes}}
-            <a class="my-3" style="width:80%;" target="_blank" href="{{url}}">
-                {{!-- <img class='' src="assets/images/redLight.png" alt="status" height="15px">   --}}
-                <div earthquake-data="{{id}}" class="bd-highlight m-auto">
+        <div class='wrapper py-2' style='width:100%;'>
+
+            <a class='my-3' style='width:80%;' target='_blank' href='{{url}}'>
+                {{!-- <img class='' src='assets/images/redLight.png' alt='status' height='15px'>   --}}
+                <div earthquake-data='{{id}}' class='bd-highlight m-auto'>
                     {{!-- convert helper in server.js --}}
-                    <span class='col-sm-10 col-md-8 col-lg-10 font-weight-bold dateTime'>{{convert time}}</span>
-                    <span class='col-sm-10 col-md-8 col-lg-10 magnitude'>Magnitude: </span> 
-                    <span class="font-weight-bold font-weight-bold ">{{mag}}</span>
-                    <span class='col-sm-10 col-md-8 col-lg-10 place'>Location: </span>{{place}}
+                    <h5 class='float-left col-sm-10 col-md-8 col-lg-5 font-weight-bold dateTime'>{{convert time}}</h5>
+                    <h5 class='float-left col-sm-10 col-md-8 col-lg-2 magnitude'>Magnitude: <span class='font-weight-bold'>{{mag}}</span></h5> 
+                    <h5 class='float-left font-weight-bold'></h5>
+                    <h5 class='float-left col-sm-10 col-md-8 col-lg-4 place'>{{place}}</h5>
                 </div>
             </a>
-            <a class='p-2 my-2 col-sm-2 col-md-2 col-lg-2' href=/notes/{{id}}> 
-                <span class='btn btn-outline-success mr-sm-2'>Notes</span>
+            <a class='float-left col-lg-1' href=/notes/{{id}}> 
+                <span class=' btn btn-outline-success mr-sm-2'>Notes</span>
             </a>
+            
+        </div>
         {{/each}}
     </div>
 </div>
