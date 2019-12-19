@@ -8,18 +8,6 @@ $("#newMessage").keyup(function () {
     };
 });
 
-// var messageBody = $('#newMessage').val()
-
-//   if (messageBody) {
-//     console.log(messageBody)
-//     if (event.keyCode === 13) {
-//       event.preventDefault()
-//       // sendMessage()
-//       console.log("CLICKED");
-//     };
-//   }
-// });
-
 $("#newMessageSend").click(function () {
   event.preventDefault()
   sendMessage()

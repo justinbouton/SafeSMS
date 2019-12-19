@@ -9,6 +9,7 @@ const connection = require("../config/connection"); // DB
 const userController = require('./api/userController');
 const earthquakeController = require('./api/earthquakeController');
 const messagingController = require('./api/messagingController');
+const noteController = require('./api/noteController');
 
 
 router.get("/", function (req, res) {
@@ -55,7 +56,15 @@ router.get("/err404", function (req, res) {
 
 // earthquake controller
 router.get("/alerts", earthquakeController.getEarthquakes);
-router.get("/alerts/:id", earthquakeController.getEarthquakeById);
+
+// note controller
+// router.get("/notes/", noteController.getNotes);
+router.post("/notes/newNote", noteController.createNote);
+router.get("/notes/:id", noteController.getNoteById);
+// router.get("/notes/:id", noteController.getNoteById);
+// router.post("/notes/newNote", noteController.createNote);
+
+
 // router.post("/alerts", earthquakeController.createEarthquakes);
 
 // Export to 

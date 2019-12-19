@@ -54,6 +54,7 @@ const getEarthquakeById = async (req, res, next) => {
 
 const createEarthquake = async (req, res, next) => {
     try {
+        let notes = await Notes.createNote(req.params.id);
 
         const {
             name,

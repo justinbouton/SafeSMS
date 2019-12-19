@@ -18,25 +18,37 @@ db.once('open', () => console.log(`\nConnected to DB ${dbName} \n`));
 
 
 
-// // WORKING uncomment to load static quake data.
+// WORKING uncomment to load static notes and quake data.
 
-// const Earthquake = require('../models/earthquakeSchema'); // Test
+// const Earthquake = require('../models/earthquakeSchema');
 // const earthquake = require('../db/earthquakeData')
-// const userArrLength = earthquake.length  
+// const Notes = require('../models/noteSchema');
+// const note = require('../db/noteData')
+// const earthquakeArrLength = earthquake.length  
 
-// for (var i = 0; i < userArrLength; i++) {
+// for (var i = 0; i < earthquakeArrLength; i++) {
 
 //   const id = earthquake[i].id 
 //   const time = earthquake[i].time 
 //   const place = earthquake[i].place 
 //   const url = earthquake[i].url
 //   const mag = earthquake[i].mag
+//   const earthquakeId = earthquake[i].id
+//   const noteBody = note[i].noteBody
 
-// Earthquake.create({ id, time, place, url, mag }, function (err, earthquake) {
-//     if (err) return handleError(err);
-//     // saved!
-//     console.log("\n\nUser entry to Earthquake DB: \n\n" + earthquake);
-//   });
+//   console.log(earthquakeId)
+//   console.log(noteBody)
+
+//     Earthquake.create({ id, time, place, url, mag }, function (err, earthquake) {
+//         if (err) return handleError(err);
+//         // saved!
+//         console.log("\n\nEntry to Earthquake DB: \n\n" + earthquake);
+//     });
+//     Notes.create({ earthquakeId, noteBody }), function (err, note) {
+//         if (err) return handleError(err);
+//         // saved!
+//     console.log("\n\nEntry to Notes DB: \n\n" + note);
+//     }
 // };
 
 

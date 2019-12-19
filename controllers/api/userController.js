@@ -35,9 +35,9 @@ const getUserById = async (req, res, next) => {
     try {
         let reqParamsId = req.params.id
         console.log("\ngetUserById: " + reqParamsId)
+        
         let user = await User.findById(reqParamsId);
         if (user) {
-
             // Get db.chat.":id" which include all correspondence
             console.log("retreiving chat messages");
             let messages = await Messaging.find({ userId: reqParamsId });
@@ -45,14 +45,12 @@ const getUserById = async (req, res, next) => {
             if (messages.length === 0) {
                 // usersMessaging appends "No user";
                 console.log("No messages found")
-                noMessages = "true";
+                noMessages = true;
             }
 
             return res
                 .status(200)
                 .render("usersMessaging", { messages, noMessages })
-                // 'messages': `user with id ${reqParamsId} fetched successfully`,
-                // 'data': user
         }
 
         return res.status(404).json({

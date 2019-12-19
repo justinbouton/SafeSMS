@@ -1,5 +1,3 @@
-// console.log("\n messagingController.js started");
-
 const Message = require('../../models/messagingSchema');
 
 const getMessages = async (req, res, next) => {

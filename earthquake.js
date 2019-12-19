@@ -8,7 +8,7 @@ var parsedEarthquakeData = [];
 
 // Recursive function with time delay
 function getEarthquakeData() {
-    console.log('getEarthquakeData')
+    console.log('Pulling earthquake data "getEarthquakeData" /earthquake.js')
 
     // Declare varibles for radius, latitude and longitude.
     // ///// FUTURE Google geolocation for lat/long /////
