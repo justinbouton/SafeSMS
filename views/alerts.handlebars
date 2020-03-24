@@ -8,10 +8,10 @@
                 {{!-- <img class='' src='assets/images/redLight.png' alt='status' height='15px'>   --}}
                 <div earthquake-data='{{id}}' class='bd-highlight m-auto'>
                     {{!-- convert helper in server.js --}}
-                    <h5 class='float-left col-sm-10 col-md-8 col-lg-5 font-weight-bold dateTime'>{{convert time}}</h5>
-                    <h5 class='float-left col-sm-10 col-md-8 col-lg-2 magnitude'>Magnitude: <span class='font-weight-bold'>{{mag}}</span></h5> 
+                    <h5 class='float-left col-sm-10 col-md-8 col-lg-4 font-weight-bold dateTime'>{{convert time}}</h5>
+                    <h5 class='float-left col-sm-10 col-md-8 col-lg-2 magnitude'>Mag: <span class='font-weight-bold'>{{mag}}</span></h5> 
                     <h5 class='float-left font-weight-bold'></h5>
-                    <h5 class='float-left col-sm-10 col-md-8 col-lg-4 place'>{{place}}</h5>
+                    <h5 class='float-left col-sm-10 col-md-8 col-lg-5 place'>{{place}}</h5>
                 </div>
             </a>
             <a class='float-left col-lg-1' href=/notes/{{id}}> 

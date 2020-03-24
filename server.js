@@ -22,10 +22,11 @@ app.set("view engine", "handlebars");
 const moment = require("moment");
 moment().format();
 
-// Handlebars helper dateTime converter
+// Handlebars helper dateTime converter 
 const hbs = require("handlebars");
 hbs.registerHelper("convert", function (dateTime) {
-    const milliseconds = moment.unix(dateTime / 1000).format("LLLL");
+    // CUSTOM DATE/TIME FORMAT see https://momentjs.com/docs/
+    const milliseconds = moment.unix(dateTime / 1000).format("ddd, MMM DD, YYYY LT");
     return(milliseconds)
 })
 

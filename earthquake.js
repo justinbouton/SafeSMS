@@ -62,12 +62,11 @@ function getEarthquakeData() {
 getEarthquakeData();
 
 
-
 var earthquakeCount = 0;
 
 function compareEarthquakeData() { // TEST partialy working
 
-// TODO pull all earthquake data to local array. Compare that array to parsedEarthquakeData
+// Pull all DB earthquake data to local array. Compare that array to API parsedEarthquakeData
 
     // Get earthquake count
     Earthquake.countDocuments({}, function (err, count) {
@@ -77,45 +76,58 @@ function compareEarthquakeData() { // TEST partialy working
         if (earthquakeCount === 0) {
             console.log("no earthquake data")
             // Add data to Earthquake DB CREATE FUNCTION
-        } else {
-            // compare to Earthquake DB
-            console.log("Woohoo! Found earthquake data.")
-            // Check Earthquake DB against parsedEarthquakeData by id add to DB if not present
-            let earthquakeDB = []
-            // Pull Earthquake DB data place in array
-            Earthquake.find({}, function (err, res){
-                res.forEach(element => {
-                    earthquakeDB.push(element)
-                });
-
-            let earthquakeDifferences = [];
-
-            // Loop through each earthquakeDB.id and compare with parsedEarthquakeData.id
-            for (var i = 0; i < earthquakeCount; i++) {
-                let quakeid = earthquakeDB[i].id
-console.log("forLoop " + i)
-
                 parsedEarthquakeData.forEach(element => {
-                    let parsedid = element.id
-                    // compare quakeid to parsdid
-                    // console.log(parsedid)
+console.log("Adding ID: " + element.id + " to db.earthquake")     
+                    // ES6 destructuring to parse out; time, place, url, mag
+                    const { id, time, place, url, mag } = element;
+
+                    Earthquake.create({
+                            id: id,
+                            time : time,
+                            place : place,
+                            url : url,
+                            mag : mag
+                    })
+                })
+        } else {
+//             // compare to Earthquake DB
+            console.log("Woohoo! Found earthquake data.")
+//             // Check Earthquake DB against parsedEarthquakeData by id add to DB if not present
+//             let earthquakeDB = []
+//             // Pull Earthquake DB data place in array
+//             Earthquake.find({}, function (err, res){
+//                 res.forEach(element => {
+//                     earthquakeDB.push(element)
+//                 });
+
+//             let earthquakeDifferences = [];
+
+//             // Loop through each earthquakeDB.id and compare with parsedEarthquakeData.id
+//             for (var i = 0; i < earthquakeCount; i++) {
+//                 let quakeid = earthquakeDB[i].id
+// console.log("forLoop " + i)
+
+//                 parsedEarthquakeData.forEach(element => {
+//                     let parsedid = element.id
+//                     // compare quakeid to parsdid
+//                     // console.log(parsedid)
                     
-                    // Compared Earthquake ID if no match add to Earthquake DB
-                    function compareEarthquakeID() {
-                        if (quakeid !== parsedid) {
-console.log("NO MATCH")
-                            // Add to Earthquake DB
-                            // Earthquake.create({
+//                     // Compared Earthquake ID if no match add to Earthquake DB
+//                     function compareEarthquakeID() {
+//                         if (quakeid !== parsedid) {
+// console.log("NO MATCH adding incident to earthquakeDB: " + element)
+//                             // Add to Earthquake DB using parsedid
+//                             // Earthquake.create({
                                 
-                            // })
-                        }
-                    }
-                    compareEarthquakeID()
-                });
+//                             // })
+//                         }
+//                     }
+//                     compareEarthquakeID()
+//                 });
                 
-                // // if id does not match add to Earthquake DB and trigger SMS admin                
-            }
-            })
+//                 // // if id does not match add to Earthquake DB and trigger SMS admin                
+//             }
+//             })
         }
     }).catch((err) => console.log("compareEarthquakeData error: " + err));
 };

@@ -1,4 +1,4 @@
-console.log("\n earthquake.js started \n");
+console.log("\n earthquakeData.js started \n");
 
 earthquake = [
     
