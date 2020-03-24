@@ -50,13 +50,9 @@ function getEarthquakeData() {
                 const { time, place, url, mag } = response;
                 // Using Earthquake constructor push to parsedEarthquakeData
                 new Earthquake(id, time, place, url, mag)
-
-                // Admin notified, earthquake threshold met, mass SMS sent
             }; 
 
             compareEarthquakeData()
-            // console.log("parsedEarthquakeData: ");
-            // console.log(parsedEarthquakeData);
         })
         .catch((err) => console.log("API call error - " + err));
 
@@ -71,7 +67,7 @@ var earthquakeCount = 0;
 
 function compareEarthquakeData() { // TEST partialy working
 
-// TODO pull all earthquake data to global array. Compare that array to parsedEarthquakeData
+// TODO pull all earthquake data to local array. Compare that array to parsedEarthquakeData
 
     // Get earthquake count
     Earthquake.countDocuments({}, function (err, count) {
@@ -80,9 +76,46 @@ function compareEarthquakeData() { // TEST partialy working
         // if earthquakeCount === 0 log no data. Else loop through each then Earthquake.create
         if (earthquakeCount === 0) {
             console.log("no earthquake data")
+            // Add data to Earthquake DB CREATE FUNCTION
         } else {
             // compare to Earthquake DB
             console.log("Woohoo! Found earthquake data.")
+            // Check Earthquake DB against parsedEarthquakeData by id add to DB if not present
+            let earthquakeDB = []
+            // Pull Earthquake DB data place in array
+            Earthquake.find({}, function (err, res){
+                res.forEach(element => {
+                    earthquakeDB.push(element)
+                });
+
+            let earthquakeDifferences = [];
+
+            // Loop through each earthquakeDB.id and compare with parsedEarthquakeData.id
+            for (var i = 0; i < earthquakeCount; i++) {
+                let quakeid = earthquakeDB[i].id
+console.log("forLoop " + i)
+
+                parsedEarthquakeData.forEach(element => {
+                    let parsedid = element.id
+                    // compare quakeid to parsdid
+                    // console.log(parsedid)
+                    
+                    // Compared Earthquake ID if no match add to Earthquake DB
+                    function compareEarthquakeID() {
+                        if (quakeid !== parsedid) {
+console.log("NO MATCH")
+                            // Add to Earthquake DB
+                            // Earthquake.create({
+                                
+                            // })
+                        }
+                    }
+                    compareEarthquakeID()
+                });
+                
+                // // if id does not match add to Earthquake DB and trigger SMS admin                
+            }
+            })
         }
     }).catch((err) => console.log("compareEarthquakeData error: " + err));
 };

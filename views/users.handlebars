@@ -2,7 +2,7 @@
     <div class="d-flex flex-wrap main-content">
         <!-- users data will append here -->
         <!-- Dynamically create content forEach user by appending userInfo to  main-content. -->
-        <h5 class="p-2 font-weight-bold">Please add new users below.</h5>
+        <h5 class="my-1 p-2 font-weight-bold">Please add new users below.</h5>
         <form class="form-inline p-2 my-2 my-lg-0" name="newUser" method="post" action="/users/create">
             <button class="btn btn-outline-success mr-sm-2" id="isAdmin" type="button" value="no">Admin?</button>
             <input class="form-control mr-sm-2 addUser firstName" id="" type="text" placeholder="First Name">
@@ -17,10 +17,10 @@
                     {{#each users}}
                     <div class="col-sm-6 col-med-4 col-lg-2">
                         <a href=/users/{{_id}}> 
-                            <div class="py-4 bd-highlight m-auto">
-                                <img src="/assets/images/redLight.png" alt="status" height="15px">
-                                <span class='firstName'>{{firstName}}</span>
-                                <span class='lastName'>{{lastName}}</span>
+                            <div class="p-2 bd-highlight m-auto">
+                                <img class='float-left m-1' src="/assets/images/redLight.png" alt="status" height="15px">
+                                <h5 class='float-left firstName'>{{firstName}}</h5>
+                                <h5 class='float-left lastName'>{{lastName}}</h5>
                             </div>
                         </a>
                         </div>
