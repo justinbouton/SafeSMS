@@ -61,9 +61,10 @@ function getEarthquakeData() {
 
 
 
-var earthquakeCount = 0;
 
-function compareEarthquakeData() { // TEST partialy working
+function compareEarthquakeData() { // Working
+
+var earthquakeCount = 0;
 
 // Pull all DB earthquake data to local array. Compare that array to API parsedEarthquakeData
 
@@ -74,6 +75,7 @@ function compareEarthquakeData() { // TEST partialy working
         // if earthquakeCount === 0 log no data. Else Earthquake.create
         if (earthquakeCount === 0) {
             console.log("no earthquake data")
+            console.log("")
             // Store earthquake data to DB.
             storeEarthquakeData(parsedEarthquakeData)
         } else {
@@ -81,10 +83,8 @@ function compareEarthquakeData() { // TEST partialy working
             console.log("Woohoo! Found earthquake data.")
 
             // Check earthquakeDB against API response parsedEarthquakeData. Compare id if already in earthquakeDB pop off that id else push to earthquakeDifferences.
-
             let earthquakeDB = [];
-            let earthquakeDifferences = [];
-            
+
             // Pull Earthquake DB data place in array
             Earthquake.find({}, function (err, res){
                 res.forEach(element => {
@@ -102,7 +102,7 @@ function compareEarthquakeData() { // TEST partialy working
             var result = parsedEarthquakeData.filter(function(o1){
                 // filter out (!) items in earthquakeDB
                 return !earthquakeDB.some(function(o2){
-                    return o1.id === o2.id;          // assumes unique id
+                    return o1.id === o2.id; // assumes unique id
                 });
             }).map(function(o){
                 // use reduce to make objects with only the required properties
@@ -113,7 +113,7 @@ function compareEarthquakeData() { // TEST partialy working
                 }, {});
             });
             
-            console.log(result)
+            // console.log(result)
             storeEarthquakeData(result)
             });
 
@@ -141,43 +141,3 @@ console.log("Adding ID: " + element.id + " to db.earthquake")
 
 // // getEarthquakeData -> compareEarthquakeData -> storeEarthquakeData
 getEarthquakeData();
-
-
-
-
-
-//              // Loop through each earthquakeDB.id and compare with parsedEarthquakeData.id
-//              for (var i = 0; i < earthquakeCount; i++) {
-//                 let quakeid = earthquakeDB[i].id
-// // console.log("forLoop " + i)
-
-//                 parsedEarthquakeData.forEach(element => {
-//                     let parsedid = element.id
-// // console.log(parsedid)
-//                 // Compared quakeid to parsdid if no match add to earthquakeDifferences
-//                         if (parsedid === quakeid) {
-//                             // pop from parsedEarthquakeData
-//                         } else {
-//                             // push to earthquakeDifferences
-//                         }          
-
-//                 // Push earthquakeDifferences to db.earthquakes.
-
-
-
-// // // console.log("NO MATCH adding incident to earthquakeDB: " + parsedid)
-// //                                 // Add to Earthquake DB to earthquakeDifferences using parsedid
-// //                                 // earthquakeDifferences.push(parsedid)
-// //     //                             // Earthquake.create({
-//                     })
-//                 }
-//                 // });
-                
-// //     //                 // // if id does not match add to Earthquake DB and trigger SMS admin                
-// //                 console.log("earthquakeDifferences")
-// //                 console.log(earthquakeDifferences)
-//         })
-
-
-
-

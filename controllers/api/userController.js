@@ -34,6 +34,7 @@ const getUsers = async (req, res, next) => {
 const getUserById = async (req, res, next) => {
     try {
         let reqParamsId = req.params.id
+        
         console.log("\ngetUserById: " + reqParamsId)
         
         let user = await User.findById(reqParamsId);

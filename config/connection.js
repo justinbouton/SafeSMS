@@ -1,6 +1,6 @@
 var connection;
 
-//Set up mongoose connection
+//Mongoose connection
 const config = require('../config');
 const mongoose = require('mongoose');
 const dbName = config.connectionString;

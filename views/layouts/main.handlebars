@@ -36,20 +36,22 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item nav justify-content-end">
-                        <a class="nav-link" href="/users">Users</a>
+                        <a class="nav-link" href="/users">
+                        <i class="fas fa-users" id="settings" style="font-size: 20px; line-height: 2;"></i> 
+                        Users</a>
                     </li>
-                    
-                    {{!-- OLD messaging page, repalced with Users page. --}}
-                    {{!-- <li class="nav-item nav justify-content-end">
-                        <a class="nav-link" href="/messaging">Messaging</a>
-                    </li> --}}
-
                     <li class="nav-item nav justify-content-end">
-                        <a class="nav-link" href="/alerts">Alerts</a>
+                        <a class="nav-link" href="/alerts">
+                        <i class="fas fa-bullhorn" id="settings" style="font-size: 20px; line-height: 2;"></i> 
+                        Alerts</a>
+                    </li>
+                    <li class="nav-item nav justify-content-end">
+                        <a class="nav-link" href="#">
+                        <i class="fas fa-cog" id="settings" style="font-size: 20px; line-height: 2;"></i> 
+                        Settings</a>
                     </li>
                 </ul>
-                <i class="fas fa-cog" id="settings" style="font-size: 20px;"></i>
-
+                
                 {{!-- FUTURE Search option --}}
                 {{!-- <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" id="input-width" type="search"
