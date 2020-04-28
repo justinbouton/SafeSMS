@@ -10,7 +10,7 @@ function addAdmin(form) {
               errorCount++; 
               // toggle this.class red border
               console.log(this)
-              this.className = "redBorder";
+              this.className += " redBorder";
             } else {
                 this.classList.remove("redBorder")
             }
