@@ -1,13 +1,13 @@
 var connection;
 
 //Mongoose connection
-const config = require('../config');
+const config = require('./config');
 const mongoose = require('mongoose');
 const dbName = config.connectionString;
 // var dbName = "safesms"; // changed mongoose.connect(mongoDb to ||
 // var mongoDB = `mongodb://localhost:27017/${dbName}`;
-mongoose.connect(process.env.MONGODB_URI || dbName, { useNewUrlParser: true, useUnifiedTopology: true });
-var db = mongoose.connection;
+mongoose.connect(process.env.MONGODB_URI || dbName, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true }); 
+var db = mongoose.connection; 
 
 /////////// WARNING THIS WILL DROP THE CURRENT DATABASE ///////////
 // db.dropDatabase();

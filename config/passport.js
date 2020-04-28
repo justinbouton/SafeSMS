@@ -1,17 +1,44 @@
-module.exports = function(passport){
+var JwtStrategy = require('passport-jwt').Strategy,
+    ExtractJwt = require('passport-jwt').ExtractJwt;
 
-    // serialize
-    passport.serializeUser(function(user, done){ 
-        done(null, user.id);
-    });
+// load up the user model
+var User = require('../models/usersSchema');
+var config = require('./config'); // get db config file
 
-    // deserialize
-    passport.deserializeUser(function(user, done){ 
-        User.findById(id, function(err, user){
-            done(err, user)
-        });
-    });
-
-    passport.use('')
-
+module.exports = function(passport) {
+  var opts = {};
+  opts.jwtFromRequest = ExtractJwt.fromAuthHeaderWithScheme("jwt");
+  opts.secretOrKey = config.secret;
+  passport.use(new JwtStrategy(opts, function(jwt_payload, done) {
+    User.findOne({id: jwt_payload.id}, function(err, user) {
+          if (err) {
+              return done(err, false);
+          }
+          if (user) {
+              done(null, user);
+          } else {
+              done(null, false);
+          }
+      });
+  }));
 };
+
+
+
+// module.exports = function(passport){
+
+//     // serialize
+//     passport.serializeUser(function(user, done){ 
+//         done(null, user.id);
+//     });
+
+//     // deserialize
+//     passport.deserializeUser(function(user, done){ 
+//         User.findById(id, function(err, user){
+//             done(err, user)
+//         });
+//     });
+
+//     passport.use('')
+
+// };

@@ -6,10 +6,18 @@ const PORT = process.env.PORT || 8080;
 const routes = require("./controllers/safesmsController.js");
 const exphbs = require("express-handlebars")
 const earthquake = require("./earthquake");
+var morgan = require('morgan');
+var passport = require('passport');
+var cors = require('cors');
+
+// Initialize CORS 
+app.use(cors());
+
+// Initialize passport 
+app.use(passport.initialize());
 
 // const bodyParser = require("body-parse");
 // const session = require("express-session");
-// const passport = require("passport");
 // const env = require("dotenv").load();
 
 // Set handlebars
