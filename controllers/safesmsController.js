@@ -25,61 +25,33 @@ router.get("/", function (req, res) {
     res.redirect("users");
 });
 
-// TEST FOR BCRYPT
 // Signup POST route
 router.post('/signup', userController.createAdmin);
-
-
-// router.post('/signup', function(req, res) {
-//     // Destructure req.body for firstName, lastName, email, password.
-//    const { firstName, lastName, email, password } = req.body
-//     if (!firstName || !lastName || !email || !password) {
-//       res.json({success: false, msg: 'Please fill out all fields.'});
-//     } else {
-//       var newAdmin = new User({
-//         'isAdmin': true,
-//         'firstName': firstName,
-//         'lastName': lastName,
-//         'email': email,
-//         'password': password
-//       });
-
-// console.log(newAdmin)
-//       // save the user
-//       newAdmin.save(function(err) {
-//         if (err) {
-//           return res.json({success: false, msg: 'Username already exists.'});
-//         }
-//         // res.json({success: true, msg: 'Successful created new user.'});
-
-//       });
-//     }
-//   });
   
-  // Create a router for login or sign-in.
-  router.post('/login', function(req, res) {
-    User.findOne({
-      username: req.body.username
-    }, function(err, user) {
-      if (err) throw err;
-  
-      if (!user) {
-        res.status(401).send({success: false, msg: 'Authentication failed. User not found.'});
-      } else {
-        // check if password matches
-        user.comparePassword(req.body.password, function (err, isMatch) {
-          if (isMatch && !err) {
-            // if user is found and password is right create a token
-            var token = jwt.sign(user, config.secret);
-            // return the information including token as JSON
-            res.json({success: true, token: 'JWT ' + token});
-          } else {
-            res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
-          }
-        });
-      }
+// Create a router for login or sign-in.
+router.post('/login', function(req, res) {
+User.findOne({
+    username: req.body.username
+}, function(err, user) {
+    if (err) throw err;
+
+    if (!user) {
+    res.status(401).send({success: false, msg: 'Authentication failed. User not found.'});
+    } else {
+    // check if password matches
+    user.comparePassword(req.body.password, function (err, isMatch) {
+        if (isMatch && !err) {
+        // if user is found and password is right create a token
+        var token = jwt.sign(user, config.secret);
+        // return the information including token as JSON
+        res.json({success: true, token: 'JWT ' + token});
+        } else {
+        res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
+        }
     });
-  });
+    }
+});
+});
   
 //   // Create a router to add a new book that only accessible to an authorized user.
 //   router.post('/book', passport.authenticate('jwt', { session: false}), function(req, res) {

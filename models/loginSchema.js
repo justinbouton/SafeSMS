@@ -5,9 +5,7 @@ const mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 const loginSchema = new Schema({
-    created: { type: Date, default: Date.now },
-    // isAdmin: Boolean, // May not need
-    // TODO companyId: String, // Pull from companySchema id // May not need
+    lastLogin: { type: Date, default: Date.now },
     email: { type: String, required: true },
     password: { type: String, required: true }
 });

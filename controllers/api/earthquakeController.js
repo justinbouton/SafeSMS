@@ -2,7 +2,7 @@ const Earthquake = require('../../models/earthquakeSchema');
 
 const getEarthquakes = async (req, res, next) => {
     try {
-        let earthquakes = await Earthquake.find({});
+        let earthquakes = await Earthquake.find({}).sort( { time: -1 } )
         console.log("Retreive earthquakes from DB")
         // console.log(earthquakes)
         

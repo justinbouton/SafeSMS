@@ -98,7 +98,7 @@ const createAdmin = async (req, res, next) => {
                 'phone': phone
             };
 
-            // save the user
+            // save newAdmin
             let newAdmin = await User.create(adminData)
 
             if (newAdmin) {
@@ -111,7 +111,6 @@ const createAdmin = async (req, res, next) => {
                               return res.json({success: false, msg: 'Username already exists.'});
                             }
                         })
-
 
                 return res.status(201).json({
                     'message': 'admin created successfully',
@@ -127,9 +126,6 @@ const createAdmin = async (req, res, next) => {
         });
     }
 }
-
-
-
 
 const createUser = async (req, res, next) => {
     try {
