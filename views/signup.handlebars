@@ -2,12 +2,13 @@
 <div class="container-fluid my-3 bg-light border rounded mx-auto" style="width: 300px;">
     <div class="d-flex flex-wrap main-content">
         <h5 class="p-2">Already a member? <a class="btn btn-outline-success" href="/login">Login</a></h5>
-        <form class="form-inline p-2 mb-2 mb-lg-0" name="newUser" method="post" action="/signup">
-            <input class="form-control mb-3 mr-sm-2 addUser firstName" id="input-width" type="text" placeholder="First Name">
-            <input class="form-control mr-sm-2 addUser lastName" id="input-width" type="text" placeholder="Last Name">
-            <input class="form-control my-3 mr-sm-2 addUser email" id="input-width" type="email" placeholder="Email Address">
-            <input class="form-control mr-sm-2 addUser phone" id="input-width" type="tel" placeholder="Phone Number">
-            <button class="mt-2 btn btn-outline-success" id="btnAddUser" onclick="addUser(this.form)"
+        <form class="form-inline p-2 mb-2 mb-lg-0" name="newAdmin" method="post" action="/signup">
+            <input class="form-control mb-3 mr-sm-2 addAdmin firstName" id="input-width" type="text" placeholder="First Name">
+            <input class="form-control mr-sm-2 addAdmin lastName" id="input-width" type="text" placeholder="Last Name">
+            <input class="form-control my-3 mr-sm-2 addAdmin email" id="input-width" type="email" placeholder="Email Address">
+            <input class="form-control mr-sm-2 addAdmin phone" id="input-width" type="tel" placeholder="Phone Number">
+            <input class="form-control mr-sm-2 my-3 addAdmin password" id="input-width" type="password" placeholder="Password">
+            <button class="mt-2 btn btn-outline-success" id="btnAddAdmin" onclick="addAdmin(this.form)"
                 type="button" value="Submit form">Sign up!</button> 
         </form>
     </div>

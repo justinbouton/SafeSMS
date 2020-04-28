@@ -24,9 +24,6 @@ router.get("/", function (req, res) {
     console.log("Redirect to home page")
     res.redirect("users");
 });
-
-// Signup POST route
-router.post('/signup', userController.createAdmin);
   
 // Create a router for login or sign-in.
 router.post('/login', function(req, res) {
@@ -106,12 +103,14 @@ User.findOne({
 
 // // Login controller
 // // TODO User cannot sign up unless isAdmin: true. If true and password exist redirect to login. If true and no password allow sign up. 
-// // TODO sign up 
+
 // router.get("/signup", loginController.signUp);
+// Signup GET route
 router.get("/signUp", function (req, res) {
     res.render("signUp")
-}); // WORKING mock up page
-// router.post("/signUp/newAdmin", userController.createUser); // TODO
+}); 
+// Signup POST route
+router.post('/signup', userController.createAdmin);
 
 
 // // TODO setup/verify user login
