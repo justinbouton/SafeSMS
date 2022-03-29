@@ -63,3 +63,15 @@ console.log(response);
     var state = this.className.indexOf(a) > -1; $(this).toggleClass(a, !state).toggleClass(b, state)
   //   $(this).toggle.val("yes");
   });
+
+
+  // TEST userEdit
+  $('#settings').click(function () {
+    event.preventDefault()
+    let edit = document.getElementsByClassName('clicktoedit');
+
+  // Loop through each clicktoedit element and add 
+    for (let item of edit) {
+      item.classList.add('edit')
+    };
+  });
