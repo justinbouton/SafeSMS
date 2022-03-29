@@ -2,9 +2,9 @@ const Note = require('../../models/noteSchema');
 
 const getNotes = async (req, res, next) => {
     try {
-        let notes = await Note.find({});
+        let notes = await Note.find({}).lean();
         console.log("Retreive notes from DB")
-        // console.log(notes)
+        console.log(notes)
         console.log("TEST " + notes)
         if (notes.length > 0) {
             console.log("Render Alerts page")
@@ -33,7 +33,7 @@ const getNoteById = async (req, res, next) => {
         let reqParamsNotes = req.params.id
         console.log("\ngetNoteNotesById: " + reqParamsNotes)
 
-        let notes = await Note.find({ earthquakeId: reqParamsNotes });
+        let notes = await Note.find({ earthquakeId: reqParamsNotes }).lean();
 
         if (notes) {
             // Get db.notes.":id" of notes
@@ -195,7 +195,7 @@ module.exports = {
 
     // console.log("Render Status page");
     // // Query: In our database, go to the notes collection, then "find" everything
-    // User.find({}).sort('firstName').exec (function(err, notes) {
+    // User.find({}).lean().sort('firstName').exec (function(err, notes) {
     //     // Log any errors if the server encounters one
     //     if (err) {
     //       console.log(err);

@@ -3,7 +3,7 @@ const Message = require('../../models/messagingSchema');
 const getMessages = async (req, res, next) => {
     try {
 
-        let messages = await Message.find({});
+        let messages = await Message.find({}).lean();
 
         if (messages.length > 0) {
             console.log("Rendering messaging page")
@@ -28,7 +28,7 @@ const getMessageById = async (req, res, next) => {
     try {
         console.log("getMessageById: ")
 
-        let message = await Message.findById(req.params.id);
+        let message = await Message.findById(req.params.id).lean();
         if (message) {
             return res.status(200).json({
                 'message': `message with id ${req.params.id} fetched successfully`,
@@ -117,7 +117,7 @@ const updateMessage = async (req, res, next) => {
         }
 
 
-        let isMessageExists = await Message.findById(messageId);
+        let isMessageExists = await Message.findById(messageId).lean();
 
         if (!isMessageExists) {
             return res.status(404).json({
@@ -133,7 +133,7 @@ const updateMessage = async (req, res, next) => {
 
         let updateMessage = await Message.findByIdAndUpdate(messageId, temp, {
             new: true
-        });
+        }).lean();
 
         if (updateMessage) {
             return res.status(200).json({
@@ -154,7 +154,7 @@ const updateMessage = async (req, res, next) => {
 
 const deleteMessage = async (req, res, next) => {
     try {
-        let message = await Message.findByIdAndRemove(req.params.id);
+        let message = await Message.findByIdAndRemove(req.params.id).lean();
         if (message) {
             return res.status(204).json({
                 'message': `message with id ${req.params.id} deleted successfully`
@@ -187,7 +187,7 @@ module.exports = {
 
     // console.log("Render Status page");
     // // Query: In our database, go to the messages collection, then "find" everything
-    // User.find({}).sort('firstName').exec (function(err, messages) {
+    // User.find({}).lean().sort('firstName').exec (function(err, messages) {
     //     // Log any errors if the server encounters one
     //     if (err) {
     //       console.log(err);

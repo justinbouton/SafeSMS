@@ -1,4 +1,4 @@
-// console.log("\n usersSchema.js started");
+// console.log("\n'usersSchema.js started'");
 
 //Require Mongoose and bcrypt
 const mongoose = require('mongoose');
@@ -11,7 +11,8 @@ const userSchema = new Schema({
     isAdmin: {type: Boolean, default: false},// Cannot sign up unless true. If admin true and password exist redirect
     created: Date,
     modified: {type: Date, default: Date.now}, // TODO change to updated
-    password: { type: String, required: true },
+    // password: { type: String, required: true }, // commented out to load seed data, need to add passwords in usersData.js
+    
     // companyId: String, // Pull from companySchema id
     firstName: String,
     lastName: String,
@@ -20,51 +21,42 @@ const userSchema = new Schema({
 });
 
 
-// TEST bcrypt
-userSchema.pre('save', function (next) {
-console.log("\n\nuserSchema save hit!")
-    var user = this;
+// Bcrypt
+// uzserSchema.pre('save', function (next) {
+// console.log("\n\nuserSchema save hit!")
+//     var user = this;
 
-    if (this.isModified('password') || this.isNew) {
-        bcrypt.genSalt(saltRounds, function (err, salt) {
-            if (err) {
-                return next(err);
-            }
-            bcrypt.hash(user.password, salt, function (err, hash) {
+//     if (this.isModified('password') || this.isNew) {
+//         bcrypt.genSalt(saltRounds, function (err, salt) {
+//             if (err) {
+//                 return next(err);
+//             }
+//             bcrypt.hash(user.password, salt, function (err, hash) {
 
-                if (err) {
-                    return next(err);
-                }
-                user.password = hash;
+//                 if (err) {
+//                     return next(err);
+//                 }
+//                 user.password = hash;
 
-                next();
-            });
-        });
-        console.log("Salted Caramel")
-    } else {
-        return next();
-    }
-});
+//                 next();
+//             });
+//         });
+//         console.log("Salted Caramel")
+//     } else {
+//         return next();
+//     }
+// });
 
-userSchema.methods.comparePassword = function (passw, cb) {
-    bcrypt.compare(passw, this.password, function (err, isMatch) {
-        if (err) {
-            return cb(err);
-        }
-        cb(null, isMatch);
-    });
-};
+// userSchema.methods.comparePassword = function (passw, cb) {
+//     bcrypt.compare(passw, this.password, function (err, isMatch) {
+//     console.log(`passw ${passw}`)
 
-
-
-
-// userSchema.methods.generateHash = function(password){
-//     return bcrypt.hashSync(password, bcrypt.genSaltSync(9));
+//         if (err) {
+//             return cb(err);
+//         }
+//         cb(null, isMatch);
+//     });
 // };
 
-// userSchema.methods.validPassword = function(password){
-//     return bcrypt.compareSync(password, this.local.password)
-// };
-
-//Export function to create "SomeModel" model class
+// Export function to create User model class
 module.exports = mongoose.model('User', userSchema);
