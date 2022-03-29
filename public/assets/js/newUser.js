@@ -65,24 +65,13 @@ console.log(response);
   });
 
 
-  // TEST userEdit
+  // userEdit toggles animations for editing user name
   $('#settings').click(function () {
     event.preventDefault()
 
     let edit = document.getElementsByClassName('clicktoedit');
-    let edited = document.getElementsByClassName('edit');
 
-  // if element class = clicktoedit change to class edit else change class to clicktoedit
-  if (edited.length != 0) {
-    // Loop through each clicktoedit element and add 
     for (let item of edit) {
-      item.classList.remove('edit')
-    };
-  } else {
-    // Loop through each clicktoedit element and add 
-      for (let item of edit) {
-        item.classList.add('edit')
-      };
-  };
-    
+      item.classList.toggle("edit");
+    };  
   });
