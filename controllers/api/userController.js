@@ -1,13 +1,14 @@
-// console.log("\n userController.js started");
+console.log("\n userController.js started");
 const messagingController = require('../../controllers/api/messagingController');
-
+const bcrypt = require('bcrypt');
 const User = require('../../models/usersSchema');
 const Messaging = require('../../models/messagingSchema');
 
 const getUsers = async (req, res, next) => {
+    console.log("get user")
     try {
 
-        let users = await User.find({});
+        let users = await User.find({}).lean();
         console.log("Retreive users from DB")
         if (users.length > 0) {
             console.log("Render Users page")
@@ -37,11 +38,11 @@ const getUserById = async (req, res, next) => {
 
         console.log("\ngetUserById: " + reqParamsId)
 
-        let user = await User.findById(reqParamsId);
+        let user = await User.findById(reqParamsId).lean();
         if (user) {
             // Get db.chat.":id" which include all correspondence
             console.log("retreiving chat messages");
-            let messages = await Messaging.find({ userId: reqParamsId });
+            let messages = await Messaging.find({ userId: reqParamsId }).lean();
             let noMessages = false;
             if (messages.length === 0) {
                 // usersMessaging appends "No user";
@@ -86,7 +87,7 @@ const createAdmin = async (req, res, next) => {
 
             // adminExists = await User.find({
             //     email: { email }
-            // })
+            // }).lean()
             // console.log(`adminExists: ${adminExists}`)
 
             const adminData = {
@@ -102,7 +103,7 @@ const createAdmin = async (req, res, next) => {
             let newAdmin = await User.create(adminData)
 
             if (newAdmin) {
-                // if (true) {
+
                 console.log("Admin created successfully:")
                 console.log(newAdmin);
 
@@ -130,9 +131,10 @@ const createAdmin = async (req, res, next) => {
 const createUser = async (req, res, next) => {
     try {
 
-        if (!req.body.password) {
-            hash = "null";
-        }
+// // Does not create user if enabled
+//         if (!req.body.password) {
+//             hash = "null";
+//         }
 
         const {
             hash,
@@ -143,9 +145,7 @@ const createUser = async (req, res, next) => {
         } = req.body;
 
 
-        let userExists = await User.find({
-            email: { $exists: true }
-        });
+        let userExists = await User.find({ email: { $exists: true }}).lean();
         console.log("UserExist: ")
         console.log((isEmpty(userExists)))
 
@@ -213,7 +213,7 @@ const createUser = async (req, res, next) => {
 
         // let isEmailExists = await User.findOne({
         //     "email": email
-        // });
+        // }).lean();
 
         // if (isEmailExists) {
         //     return res.status(409).json({
@@ -286,7 +286,7 @@ const updateUser = async (req, res, next) => {
         }
 
 
-        let isUserExists = await User.findById(userId);
+        let isUserExists = await User.findById(userId).lean();
 
         if (!isUserExists) {
             return res.status(404).json({
@@ -302,7 +302,7 @@ const updateUser = async (req, res, next) => {
 
         let updateUser = await User.findByIdAndUpdate(userId, temp, {
             new: true
-        });
+        }).lean();
 
         if (updateUser) {
             return res.status(200).json({
@@ -323,7 +323,7 @@ const updateUser = async (req, res, next) => {
 
 const deleteUser = async (req, res, next) => {
     try {
-        let user = await User.findByIdAndRemove(req.params.id);
+        let user = await User.findByIdAndRemove(req.params.id).lean();
         if (user) {
             return res.status(204).json({
                 'message': `user with id ${req.params.id} deleted successfully`
@@ -344,11 +344,56 @@ const deleteUser = async (req, res, next) => {
     }
 }
 
+const loginUser = async (req, res, next) => {
+    console.log("userController loginUser")
+    try {
+
+        // Capture usename and password
+        const { email, password } = req.body
+        const user = email;
+        console.log(`\nTEST email: ${email} \npassword: ${password}\n`)
+
+        // Does user exist
+        let isEmailExists = User.lean({
+            email: email
+        });
+
+        if (!isEmailExists) {
+            return res.status(409).json({
+                'code': 'ENTITY_DOES_NOT_EXIST',
+                'description': 'email does not exist',
+                'field': 'email'
+            });
+        } else {
+        
+// TESTING 
+const dbPassword = "$2b$10$MZom7tv.2pPcKsod.WSO4.gAjIl5CikNizqFVD6z/8yrkElXhTedC"
+        if (user && bcrypt.compareSync(dbPassword, password)) {
+            const { password, ...userWithoutHash } = user.toObject();
+            const token = jwt.sign({ sub: user.id }, config.secret);
+            return {
+                ...userWithoutHash,
+                token
+            };
+        }
+        // res.render("users")
+        return res.status(200).json({'description': 'Great success'})
+    }
+    } catch (error) {
+        console.log("ERROR: " + error)
+        return res.status(500).json({
+            'code': 'SERVER_ERROR',
+            'description': 'something went wrong, Please try again'
+        })
+    }
+}
+
 module.exports = {
     getUsers: getUsers,
     getUserById: getUserById,
     createAdmin: createAdmin,
     createUser: createUser,
     updateUser: updateUser,
-    deleteUser: deleteUser
+    deleteUser: deleteUser,
+    loginUser: loginUser
 }

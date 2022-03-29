@@ -15,7 +15,7 @@ const Login = require('../../models/loginSchema');
 const authenticate = async (req, res, next) => {
     try {
         const { username, password } = req.body
-        const user = await User.findOne({ username });
+        const user = await User.findOne({ username }).lean();
         if (user && bcrypt.compareSync(password, user.hash)) {
             const { hash, ...userWithoutHash } = user.toObject();
             const token = jwt.sign({ sub: user.id }, config.secret);
@@ -46,7 +46,7 @@ module.exports = {
 // const getUsers = async (req, res, next) => {
 //     try {
 
-//         let users = await User.find({});
+//         let users = await User.find({}).lean();
 // console.log("Retreive users from DB")
 //         if (users.length > 0) {
 //             console.log("Render Users page")
@@ -74,15 +74,15 @@ module.exports = {
 //     try {
 //         let reqParamsId = req.params.id
 //         console.log("\ngetUserById: " + reqParamsId)
-//         // let user = await User.findById(reqParamsId);5dca0d82c65e1348c1961097
-//         let user = await User.findById(reqParamsId);
+//         // let user = await User.findById(reqParamsId).lean();5dca0d82c65e1348c1961097
+//         let user = await User.findById(reqParamsId).lean();
 //         if (user) {
 
 //             // Need to setup db.chat with Id as the array for messaging
 //             // Get static db.chat.:id which include all correspondence
 //             console.log("retreiving chat messages");
-//             // let messages = await Login.findById(reqParamsId);
-//             let messages = await Login.find({ userId: reqParamsId }); // WORKING
+//             // let messages = await Login.findById(reqParamsId).lean();
+//             let messages = await Login.find({ userId: reqParamsId }).lean(); // WORKING
 //             let noMessages = false;
 //             if (messages.length === 0) {
 //                 // usersLogin appends "No user";
@@ -144,7 +144,7 @@ module.exports = {
 
 //         let isEmailExists = await User.findOne({
 //             "email": email
-//         });
+//         }).lean();
 
 //         if (isEmailExists) {
 //             return res.status(409).json({
@@ -213,7 +213,7 @@ module.exports = {
 //         }
 
 
-//         let isUserExists = await User.findById(userId);
+//         let isUserExists = await User.findById(userId).lean();
 
 //         if (!isUserExists) {
 //             return res.status(404).json({
@@ -229,7 +229,7 @@ module.exports = {
 
 //         let updateUser = await User.findByIdAndUpdate(userId, temp, {
 //             new: true
-//         });
+//         }).lean();
 
 //         if (updateUser) {
 //             return res.status(200).json({
@@ -250,7 +250,7 @@ module.exports = {
 
 // const deleteUser = async (req, res, next) => {
 //     try {
-//         let user = await User.findByIdAndRemove(req.params.id);
+//         let user = await User.findByIdAndRemove(req.params.id).lean();
 //         if (user) {
 //             return res.status(204).json({
 //                 'message': `user with id ${req.params.id} deleted successfully`

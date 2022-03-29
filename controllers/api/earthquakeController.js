@@ -1,9 +1,13 @@
 const Earthquake = require('../../models/earthquakeSchema');
 
+//032322 added .lean() to all Mongo DB .find requests to alleviate:
+// Handlebars: Access has been denied to resolve the property "messageAdmin" because it is not an "own property" of its parent.
+// You can add a runtime option to disable the check or this warning: See https://handlebarsjs.com/api-reference/runtime-options.html#options-to-control-prototype-access for details
+
 const getEarthquakes = async (req, res, next) => {
     try {
         // NICE TO HAVE sort earthquakes, by time or place
-        let earthquakes = await Earthquake.find({}).sort({ time: -1 })
+        let earthquakes = await Earthquake.find({}).lean().sort({ time: -1 })
         console.log("Retreive earthquakes from DB")
         // console.log(earthquakes)
         
@@ -31,7 +35,7 @@ const getEarthquakes = async (req, res, next) => {
 
 const getEarthquakeById = async (req, res, next) => {
     try {
-        let earthquake = await Earthquake.findById(req.params.id);
+        let earthquake = await Earthquake.findById(req.params.id).lean();
         if (earthquake) {
             return res.status(200).json({
                 'message': `earthquake with id ${req.params.id} fetched successfully`,
@@ -114,7 +118,7 @@ const updateEarthquake = async (req, res, next) => {
         }
 
 
-        let isEarthquakeExists = await Earthquake.findById(earthquakeId);
+        let isEarthquakeExists = await Earthquake.findById(earthquakeId).lean();
 
         if (!isEarthquakeExists) {
             return res.status(404).json({
@@ -130,7 +134,7 @@ const updateEarthquake = async (req, res, next) => {
 
         let updateEarthquake = await Earthquake.findByIdAndUpdate(earthquakeId, temp, {
             new: true
-        });
+        }).lean();
 
         if (updateEarthquake) {
             return res.status(200).json({
@@ -151,7 +155,7 @@ const updateEarthquake = async (req, res, next) => {
 
 const deleteEarthquake = async (req, res, next) => {
     try {
-        let earthquake = await Earthquake.findByIdAndRemove(req.params.id);
+        let earthquake = await Earthquake.findByIdAndRemove(req.params.id).lean();
         if (earthquake) {
             return res.status(204).json({
                 'message': `earthquake with id ${req.params.id} deleted successfully`

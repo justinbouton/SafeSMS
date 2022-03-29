@@ -121,7 +121,8 @@ router.post('/signup', userController.createAdmin);
 
 // Users controller
 router.get("/users", userController.getUsers);
-router.post("/users/newAdmin", userController.createUser);
+router.post("/users/newUser", userController.createUser);
+// router.post("/users/newAdmin", userController.createUser);
 router.get("/users/:id", userController.getUserById);
 
 // Messaging
