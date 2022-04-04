@@ -80,7 +80,7 @@ var earthquakeCount = 0;
             storeEarthquakeData(parsedEarthquakeData)
         } else {
 
-            console.log("Woohoo! Found earthquake data.")
+            console.log("The world is shakin! Received earthquake data.")
 
             // Check earthquakeDB against API response parsedEarthquakeData. Compare id if already in earthquakeDB pop off that id else push to earthquakeDifferences.
             let earthquakeDB = [];

@@ -63,3 +63,15 @@ console.log(response);
     var state = this.className.indexOf(a) > -1; $(this).toggleClass(a, !state).toggleClass(b, state)
   //   $(this).toggle.val("yes");
   });
+
+
+  // Edit toggles animations for editing user name
+  $('#settings').click(function () {
+    event.preventDefault()
+
+    let edit = document.getElementsByClassName('clicktoedit');
+
+    for (let item of edit) {
+      item.classList.toggle("edit");
+    };  
+  });
