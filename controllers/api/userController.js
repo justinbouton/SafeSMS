@@ -143,7 +143,7 @@ const createUser = async (req, res, next) => {
             email,
             phone
         } = req.body;
-
+1
 
         let userExists = await User.find({ email: { $exists: true }}).lean();
         console.log("UserExist: ")
@@ -189,7 +189,7 @@ const createUser = async (req, res, next) => {
                     // 'data': temp 
                 });
             } else {
-                throw new Error('something went worng');
+                throw new Error('something went wrong');
             }
         }
 
@@ -260,34 +260,35 @@ const createUser = async (req, res, next) => {
 
 const updateUser = async (req, res, next) => {
     try {
-
-
+        
         const userId = req.params.id;
-
+console.log(`\n UserID to update: ${userId}`)
         const {
-            name,
-            email
+            firstName,
+            lastName,
+            email,
+            phone
         } = req.body;
 
-        if (name === undefined || name === '') {
-            return res.status(422).json({
-                'code': 'REQUIRED_FIELD_MISSING',
-                'description': 'name is required',
-                'field': 'name'
-            });
-        }
+        // if (name === undefined || name === '') {
+        //     return res.status(422).json({
+        //         'code': 'REQUIRED_FIELD_MISSING',
+        //         'description': 'name is required',
+        //         'field': 'name'
+        //     });
+        // }
 
-        if (email === undefined || email === '') {
-            return res.status(422).json({
-                'code': 'REQUIRED_FIELD_MISSING',
-                'description': 'email is required',
-                'field': 'email'
-            });
-        }
+        // if (email === undefined || email === '') {
+        //     return res.status(422).json({
+        //         'code': 'REQUIRED_FIELD_MISSING',
+        //         'description': 'email is required',
+        //         'field': 'email'
+        //     });
+        // }
 
 
         let isUserExists = await User.findById(userId).lean();
-
+console.log("\n Does user exist, if so old data: " + JSON.stringify(isUserExists))
         if (!isUserExists) {
             return res.status(404).json({
                 'code': 'BAD_REQUEST_ERROR',
@@ -296,13 +297,20 @@ const updateUser = async (req, res, next) => {
         }
 
         const temp = {
-            name: name,
-            email: email
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            phone: phone
         }
-
-        let updateUser = await User.findByIdAndUpdate(userId, temp, {
-            new: true
-        }).lean();
+        
+console.log("\n New updated data: " + JSON.stringify(temp))
+        let updateUser = await User.findByIdAndUpdate(userId,
+            
+// TODO     //  NEEDS CLEAN UP ISSUE WITH JSON PASSING THROUGH
+            
+            { firstName: temp.firstName, lastName: temp.lastName, email: temp.email, phone: temp.phone },
+            { new: true }
+          );
 
         if (updateUser) {
             return res.status(200).json({

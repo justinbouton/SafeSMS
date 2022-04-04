@@ -18,6 +18,11 @@ a,a:hover {
 #messageAdmin {
     text-align: right;
 }
+#settings {
+    border: none;
+    background-color: none;
+    outline: none;
+}
 .firstName, .lastName {
     font-weight: inherit;
 }

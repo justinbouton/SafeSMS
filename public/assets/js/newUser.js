@@ -65,7 +65,7 @@ console.log(response);
   });
 
 
-  // userEdit toggles animations for editing user name
+  // Edit toggles animations for editing user name
   $('#settings').click(function () {
     event.preventDefault()
 

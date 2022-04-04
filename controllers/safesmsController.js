@@ -123,7 +123,7 @@ router.post('/signup', userController.createAdmin);
 router.get("/users", userController.getUsers);
 router.post("/users/newUser", userController.createUser);
 // router.post("/users/newAdmin", userController.createAdmin); // Could this push through .createUser?
-router.post("/users/newAdmin", userController.updateUser);
+router.post("/users/updateUser/:id", userController.updateUser);
 router.get("/users/:id", userController.getUserById);
 
 // Messaging
